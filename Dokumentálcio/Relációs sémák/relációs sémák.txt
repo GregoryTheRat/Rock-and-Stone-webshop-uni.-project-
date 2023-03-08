@@ -19,4 +19,4 @@ MitSzállít: _Szállító_id_, _mit_
 Hírdet: _hirdetés_id_ ,felhaszn_id 
 Értékel: _felhaszn_id_, _hírdetés_id_, csillag, leírás
 Rendel: _id_, felhaszn_id, hírdetés_id, szállító_id 
-Kiszállítás:  _rendel_id_, _szállító_id_ mennyiség, hova, költség, várható_szállítás
+Kiszállítás:  _rendel_id_, _szállító_id_, mennyiség, hova, költség, várható_szállítás
