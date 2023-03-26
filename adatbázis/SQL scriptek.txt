@@ -1,0 +1,80 @@
+CREATE TABLE Felhasznalo
+(  id number(10) NOT NULL,
+    nev VARCHAR2(50),
+    email varchar2(70),
+    jelszo varchar(20)
+
+);
+
+ALTER TABLE FELHASZNALO
+ADD CONSTRAINT felhaszn_pk PRIMARY KEY (id);
+
+
+CREATE TABLE Hirdetes
+(  hirdetes_id number(10) NOT NULL,
+    termek_nev VARCHAR2(50),
+    mennyiseg FLOAT(20),
+    ar_kg FLOAT(20),
+    min_vasarlas INT
+
+);
+
+
+
+
+ALTER TABLE HIRDETES
+ADD CONSTRAINT hirdetes_pk PRIMARY KEY (hirdetes_id)
+
+
+
+CREATE TABLE Hirdetes
+(  hirdetes_id number(10) NOT NULL,
+    termek_nev VARCHAR2(50),
+    mennyiseg FLOAT(20),
+    ar_kg FLOAT(20),
+    min_vasarlas INT
+
+);
+
+ALTER TABLE HIRDETES
+ADD CONSTRAINT hirdetes_pk PRIMARY KEY (hirdetes_id);
+
+
+CREATE TABLE Szallito
+(  szallito_id number(10) NOT NULL,
+    km_ar FLOAT(20),
+    ar_kg FLOAT(20)
+);
+
+ALTER TABLE Szallito
+ADD CONSTRAINT szallito_pk PRIMARY KEY (szallito_id);
+
+
+CREATE TABLE MitSzallit
+(  szallito_id number(10) NOT NULL,
+   mit VARCHAR2(20),
+   mennyiseg FLOAT(20),
+    ar_kg FLOAT(20),
+     min_vasarlas INT
+);
+
+
+ALTER TABLE MitSzallit
+ADD CONSTRAINT mitszallit_pk PRIMARY KEY (szallito_id);
+
+ALTER TABLE MitSzallit
+ADD CONSTRAINT mitszallit_fk FOREIGN KEY (szallito_id) REFERENCES Szalito( szallito_id) ;
+
+CREATE TABLE Hirdet
+(  
+   felhaszn_id NUMBER(10)  NOT NULL,
+   hirdetes_id number(10),
+   mikor DATE,
+    FOREIGN KEY(felhaszn_id) REFERENCES (group_id)
+);
+
+
+ALTER TABLE Hirdet
+CONSTRAINT ( FOREIGN KEY (column1, column2, ... column_n)
+    REFERENCES parent_table (column1, column2, ... column_n)
+)
