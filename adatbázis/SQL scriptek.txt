@@ -1,80 +1,259 @@
 CREATE TABLE Felhasznalo
-(  id number(10) NOT NULL,
+(  id INT  NOT NULL,
     nev VARCHAR2(50),
     email varchar2(70),
-    jelszo varchar(20)
-
+    jelszo varchar(20),
+    PRIMARY KEY(id)
 );
-
-ALTER TABLE FELHASZNALO
-ADD CONSTRAINT felhaszn_pk PRIMARY KEY (id);
 
 
 CREATE TABLE Hirdetes
-(  hirdetes_id number(10) NOT NULL,
+(  id int NOT NULL,
     termek_nev VARCHAR2(50),
     mennyiseg FLOAT(20),
     ar_kg FLOAT(20),
-    min_vasarlas INT
+    min_vasarlas INT,
+    PRIMARY KEY(id)
 
 );
-
-
-
-
-ALTER TABLE HIRDETES
-ADD CONSTRAINT hirdetes_pk PRIMARY KEY (hirdetes_id)
-
-
-
-CREATE TABLE Hirdetes
-(  hirdetes_id number(10) NOT NULL,
-    termek_nev VARCHAR2(50),
-    mennyiseg FLOAT(20),
-    ar_kg FLOAT(20),
-    min_vasarlas INT
-
-);
-
-ALTER TABLE HIRDETES
-ADD CONSTRAINT hirdetes_pk PRIMARY KEY (hirdetes_id);
 
 
 CREATE TABLE Szallito
-(  szallito_id number(10) NOT NULL,
+(  id int NOT NULL,
     km_ar FLOAT(20),
-    ar_kg FLOAT(20)
+    ar_kg FLOAT(20),
+    PRIMARY KEY(id)
 );
 
-ALTER TABLE Szallito
-ADD CONSTRAINT szallito_pk PRIMARY KEY (szallito_id);
 
 
 CREATE TABLE MitSzallit
-(  szallito_id number(10) NOT NULL,
+(  szallito_id int NOT NULL,
    mit VARCHAR2(20),
    mennyiseg FLOAT(20),
     ar_kg FLOAT(20),
-     min_vasarlas INT
+     min_vasarlas INT,
+     FOREIGN KEY (szallito_id) REFERENCES SZALLITO(ID),
+     CONSTRAINT MitSzallit_pk primary key (szallito_id,mit)
 );
-
-
-ALTER TABLE MitSzallit
-ADD CONSTRAINT mitszallit_pk PRIMARY KEY (szallito_id);
-
-ALTER TABLE MitSzallit
-ADD CONSTRAINT mitszallit_fk FOREIGN KEY (szallito_id) REFERENCES Szalito( szallito_id) ;
 
 CREATE TABLE Hirdet
-(  
-   felhaszn_id NUMBER(10)  NOT NULL,
-   hirdetes_id number(10),
-   mikor DATE,
-    FOREIGN KEY(felhaszn_id) REFERENCES (group_id)
+(  felhsazn_id int NOT NULL,
+   hirdetes_id int NOT NULL,
+   mikor date,
+     FOREIGN KEY (felhsazn_id) REFERENCES FELHASZNALO(id),
+     FOREIGN KEY (hirdetes_id)REFERENCES HIRDETES(id),
+     CONSTRAINT hirdet_pk primary key (felhsazn_id,hirdetes_id)
 );
 
 
-ALTER TABLE Hirdet
-CONSTRAINT ( FOREIGN KEY (column1, column2, ... column_n)
-    REFERENCES parent_table (column1, column2, ... column_n)
-)
+CREATE TABLE ertekel
+(  felhsazn_id int NOT NULL,
+   hirdetes_id int NOT NULL,
+   csillag int,
+    leiras varchar2(500),
+     FOREIGN KEY (felhsazn_id) REFERENCES FELHASZNALO(id),
+     FOREIGN KEY (hirdetes_id)REFERENCES HIRDETES(id),
+     CONSTRAINT ertekel_pk primary key (felhsazn_id,hirdetes_id)
+);
+
+
+CREATE TABLE Rendel
+(  id int not null ,
+    felhsazn_id int NOT NULL,
+   hirdetes_id int NOT NULL,
+   szallito_id int not null,
+     FOREIGN KEY (felhsazn_id) REFERENCES FELHASZNALO(id),
+     FOREIGN KEY (hirdetes_id)REFERENCES HIRDETES(id),
+      FOREIGN KEY (szallito_id)REFERENCES SZALLITO(id),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE Kiszallit
+(  rendel_id int not null ,
+    szallito_id int not null,
+    mennyiseg float(20),
+    hova varchar2(50),
+    koltseg FLOAT(10),
+    varhato_szallitas DATE,
+
+     FOREIGN KEY (rendel_id) REFERENCES RENDEL(id),
+     FOREIGN KEY (szallito_id)REFERENCES SZALLITO(id),
+     CONSTRAINT kisszallit_pk primary key (rendel_id,szallito_id)
+);
+
+
+
+
+INSERT Into FELHASZNALO VALUES (1,'Szabo Peter','szabp@citromail.hu','erospista123');
+INSERT Into FELHASZNALO VALUES (2,'Tamas Eszter','tas@citromail.hu','tami4');
+INSERT Into FELHASZNALO VALUES (3,'Kerek Huba','kerhub@freemail.hu','hubi23');
+INSERT Into FELHASZNALO VALUES (4,'Csoma Taksony','csomag@gmail.com','csoma2');
+INSERT Into FELHASZNALO VALUES (5,'Kalapos Gertrud','kalapge@citromail.hu','akalapos');
+INSERT Into FELHASZNALO VALUES (6,'Lakatos Emanuel','lakatm@citromail.hu','lammelama12');
+INSERT Into FELHASZNALO VALUES (7,'Pecsi Zsofi','pezso@citromail.hu','pezso');
+INSERT Into FELHASZNALO VALUES (8,'Banki Gergely','kicsiq@citromail.hu','password');
+INSERT Into FELHASZNALO VALUES (9,'Lakatos Alfonz','lafikobra@citromail.hu','hagyma21');
+INSERT Into FELHASZNALO VALUES (10,'Dombovari Istvan','veryfunny@citromail.hu','humoros69');
+INSERT Into FELHASZNALO VALUES (11,'Puskas Tivadar','imold@citromail.hu','jelszo45');
+INSERT Into FELHASZNALO VALUES (12,'Pepe Frog','pepe@citromail.hu','iamameme');
+INSERT Into FELHASZNALO VALUES (13,'Gorilla Harambe','HarambethebigG@citromail.hu','harambe10');
+INSERT Into FELHASZNALO VALUES (14,'Szep Virag','flowerpower@citromail.hu','virag2');
+INSERT Into FELHASZNALO VALUES (15,'Horthy istvan','admiralisgeneralis@citromail.hu','feherlo36');
+INSERT Into FELHASZNALO VALUES (16,'Adolf Alfonzo','alfonz@citromail.hu','alfaalfonz');
+INSERT Into FELHASZNALO VALUES (17,'Chadwik Chad','chad@citromail.hu','cc666');
+INSERT Into FELHASZNALO VALUES (18,'Biro Zsoka','birozs@citromail.hu','123-45');
+
+
+
+
+INSERT INTO  HIRDETES VALUES (1,'Bolgar Lyukacsos Szikla',32000,180,1000);
+INSERT INTO  HIRDETES VALUES (2,'Bazalt',120000,990,1000);
+INSERT INTO  HIRDETES VALUES (3,'Gorog hofeher szikla',76030,1501000,1000);
+INSERT INTO  HIRDETES VALUES (4,'TAHITI ÜVEG TÜRKIZ',99995,1050,1000);
+INSERT INTO  HIRDETES VALUES (5,'Szivárványkő',62000,574,1000);
+INSERT INTO  HIRDETES VALUES (6,'Gardenit extra',52020,2269,1000);
+INSERT INTO  HIRDETES VALUES (7,'Marvany',909856,2986,1000);
+INSERT INTO  HIRDETES VALUES (8,'spagetti koral szikla',351000,250,1000);
+INSERT INTO  HIRDETES VALUES (9,'barnás mészkő',32000,130,1000);
+INSERT INTO  HIRDETES VALUES (10,'szörny szikla',89600,250,1000);
+INSERT INTO  HIRDETES VALUES (11,' riolit',34000,1500,1000);
+INSERT INTO  HIRDETES VALUES (12,' opál',34000,1500,1000);
+INSERT INTO  HIRDETES VALUES (13,' bézs mészkő sziklák ',74000,55,1000);
+INSERT INTO  HIRDETES VALUES (14,' meteora mészkő ',74000,250,100);
+INSERT INTO  HIRDETES VALUES (15,' sivatagi rózsa ',6500,1900,10);
+INSERT INTO  HIRDETES VALUES (16,' fekete pala ',84000,550,1000);
+INSERT INTO  HIRDETES VALUES (17,' Gránit golyók ',90231,330,1000);
+INSERT INTO  HIRDETES VALUES (18,' erezett márvány ',21000,200,1000);
+INSERT INTO  HIRDETES VALUES (19,' Vraca mészkő',64000,250,1000);
+INSERT INTO  HIRDETES VALUES (20,' AKRON ',64000,700,1000);
+INSERT INTO  HIRDETES VALUES (21,' Jade ',64000,2000,10);
+INSERT INTO  HIRDETES VALUES (22,' Travertin ',44000,600,1000);
+INSERT INTO  HIRDETES VALUES (23,' Brazil Pala ',54000,320,1000);
+INSERT INTO  HIRDETES VALUES (24,' India homokkő ',34000,410,1000);
+INSERT INTO  HIRDETES VALUES (25,' Perlato mészkő ',22000,890,1000);
+
+
+
+
+INSERT INTO SZALLITO VALUES (1,200,45);
+INSERT INTO SZALLITO VALUES (2,210,37);
+INSERT INTO SZALLITO VALUES (3,310,20);
+INSERT INTO SZALLITO VALUES (4,290,25);
+INSERT INTO SZALLITO VALUES (5,500,5);
+INSERT INTO SZALLITO VALUES (6,450,30);
+INSERT INTO SZALLITO VALUES (7,210,45);
+INSERT INTO SZALLITO VALUES (8,220,19);
+INSERT INTO SZALLITO VALUES (9,170,60);
+INSERT INTO SZALLITO VALUES (10,390,12);
+INSERT INTO SZALLITO VALUES (11,430,36);
+INSERT INTO SZALLITO VALUES (12,330,30);
+
+
+
+INSERT INTO MITSZALLIT values (1,'LyukacsosSzikla',1500,180,1000);
+INSERT INTO MITSZALLIT values (1,'Bazalt',1700,990,1000);
+INSERT INTO MITSZALLIT values (1,'Gorog hofeher szikla',2000,1000,1000);
+INSERT INTO MITSZALLIT values (1,'TAHITI ÜVEG TÜRKIZ',1200,1050,1000);
+INSERT INTO MITSZALLIT values (2,'Szivárványkő',1200,574,1000);
+INSERT INTO MITSZALLIT values (2,'Gardenit extra',2500,2269,1000);
+INSERT INTO MITSZALLIT values (6,'Marvany',2500,2986,1000);
+INSERT INTO MITSZALLIT values (3,'spagettikoral szikla',2500,250,1000);
+INSERT INTO MITSZALLIT values (4,'barnás mészkő',2550,130,1000);
+INSERT INTO MITSZALLIT values (4,'szörny szikla',2500,250,1000);
+INSERT INTO MITSZALLIT values (4,'riolit',2500,1500,1000);
+INSERT INTO MITSZALLIT values (5,'opál',2750,1500,1000);
+INSERT INTO MITSZALLIT values (5,'bézs mészkő',2500,2269,1000);
+INSERT INTO MITSZALLIT values (5,'meteora mészkő',2500,250,1000);
+INSERT INTO MITSZALLIT values (6,'sivatagi rózsa',250,1900,10);
+INSERT INTO MITSZALLIT values (7,'fekete pala',2500,550,1000);
+INSERT INTO MITSZALLIT values (8,'Gránit golyók',2500,330,1000);
+INSERT INTO MITSZALLIT values (9,'erezett márvány',2500,200,1000);
+INSERT INTO MITSZALLIT values (10,'Vraca mészkő',2500,250,1000);
+INSERT INTO MITSZALLIT values (11,'AKRON',2500,700,1000);
+INSERT INTO MITSZALLIT values (10,'Jade',500,2000,10);
+INSERT INTO MITSZALLIT values (9,'Travertin',2500,600,1000);
+INSERT INTO MITSZALLIT values (7,'Brazil Pala',2500,320,1000);
+INSERT INTO MITSZALLIT values (6,'India homokkő',2500,410,1000);
+INSERT INTO MITSZALLIT values (5,'Perlato mészkő ',2500,890,1000);
+
+
+INSERT INTO HIRDET values (1,1,'11-Nov-1999');
+INSERT INTO HIRDET values (1,2,'11-Nov-1999');
+INSERT INTO HIRDET values (1,3,'11-JUN-1999');
+INSERT INTO HIRDET values (1,4,'11-Nov-1999');
+INSERT INTO HIRDET values (1,5,'12-Nov-1999');
+INSERT INTO HIRDET values (1,6,'12-JUN-2002');
+INSERT INTO HIRDET values (1,7,'11-APR-2003');
+INSERT INTO HIRDET values (2,8,'11-Nov-1999');
+INSERT INTO HIRDET values (3,9,'11-Nov-1999');
+INSERT INTO HIRDET values (4,10,'11-JUL-2003');
+INSERT INTO HIRDET values (5,11,'11-Nov-2007');
+INSERT INTO HIRDET values (5,12,'01-APR-2005');
+INSERT INTO HIRDET values (5,13,'11-JUN-2022');
+INSERT INTO HIRDET values (4,14,'11-Nov-2022');
+INSERT INTO HIRDET values (3,15,'11-Nov-2022');
+INSERT INTO HIRDET values (2,16,'03-Nov-2022');
+INSERT INTO HIRDET values (1,17,'11-APR-2022');
+INSERT INTO HIRDET values (2,18,'02-Nov-2019');
+INSERT INTO HIRDET values (3,19,'11-Nov-2019');
+INSERT INTO HIRDET values (3,20,'08-JUN-2019');
+INSERT INTO HIRDET values (4,21,'08-JUL-2019');
+INSERT INTO HIRDET values (5,22,'07-JUL-2019');
+INSERT INTO HIRDET values (6,23,'09-APR-2019');
+INSERT INTO HIRDET values (5,24,'06-APR-2019');
+INSERT INTO HIRDET values (5,25,'09-APR-2019');
+
+
+
+
+INSERT INTO ERTEKEL VALUES (6,1,5,'jo kis cucc mind megjott kivallo minoseg');
+INSERT INTO ERTEKEL VALUES (6,2,5,'jo kis cucc mind megjott kivallo minoseg');
+INSERT INTO ERTEKEL VALUES (13,2,5,'jo kis cucc mind megjott kivallo minoseg');
+INSERT INTO ERTEKEL VALUES (11,2,5,'jo kis cucc mind megjott kivallo minoseg');
+INSERT INTO ERTEKEL VALUES (7,3,5,'jo kis cucc mind megjott kivallo minoseg');
+INSERT INTO ERTEKEL VALUES (7,4,5,'jo kis cucc mind megjott kivallo minoseg');
+INSERT INTO ERTEKEL VALUES (7,5,5,'jo kis cucc mind megjott kivallo minoseg');
+INSERT INTO ERTEKEL VALUES (8,5,5,'jo kis cucc mind megjott kivallo minoseg');
+INSERT INTO ERTEKEL VALUES (8,4,5,'jo kis cucc mind megjott kivallo minoseg');
+INSERT INTO ERTEKEL VALUES (9,6,5,'jo kis cucc mind megjott kivallo minoseg');
+INSERT INTO ERTEKEL VALUES (10,7,5,'jo kis cucc mind megjott kivallo minoseg');
+INSERT INTO ERTEKEL VALUES (11,8,3,'atlagos');
+INSERT INTO ERTEKEL VALUES (10,9,3,'atlagos');
+INSERT INTO ERTEKEL VALUES (10,10,3,'atlagos');
+INSERT INTO ERTEKEL VALUES (13,11,3,'atlagos');
+INSERT INTO ERTEKEL VALUES (14,12,3,'atlagos');
+INSERT INTO ERTEKEL VALUES (15,13,3,'atlagos');
+INSERT INTO ERTEKEL VALUES (6,14,3,'atlagos');
+INSERT INTO ERTEKEL VALUES (13,15,2,'rossz');
+INSERT INTO ERTEKEL VALUES (14,16,2,'rossz');
+INSERT INTO ERTEKEL VALUES (15,17,1,'rossz');
+INSERT INTO ERTEKEL VALUES (16,18,2,'rossz');
+INSERT INTO ERTEKEL VALUES (11,19,4,'jo');
+INSERT INTO ERTEKEL VALUES (7,20,4,'jo ');
+INSERT INTO ERTEKEL VALUES (7,21,4,'jo');
+INSERT INTO ERTEKEL VALUES (9,21,4,'jo ');
+INSERT INTO ERTEKEL VALUES (9,22,4,'jo ');
+INSERT INTO ERTEKEL VALUES (9,23,4,'jo ');
+INSERT INTO ERTEKEL VALUES (7,24,4,'jo ');
+INSERT INTO ERTEKEL VALUES (6,25,4,'jo ');
+
+
+insert into RENDEL VALUES (1,6,4,1);
+insert into RENDEL VALUES (2,3,4,1);
+insert into RENDEL VALUES (3,13,1,1);
+insert into RENDEL VALUES (4,13,12,5);
+insert into RENDEL VALUES (5,13,23,7);
+insert into RENDEL VALUES (6,13,21,10);
+insert into RENDEL VALUES (7,13,20,11);
+
+
+
+
+INSERT INTO Kiszallit VALUES (1,1,1500,'Kiskerepes Vitez utca 27',1600000,'29-MAR-2023');
+INSERT INTO Kiszallit VALUES (2,1,2500,'Fót PEtőfi köz  13',1600000,'29-MAR-2023');
+INSERT INTO Kiszallit VALUES (3,1,2500,'Budapest Galamb utca 10',1650000,'26-MAR-2023');
+INSERT INTO Kiszallit VALUES (4,1,1500,'Budapest Galamb utca 10',1650000,'26-MAR-2023');
+INSERT INTO Kiszallit VALUES (5,1,1500,'Budapest Galamb utca 10',1650000,'26-MAR-2023');
+INSERT INTO Kiszallit VALUES (6,1,1500,'Budapest Galamb utca 10',1665000,'28-MAR-2023');
+INSERT INTO Kiszallit VALUES (7,1,1500,'Budapest Galambutca 10',1780000,'28-MAR-2023');
