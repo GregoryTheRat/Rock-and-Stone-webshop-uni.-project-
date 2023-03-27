@@ -1,0 +1,195 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  background-color: #fff;
+  height: 100px;
+  padding: 50px 100px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  box-shadow: 10px 10px 10px grey;
+}
+
+.ko-es-szikla span {
+  color: black;
+  font-size: 36px;
+  font-weight: 900;
+  font-style: italic;
+}
+.ko-es-szikla span:hover {
+  cursor: pointer;
+  font-size: 38px;
+  transition: all 0.5s ease;
+}
+
+.navbar {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar li:nth-child(3) {
+  margin-right: 280px;
+}
+
+.navbar a {
+  padding: 6px;
+  color: black;
+  font-size: 22px;
+  font-weight: 550;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+.navbar a:hover {
+  background-color: black;
+  color: white;
+  transition: all 0.6s ease;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+  margin-top: 130px;
+  background-color: rgb(211, 211, 211);
+  align-items: center;
+  justify-content: center;
+}
+
+.filter {
+  background-color: indianred;
+  height: 100px;
+}
+
+.hirdetes {
+  display: flex;
+  height: 350px;
+  width: 90%;
+  margin: 30px;
+  background-color: aliceblue;
+  justify-content: space-evenly;
+  box-shadow: 10px 10px 10px grey;
+  align-items: center;
+}
+
+.hirdetes-adatok {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: 90%;
+  width: 50%;
+  background-color: white;
+  border: 2px solid grey;
+  border-radius: 10px;
+}
+
+.adatok1 {
+  padding: 20px;
+  max-height: 75%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.hirdetett-termek {
+  margin-bottom: 10px;
+  text-align: center;
+}
+.adatok1 p {
+  margin-top: 6px;
+  max-width: 90%;
+}
+
+.adatok2 {
+  height: 25%;
+  border: 2px solid black;
+  margin-top: 10px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.szallitas-adatok {
+  padding: 20px;
+  min-height: 90%;
+  width: 20%;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1px;
+}
+
+.szallitas-adatok h2 {
+  padding: 20px;
+}
+.szallitas-adatok p:last-child {
+  margin-bottom: 20px;
+}
+
+.szallito-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.szallitok {
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.egyeb-adatok {
+  min-height: 90%;
+  width: 20%;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 25px;
+}
+.rating {
+  display: flex;
+  justify-content: center;
+  font-size: 36px;
+  color: #ccc;
+}
+
+.star:hover,
+.star:hover ~ .star,
+.star.selected,
+.star.selected ~ .star {
+  color: #ffcc00;
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+  height: 100px;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+}
