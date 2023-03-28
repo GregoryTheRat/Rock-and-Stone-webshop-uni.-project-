@@ -13,9 +13,17 @@
       <header>
         <a href="index.html" class="ko-es-szikla"><span>Kő és szikla</span></a>
         <ul class="navbar">
-          <li><a href="#">Hirdetmények</a></li>
+          <li class="active">
+            <a href="index.html" onclick="activateNavItem(this)"
+              >Hirdetmények</a
+            >
+          </li>
           <li><a href="#">Új hirdetmény</a></li>
-          <li><a href="profil.html">Profil adatok</a></li>
+          <li>
+            <a href="profil-adatok.html" onclick="activateNavItem(this)"
+              >Profil adatok</a
+            >
+          </li>
           <li><a href="#">Bejelentkezés/Kijelentkezés</a></li>
           <li><a href="#">Regisztráció</a></li>
         </ul>
@@ -102,12 +110,10 @@
           </div>
           <div class="egyeb-adatok">
             <h2>Értékelés</h2>
-            <div class="rating">
-              <span class="star" data-rating="1">&#9733;</span>
-              <span class="star" data-rating="2">&#9733;</span>
-              <span class="star" data-rating="3">&#9733;</span>
-              <span class="star" data-rating="4">&#9733;</span>
-              <span class="star" data-rating="5">&#9733;</span>
+            <p><strong>3.5</strong></p>
+            <hr />
+            <div>
+              <button>Tovább a vásárláshoz</button>
             </div>
           </div>
         </div>
@@ -190,7 +196,14 @@
             <p><strong>Ár/km: </strong>70 HUF</p>
             <p><strong>Ár/kg: </strong>45 HUF</p>
           </div>
-          <div class="egyeb-adatok"></div>
+          <div class="egyeb-adatok">
+            <h2>Értékelés</h2>
+            <p><strong>3.5</strong></p>
+            <hr />
+            <div>
+              <button>Tovább a vásárláshoz</button>
+            </div>
+          </div>
         </div>
         <div class="hirdetes">
           <div class="hirdetes-adatok">
@@ -271,11 +284,18 @@
             <p><strong>Ár/km: </strong>70 HUF</p>
             <p><strong>Ár/kg: </strong>45 HUF</p>
           </div>
-          <div class="egyeb-adatok"></div>
+          <div class="egyeb-adatok">
+            <h2>Értékelés</h2>
+            <p><strong>3.5</strong></p>
+            <hr />
+            <div>
+              <button>Tovább a vásárláshoz</button>
+            </div>
+          </div>
         </div>
       </main>
       <footer><p>&copy; Kő és szikla 2023</p></footer>
     </div>
-    <script></script>
+    <script src="script.js"></script>
   </body>
 </html>
