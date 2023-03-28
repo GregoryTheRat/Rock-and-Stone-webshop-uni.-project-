@@ -1,2 +1,303 @@
-<h1>Home#home</h1>
-<p>Find me in app/views/home/home.html.erb</p>
+
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <%= stylesheet_link_tag "style" %>
+    <title>Kő és szikla</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <header>
+
+        <a href="home/home" class="ko-es-szikla"><span>Kő és szikla</span></a>
+        <ul class="navbar">
+          <li class="active">
+            <a href="home.html.erb" onclick="activateNavItem(this)"
+              >Hirdetmények</a
+            >
+          </li>
+          <li><a href="#">Új hirdetmény</a></li>
+          <li>
+            <a href="../profil/profilAdatok" onclick="activateNavItem(this)"
+              >Profil adatok</a
+            >
+          </li>
+          <li><a href="#">Bejelentkezés/Kijelentkezés</a></li>
+          <li><a href="#">Regisztráció</a></li>
+        </ul>
+      </header>
+      <main>
+        <div class="hirdetes">
+          <div class="hirdetes-adatok">
+            <div class="adatok1">
+              <h2 class="hirdetett-termek">Hirdetett termék: Bauxit</h2>
+              <h3 class="hirdeto">Hirdető: Mekk Elek</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+                molestias laudantium, veniam ducimus magnam ad repellendus
+                quisquam perspiciatis culpa quo architecto deleniti amet fuga.
+                Neque veniam laborum blanditiis repellat error? Velit eum, quasi
+                repellat cumque repellendus quia, placeat exercitationem optio,
+                natus accusamus tenetur! Nihil quasi magni minus totam quas
+                facilis veritatis corrupti mollitia rem recusandae, ab nostrum
+                fugit cum sint quod aperiam aliquam laborum et distinctio quo
+                itaque ut rerum. Corrupti maiores temporibus mollitia quos.
+                Ipsam perferendis nam alias amet. Dolorem necessitatibus quis
+                deserunt culpa. Delectus numquam necessitatibus voluptas ullam
+                atque dolorum dolores nulla a, quis autem, provident itaque
+                iusto voluptate sequi facilis nemo inventore, quas nesciunt?
+                Aliquam dicta voluptate quibusdam qui eligendi. Incidunt aliquam
+                rem minus. Ea dolores distinctio fuga deleniti dolorem quaerat
+                harum doloribus, reprehenderit quos fugiat illum ratione.
+                Aliquid eligendi consectetur delectus ipsum saepe dolores
+                maiores maxime temporibus ea dolore cupiditate facere possimus
+                cum error hic voluptates, libero ab quae mollitia beatae quos
+                aliquam officia non! Eligendi dolorem quo assumenda. Qui eaque
+                vel corrupti accusamus exercitationem velit soluta, veritatis
+                ipsa, alias rerum mollitia. Numquam fuga delectus inventore odit
+                repellat ipsam perspiciatis nostrum qui repellendus eum, soluta
+                deserunt natus, vel corporis ab explicabo eligendi, magnam rerum
+                voluptatem dolor necessitatibus autem magni hic mollitia? Fugiat
+                ad, eos minima praesentium facere eaque saepe maxime repudiandae
+                commodi, non veritatis distinctio illo similique ducimus
+                possimus dolorem exercitationem libero blanditiis aspernatur?
+                Quia sit fuga perspiciatis voluptate itaque voluptatibus iusto
+                temporibus similique sapiente facilis enim molestiae, velit quas
+                provident ipsam nemo autem iste corrupti nobis ipsum
+                consectetur. Exercitationem animi, in, nulla numquam, laborum
+                laudantium provident dicta explicabo laboriosam similique ut.
+                Inventore, sequi totam. Fuga a dolore ipsum? Aliquid quis ipsam
+                provident, temporibus eum necessitatibus, labore quae sapiente,
+                magnam nesciunt officiis. Aliquam labore dolorum beatae magni
+                quas dolores fuga hic pariatur libero, voluptate sequi rem
+                dolore, omnis, maxime consectetur voluptas reprehenderit
+                voluptatibus a excepturi doloribus! Error neque perferendis
+                tenetur itaque doloremque odio labore quod. Repellat obcaecati
+                in cupiditate veniam pariatur! Nulla ea accusantium esse
+                consequuntur odit illum dicta necessitatibus cumque modi at ad,
+                molestiae id magni maxime inventore neque, debitis optio
+                veritatis iure repellendus? Quam mollitia eligendi voluptatum
+                dolor debitis? Non quo sint, quae tempore unde, quod animi
+                similique voluptas repellat placeat porro reiciendis blanditiis
+                cum accusantium dignissimos eum autem cumque! Inventore odit
+                consequuntur architecto laudantium omnis debitis nihil veritatis
+                ea sit, fugit mollitia veniam praesentium voluptas. Repellendus
+                enim nihil blanditiis porro. Quidem, nostrum assumenda?
+              </p>
+            </div>
+            <div class="adatok2">
+              <p><strong>Ár/kg:</strong>1500 HUF</p>
+              <p><strong>Min. vásárlás:</strong>50 KG</p>
+              <p><strong>Raktáron: </strong>200 KG</p>
+            </div>
+          </div>
+          <div class="szallitas-adatok">
+            <h2>Szállítási adatok</h2>
+
+            <div class="szallito-list">
+              <label for="szallitok" class="szallitok">Szállítók:</label>
+              <select>
+                <option value="foodpanda" selected>Foodpanda</option>
+                <option value="gls" disabled>GLS</option>
+                <option value="dpd" disabled>DPD</option>
+                <option value="wolt" disabled>Wolt</option>
+              </select>
+            </div>
+            <p><strong>Ár/km: </strong>70 HUF</p>
+            <p><strong>Ár/kg: </strong>45 HUF</p>
+          </div>
+          <div class="egyeb-adatok">
+            <h2>Értékelés</h2>
+            <p><strong>3.5</strong></p>
+            <hr />
+            <div>
+              <button>Tovább a vásárláshoz</button>
+            </div>
+          </div>
+        </div>
+        <div class="hirdetes">
+          <div class="hirdetes-adatok">
+            <div class="adatok1">
+              <h2 class="hirdetett-termek">Hirdetett termék: Bauxit</h2>
+              <h3 class="hirdeto">Hirdető: Mekk Elek</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+                molestias laudantium, veniam ducimus magnam ad repellendus
+                quisquam perspiciatis culpa quo architecto deleniti amet fuga.
+                Neque veniam laborum blanditiis repellat error? Velit eum, quasi
+                repellat cumque repellendus quia, placeat exercitationem optio,
+                natus accusamus tenetur! Nihil quasi magni minus totam quas
+                facilis veritatis corrupti mollitia rem recusandae, ab nostrum
+                fugit cum sint quod aperiam aliquam laborum et distinctio quo
+                itaque ut rerum. Corrupti maiores temporibus mollitia quos.
+                Ipsam perferendis nam alias amet. Dolorem necessitatibus quis
+                deserunt culpa. Delectus numquam necessitatibus voluptas ullam
+                atque dolorum dolores nulla a, quis autem, provident itaque
+                iusto voluptate sequi facilis nemo inventore, quas nesciunt?
+                Aliquam dicta voluptate quibusdam qui eligendi. Incidunt aliquam
+                rem minus. Ea dolores distinctio fuga deleniti dolorem quaerat
+                harum doloribus, reprehenderit quos fugiat illum ratione.
+                Aliquid eligendi consectetur delectus ipsum saepe dolores
+                maiores maxime temporibus ea dolore cupiditate facere possimus
+                cum error hic voluptates, libero ab quae mollitia beatae quos
+                aliquam officia non! Eligendi dolorem quo assumenda. Qui eaque
+                vel corrupti accusamus exercitationem velit soluta, veritatis
+                ipsa, alias rerum mollitia. Numquam fuga delectus inventore odit
+                repellat ipsam perspiciatis nostrum qui repellendus eum, soluta
+                deserunt natus, vel corporis ab explicabo eligendi, magnam rerum
+                voluptatem dolor necessitatibus autem magni hic mollitia? Fugiat
+                ad, eos minima praesentium facere eaque saepe maxime repudiandae
+                commodi, non veritatis distinctio illo similique ducimus
+                possimus dolorem exercitationem libero blanditiis aspernatur?
+                Quia sit fuga perspiciatis voluptate itaque voluptatibus iusto
+                temporibus similique sapiente facilis enim molestiae, velit quas
+                provident ipsam nemo autem iste corrupti nobis ipsum
+                consectetur. Exercitationem animi, in, nulla numquam, laborum
+                laudantium provident dicta explicabo laboriosam similique ut.
+                Inventore, sequi totam. Fuga a dolore ipsum? Aliquid quis ipsam
+                provident, temporibus eum necessitatibus, labore quae sapiente,
+                magnam nesciunt officiis. Aliquam labore dolorum beatae magni
+                quas dolores fuga hic pariatur libero, voluptate sequi rem
+                dolore, omnis, maxime consectetur voluptas reprehenderit
+                voluptatibus a excepturi doloribus! Error neque perferendis
+                tenetur itaque doloremque odio labore quod. Repellat obcaecati
+                in cupiditate veniam pariatur! Nulla ea accusantium esse
+                consequuntur odit illum dicta necessitatibus cumque modi at ad,
+                molestiae id magni maxime inventore neque, debitis optio
+                veritatis iure repellendus? Quam mollitia eligendi voluptatum
+                dolor debitis? Non quo sint, quae tempore unde, quod animi
+                similique voluptas repellat placeat porro reiciendis blanditiis
+                cum accusantium dignissimos eum autem cumque! Inventore odit
+                consequuntur architecto laudantium omnis debitis nihil veritatis
+                ea sit, fugit mollitia veniam praesentium voluptas. Repellendus
+                enim nihil blanditiis porro. Quidem, nostrum assumenda?
+              </p>
+            </div>
+            <div class="adatok2">
+              <p><strong>Ár/kg:</strong>1500 HUF</p>
+              <p><strong>Min. vásárlás:</strong>50 KG</p>
+              <p><strong>Raktáron: </strong>200 KG</p>
+            </div>
+          </div>
+          <div class="szallitas-adatok">
+            <h2>Szállítási adatok</h2>
+
+            <div class="szallito-list">
+              <label for="szallitok" class="szallitok">Szállítók:</label>
+              <select>
+                <option value="foodpanda" selected>Foodpanda</option>
+                <option value="gls" disabled>GLS</option>
+                <option value="dpd" disabled>DPD</option>
+                <option value="wolt" disabled>Wolt</option>
+              </select>
+            </div>
+            <p><strong>Ár/km: </strong>70 HUF</p>
+            <p><strong>Ár/kg: </strong>45 HUF</p>
+          </div>
+          <div class="egyeb-adatok">
+            <h2>Értékelés</h2>
+            <p><strong>3.5</strong></p>
+            <hr />
+            <div>
+              <button>Tovább a vásárláshoz</button>
+            </div>
+          </div>
+        </div>
+        <div class="hirdetes">
+          <div class="hirdetes-adatok">
+            <div class="adatok1">
+              <h2 class="hirdetett-termek">Hirdetett termék: Bauxit</h2>
+              <h3 class="hirdeto">Hirdető: Mekk Elek</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+                molestias laudantium, veniam ducimus magnam ad repellendus
+                quisquam perspiciatis culpa quo architecto deleniti amet fuga.
+                Neque veniam laborum blanditiis repellat error? Velit eum, quasi
+                repellat cumque repellendus quia, placeat exercitationem optio,
+                natus accusamus tenetur! Nihil quasi magni minus totam quas
+                facilis veritatis corrupti mollitia rem recusandae, ab nostrum
+                fugit cum sint quod aperiam aliquam laborum et distinctio quo
+                itaque ut rerum. Corrupti maiores temporibus mollitia quos.
+                Ipsam perferendis nam alias amet. Dolorem necessitatibus quis
+                deserunt culpa. Delectus numquam necessitatibus voluptas ullam
+                atque dolorum dolores nulla a, quis autem, provident itaque
+                iusto voluptate sequi facilis nemo inventore, quas nesciunt?
+                Aliquam dicta voluptate quibusdam qui eligendi. Incidunt aliquam
+                rem minus. Ea dolores distinctio fuga deleniti dolorem quaerat
+                harum doloribus, reprehenderit quos fugiat illum ratione.
+                Aliquid eligendi consectetur delectus ipsum saepe dolores
+                maiores maxime temporibus ea dolore cupiditate facere possimus
+                cum error hic voluptates, libero ab quae mollitia beatae quos
+                aliquam officia non! Eligendi dolorem quo assumenda. Qui eaque
+                vel corrupti accusamus exercitationem velit soluta, veritatis
+                ipsa, alias rerum mollitia. Numquam fuga delectus inventore odit
+                repellat ipsam perspiciatis nostrum qui repellendus eum, soluta
+                deserunt natus, vel corporis ab explicabo eligendi, magnam rerum
+                voluptatem dolor necessitatibus autem magni hic mollitia? Fugiat
+                ad, eos minima praesentium facere eaque saepe maxime repudiandae
+                commodi, non veritatis distinctio illo similique ducimus
+                possimus dolorem exercitationem libero blanditiis aspernatur?
+                Quia sit fuga perspiciatis voluptate itaque voluptatibus iusto
+                temporibus similique sapiente facilis enim molestiae, velit quas
+                provident ipsam nemo autem iste corrupti nobis ipsum
+                consectetur. Exercitationem animi, in, nulla numquam, laborum
+                laudantium provident dicta explicabo laboriosam similique ut.
+                Inventore, sequi totam. Fuga a dolore ipsum? Aliquid quis ipsam
+                provident, temporibus eum necessitatibus, labore quae sapiente,
+                magnam nesciunt officiis. Aliquam labore dolorum beatae magni
+                quas dolores fuga hic pariatur libero, voluptate sequi rem
+                dolore, omnis, maxime consectetur voluptas reprehenderit
+                voluptatibus a excepturi doloribus! Error neque perferendis
+                tenetur itaque doloremque odio labore quod. Repellat obcaecati
+                in cupiditate veniam pariatur! Nulla ea accusantium esse
+                consequuntur odit illum dicta necessitatibus cumque modi at ad,
+                molestiae id magni maxime inventore neque, debitis optio
+                veritatis iure repellendus? Quam mollitia eligendi voluptatum
+                dolor debitis? Non quo sint, quae tempore unde, quod animi
+                similique voluptas repellat placeat porro reiciendis blanditiis
+                cum accusantium dignissimos eum autem cumque! Inventore odit
+                consequuntur architecto laudantium omnis debitis nihil veritatis
+                ea sit, fugit mollitia veniam praesentium voluptas. Repellendus
+                enim nihil blanditiis porro. Quidem, nostrum assumenda?
+              </p>
+            </div>
+            <div class="adatok2">
+              <p><strong>Ár/kg:</strong>1500 HUF</p>
+              <p><strong>Min. vásárlás:</strong>50 KG</p>
+              <p><strong>Raktáron: </strong>200 KG</p>
+            </div>
+          </div>
+          <div class="szallitas-adatok">
+            <h2>Szállítási adatok</h2>
+
+            <div class="szallito-list">
+              <label for="szallitok" class="szallitok">Szállítók:</label>
+              <select>
+                <option value="foodpanda" selected>Foodpanda</option>
+                <option value="gls" disabled>GLS</option>
+                <option value="dpd" disabled>DPD</option>
+                <option value="wolt" disabled>Wolt</option>
+              </select>
+            </div>
+            <p><strong>Ár/km: </strong>70 HUF</p>
+            <p><strong>Ár/kg: </strong>45 HUF</p>
+          </div>
+          <div class="egyeb-adatok">
+            <h2>Értékelés</h2>
+            <p><strong>3.5</strong></p>
+            <hr />
+            <div>
+              <button>Tovább a vásárláshoz</button>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer><p>&copy; Kő és szikla 2023</p></footer>
+    </div>
+  </body>
+</html>

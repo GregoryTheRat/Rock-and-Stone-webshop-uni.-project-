@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <% stylesheet_link_tag "style" %>
+  <title>Kő és szikla</title>
+</head>
+<body>
+<div class="container">
+  <header>
+    <a href="home/home" class="ko-es-szikla"><span>Kő és szikla</span></a>
+    <ul class="navbar">
+      <li>
+        <a href="home/home" onclick="activateNavItem(this)"
+        >Hirdetmények</a
+        >
+      </li>
+      <li><a href="#">Új hirdetmény</a></li>
+      <li class="active">
+        <a href="profil/profilAdatok" onclick="activateNavItem(this)"
+        >Profil adatok</a
+        >
+      </li>
+      <li><a href="#">Bejelentkezés/Kijelentkezés</a></li>
+      <li><a href="#">Regisztráció</a></li>
+    </ul>
+  </header>
+  <main>
+    <div class="profil">
+      <h1>Általános profil adatok</h1>
+      <table class="profil-table">
+        <tr>
+          <td>Username:</td>
+          <td>Mek Elek</td>
+        </tr>
+        <tr>
+          <td>E-mail cím:</td>
+          <td>mk.elek@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Jelszó:</td>
+          <td>rock&stone</td>
+        </tr>
+        <tr>
+          <td><button>Törlés</button></td>
+          <td><button>Módosítás</button></td>
+        </tr>
+      </table>
+    </div>
+  </main>
+  <footer><p>&copy; Kő és szikla 2023</p></footer>
+</div>
+
+</body>
+</html>
