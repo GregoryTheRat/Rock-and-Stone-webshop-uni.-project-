@@ -457,3 +457,1161 @@ Processing by HomeController#home as HTML
 Completed 200 OK in 37ms (Views: 32.0ms | Allocations: 3888)
 
 
+Started GET "/" for 127.0.0.1 at 2023-03-28 22:52:57 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1527)
+  Rendered layout layouts/application.html.erb (Duration: 36.7ms | Allocations: 17300)
+Completed 200 OK in 47ms (Views: 42.0ms | Allocations: 18287)
+
+
+Started GET "/profil/profilAdatok" for 127.0.0.1 at 2023-03-28 22:52:59 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/profil/profilAdatok"):
+  
+Started GET "/" for 127.0.0.1 at 2023-03-28 22:53:44 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1522)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 4313)
+Completed 200 OK in 23ms (Views: 18.3ms | Allocations: 5170)
+
+
+Started GET "/profil/profilAdatok" for 127.0.0.1 at 2023-03-28 22:53:45 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/profil/profilAdatok"):
+  
+Started GET "/profil/profilAdatok" for 127.0.0.1 at 2023-03-28 22:54:20 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/profil/profilAdatok"):
+  
+Started GET "/" for 127.0.0.1 at 2023-03-28 22:54:23 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1523)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 4314)
+Completed 200 OK in 21ms (Views: 17.5ms | Allocations: 5137)
+
+
+Started GET "/profil-adatok.html.erb" for 127.0.0.1 at 2023-03-28 22:54:26 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/profil-adatok.html.erb"):
+  
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:14:19 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 127.9ms | Allocations: 25449)
+  Rendered layout layouts/application.html.erb (Duration: 219.2ms | Allocations: 41563)
+Completed 200 OK in 302ms (Views: 252.4ms | ActiveRecord: 0.0ms | Allocations: 45265)
+
+
+Started GET "/home/profil-adatok" for 127.0.0.1 at 2023-03-29 09:14:26 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/profil-adatok"):
+  
+Started GET "/home" for 127.0.0.1 at 2023-03-29 09:14:37 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+Started GET "/home" for 127.0.0.1 at 2023-03-29 09:14:44 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:14:48 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1016)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 3517)
+Completed 200 OK in 22ms (Views: 18.1ms | ActiveRecord: 0.0ms | Allocations: 3844)
+
+
+Started GET "/home/home.html.erb" for 127.0.0.1 at 2023-03-29 09:15:00 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/home.html.erb"):
+  
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:22:15 +0200
+Started GET "/home/home" for 127.0.0.1 at 2023-03-29 09:22:18 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 12.2ms | Allocations: 1525)
+  Rendered layout layouts/application.html.erb (Duration: 81.7ms | Allocations: 17306)
+Completed 200 OK in 107ms (Views: 97.0ms | Allocations: 18293)
+
+
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:22:21 +0200
+  Rendered home/home.html.erb within layouts/application (Duration: 26.0ms | Allocations: 1428)
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered layout layouts/application.html.erb (Duration: 137.2ms | Allocations: 18383)
+Completed 200 OK in 148ms (Views: 140.3ms | Allocations: 19064)
+
+
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 10.0ms | Allocations: 2586)
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | Allocations: 5160)
+Completed 200 OK in 46ms (Views: 27.0ms | Allocations: 10237)
+
+
+Started GET "/home/home/home" for 127.0.0.1 at 2023-03-29 09:22:27 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/home/home"):
+  
+Started GET "/home/home/home" for 127.0.0.1 at 2023-03-29 09:23:24 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/home/home"):
+  
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:23:30 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1522)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 4304)
+Completed 200 OK in 21ms (Views: 17.8ms | Allocations: 5109)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2023-03-29 09:23:31 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 2.7ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3379)
+Completed 200 OK in 12ms (Views: 9.3ms | Allocations: 3677)
+
+
+Started GET "/home/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:23:33 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/home/profilAdatok"):
+  
+Started GET "/home/home" for 127.0.0.1 at 2023-03-29 09:23:35 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 2.6ms | Allocations: 913)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3392)
+Completed 200 OK in 12ms (Views: 9.8ms | Allocations: 3671)
+
+
+Started GET "/home/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:23:37 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/home/profilAdatok"):
+  
+Started GET "/home/home" for 127.0.0.1 at 2023-03-29 09:24:08 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1519)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 4287)
+Completed 200 OK in 20ms (Views: 16.6ms | Allocations: 5130)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2023-03-29 09:24:10 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 2.9ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 3394)
+Completed 200 OK in 13ms (Views: 10.5ms | Allocations: 3690)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:24:13 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 7.0ms | Allocations: 909)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 3380)
+Completed 200 OK in 26ms (Views: 21.0ms | Allocations: 3661)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-03-29 09:24:14 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+Started GET "/home" for 127.0.0.1 at 2023-03-29 09:25:05 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:25:07 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1523)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 4323)
+Completed 200 OK in 20ms (Views: 17.0ms | Allocations: 5128)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2023-03-29 09:25:08 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 4.1ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 3385)
+Completed 200 OK in 18ms (Views: 13.5ms | Allocations: 3683)
+
+
+Started GET "/home/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:25:10 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/home/profilAdatok"):
+  
+Started GET "/home/home" for 127.0.0.1 at 2023-03-29 09:25:13 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 2.9ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 3385)
+Completed 200 OK in 15ms (Views: 11.8ms | Allocations: 3663)
+
+
+Started GET "/home/home/home" for 127.0.0.1 at 2023-03-29 09:25:17 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/home/home"):
+  
+Started GET "/home/home" for 127.0.0.1 at 2023-03-29 09:25:18 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 9.2ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 3403)
+Completed 200 OK in 19ms (Views: 16.6ms | Allocations: 3681)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:25:19 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3376)
+Completed 200 OK in 13ms (Views: 9.3ms | Allocations: 3656)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2023-03-29 09:25:20 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 3379)
+Completed 200 OK in 14ms (Views: 11.0ms | Allocations: 3659)
+
+
+Started GET "/home/home/home" for 127.0.0.1 at 2023-03-29 09:25:21 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/home/home"):
+  
+Started GET "/home/home" for 127.0.0.1 at 2023-03-29 09:25:23 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 909)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3385)
+Completed 200 OK in 13ms (Views: 10.1ms | Allocations: 3663)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:25:24 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 3.0ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 3391)
+Completed 200 OK in 12ms (Views: 9.9ms | Allocations: 3671)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:26:16 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1518)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 4298)
+Completed 200 OK in 23ms (Views: 19.1ms | Allocations: 5138)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2023-03-29 09:26:19 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 2.7ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3388)
+Completed 200 OK in 11ms (Views: 9.4ms | Allocations: 3684)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2023-03-29 09:26:21 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 7.7ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 3403)
+Completed 200 OK in 27ms (Views: 22.5ms | Allocations: 3683)
+
+
+Started GET "/home/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:26:22 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/home/profilAdatok"):
+  
+Started GET "/home/home" for 127.0.0.1 at 2023-03-29 09:26:41 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1524)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 4309)
+Completed 200 OK in 25ms (Views: 20.1ms | Allocations: 5149)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:26:42 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 4.4ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 3373)
+Completed 200 OK in 18ms (Views: 14.8ms | Allocations: 3671)
+
+
+Started GET "/profilAdatok.html.erb" for 127.0.0.1 at 2023-03-29 09:26:43 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/profilAdatok.html.erb"):
+  
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:27:45 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1522)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 4301)
+Completed 200 OK in 19ms (Views: 15.4ms | Allocations: 5141)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:27:47 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1080)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 3557)
+Completed 200 OK in 14ms (Views: 11.1ms | Allocations: 3909)
+
+
+Started GET "/home/home/home" for 127.0.0.1 at 2023-03-29 09:27:48 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/home/home"):
+  
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:27:51 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 4.3ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 3382)
+Completed 200 OK in 23ms (Views: 20.4ms | Allocations: 3660)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:27:52 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 4.9ms | Allocations: 913)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 3416)
+Completed 200 OK in 26ms (Views: 21.9ms | Allocations: 3697)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2023-03-29 09:27:53 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 7.8ms | Allocations: 913)
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 3401)
+Completed 200 OK in 30ms (Views: 23.9ms | Allocations: 3683)
+
+
+Started GET "/home/home/home" for 127.0.0.1 at 2023-03-29 09:27:54 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/home/home"):
+  
+Started GET "/home/home" for 127.0.0.1 at 2023-03-29 09:27:56 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 2.8ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 3402)
+Completed 200 OK in 15ms (Views: 12.3ms | Allocations: 3680)
+
+
+Started GET "/home/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:27:59 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/home/profilAdatok"):
+  
+Started GET "/home/home" for 127.0.0.1 at 2023-03-29 09:28:01 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 4.4ms | Allocations: 912)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 3410)
+Completed 200 OK in 20ms (Views: 15.6ms | Allocations: 3689)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:28:02 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 6.0ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 3391)
+Completed 200 OK in 27ms (Views: 20.0ms | Allocations: 3671)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:34:31 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1525)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 4331)
+Completed 200 OK in 24ms (Views: 18.7ms | Allocations: 5171)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:34:34 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 11.1ms | Allocations: 1242)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 3733)
+Completed 200 OK in 41ms (Views: 30.7ms | Allocations: 4085)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:35:13 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1335)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 4099)
+Completed 200 OK in 21ms (Views: 18.0ms | Allocations: 4944)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:36:00 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1349)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 4137)
+Completed 200 OK in 27ms (Views: 20.9ms | Allocations: 5000)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-03-29 09:36:01 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:36:05 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 3.1ms | Allocations: 941)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 3417)
+Completed 200 OK in 18ms (Views: 16.0ms | Allocations: 3713)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:36:16 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1397)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 4170)
+Completed 200 OK in 22ms (Views: 18.7ms | Allocations: 5009)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2023-03-29 09:36:18 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1320)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 3788)
+Completed 200 OK in 14ms (Views: 10.9ms | Allocations: 4139)
+
+
+Started GET "/home/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:36:19 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/home/profilAdatok"):
+  
+Started GET "/home/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:36:28 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/home/profilAdatok"):
+  
+Started GET "/home/home" for 127.0.0.1 at 2023-03-29 09:36:30 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 4.6ms | Allocations: 913)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 3404)
+Completed 200 OK in 22ms (Views: 16.7ms | Allocations: 3683)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2023-03-29 09:37:05 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1519)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 4287)
+Completed 200 OK in 35ms (Views: 28.2ms | Allocations: 5126)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:37:09 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 3.9ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 3370)
+Completed 200 OK in 17ms (Views: 13.7ms | Allocations: 3666)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:37:10 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 8.5ms | Allocations: 1147)
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 3618)
+Completed 200 OK in 33ms (Views: 24.6ms | Allocations: 3951)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2023-03-29 09:37:11 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 6.6ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 3397)
+Completed 200 OK in 25ms (Views: 21.0ms | Allocations: 3677)
+
+
+Started GET "/home/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:37:13 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/home/profilAdatok"):
+  
+Started GET "/home/home" for 127.0.0.1 at 2023-03-29 09:37:15 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 5.4ms | Allocations: 913)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 3395)
+Completed 200 OK in 25ms (Views: 20.0ms | Allocations: 3674)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2023-03-29 09:37:28 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1517)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 4301)
+Completed 200 OK in 27ms (Views: 21.8ms | Allocations: 5140)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:37:29 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1171)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 3651)
+Completed 200 OK in 22ms (Views: 15.3ms | Allocations: 4002)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:37:32 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 3.4ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 3370)
+Completed 200 OK in 15ms (Views: 12.4ms | Allocations: 3650)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:37:33 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 4.2ms | Allocations: 959)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 3444)
+Completed 200 OK in 19ms (Views: 15.4ms | Allocations: 3725)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:37:34 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 6.6ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 3367)
+Completed 200 OK in 29ms (Views: 23.1ms | Allocations: 3647)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:38:24 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1394)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 4178)
+Completed 200 OK in 28ms (Views: 22.8ms | Allocations: 5025)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:39:20 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1390)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 4165)
+Completed 200 OK in 27ms (Views: 22.6ms | Allocations: 5028)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:40:11 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1397)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 4201)
+Completed 200 OK in 22ms (Views: 18.0ms | Allocations: 5065)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:40:12 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 2.8ms | Allocations: 965)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3442)
+Completed 200 OK in 12ms (Views: 10.0ms | Allocations: 3738)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:40:54 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 71.0ms | Allocations: 4438)
+  Rendered layout layouts/application.html.erb (Duration: 97.8ms | Allocations: 9233)
+Completed 200 OK in 106ms (Views: 103.4ms | Allocations: 10078)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:42:04 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1375)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 4167)
+Completed 200 OK in 34ms (Views: 27.9ms | Allocations: 5030)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:42:27 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 2.7ms | Allocations: 954)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 3436)
+Completed 200 OK in 15ms (Views: 11.8ms | Allocations: 3732)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:42:27 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 3.6ms | Allocations: 959)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 3446)
+Completed 200 OK in 17ms (Views: 13.6ms | Allocations: 3725)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:44:16 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1278)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 4056)
+Completed 200 OK in 30ms (Views: 23.5ms | Allocations: 4901)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:44:28 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1277)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 4070)
+Completed 200 OK in 30ms (Views: 24.0ms | Allocations: 4933)
+
+
+Started GET "/home/root" for 127.0.0.1 at 2023-03-29 09:44:29 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/root"):
+  
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:45:22 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1398)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 4175)
+Completed 200 OK in 32ms (Views: 25.7ms | Allocations: 5036)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:45:23 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 5.7ms | Allocations: 964)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 3443)
+Completed 200 OK in 21ms (Views: 15.7ms | Allocations: 3739)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:45:23 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1321)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 3803)
+Completed 200 OK in 21ms (Views: 15.8ms | Allocations: 4136)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:45:25 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 7.4ms | Allocations: 964)
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 3440)
+Completed 200 OK in 31ms (Views: 24.2ms | Allocations: 3720)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:45:26 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 6.6ms | Allocations: 910)
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 3406)
+Completed 200 OK in 29ms (Views: 25.3ms | Allocations: 3686)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:45:27 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 6.5ms | Allocations: 965)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 3441)
+Completed 200 OK in 26ms (Views: 22.5ms | Allocations: 3722)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:46:09 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1390)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 4162)
+Completed 200 OK in 28ms (Views: 23.0ms | Allocations: 5007)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:46:18 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1388)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 4160)
+Completed 200 OK in 29ms (Views: 23.3ms | Allocations: 5023)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:46:19 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 5.5ms | Allocations: 965)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 3453)
+Completed 200 OK in 22ms (Views: 15.9ms | Allocations: 3749)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:46:22 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 3.7ms | Allocations: 965)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 3426)
+Completed 200 OK in 17ms (Views: 13.2ms | Allocations: 3704)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:46:23 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 6.3ms | Allocations: 965)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 3447)
+Completed 200 OK in 26ms (Views: 21.3ms | Allocations: 3725)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:46:24 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1328)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 3809)
+Completed 200 OK in 19ms (Views: 15.0ms | Allocations: 4143)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:46:25 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 7.8ms | Allocations: 965)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 3456)
+Completed 200 OK in 28ms (Views: 24.7ms | Allocations: 3736)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:47:06 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1452)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 4273)
+Completed 200 OK in 25ms (Views: 21.7ms | Allocations: 5118)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:47:07 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 4.6ms | Allocations: 968)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 3455)
+Completed 200 OK in 15ms (Views: 13.1ms | Allocations: 3752)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:47:07 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 8.1ms | Allocations: 965)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 3435)
+Completed 200 OK in 36ms (Views: 28.5ms | Allocations: 3713)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:47:08 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1321)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 3803)
+Completed 200 OK in 18ms (Views: 13.6ms | Allocations: 4136)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:47:10 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 3.0ms | Allocations: 966)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 3439)
+Completed 200 OK in 13ms (Views: 10.4ms | Allocations: 3719)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:47:11 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 4.2ms | Allocations: 909)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 3396)
+Completed 200 OK in 17ms (Views: 13.6ms | Allocations: 3676)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2023-03-29 09:47:12 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 6.8ms | Allocations: 909)
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 3391)
+Completed 200 OK in 31ms (Views: 24.5ms | Allocations: 3672)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2023-03-29 09:48:59 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1581)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 4409)
+Completed 200 OK in 25ms (Views: 21.7ms | Allocations: 5254)
+
+
+Started GET "/home/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:49:00 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/home/profilAdatok"):
+  
+Started GET "/home/home" for 127.0.0.1 at 2023-03-29 09:49:03 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 2.9ms | Allocations: 913)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 3397)
+Completed 200 OK in 14ms (Views: 11.5ms | Allocations: 3694)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:49:03 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 7.9ms | Allocations: 911)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 3386)
+Completed 200 OK in 29ms (Views: 22.5ms | Allocations: 3667)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:49:05 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 35.0ms | Allocations: 5984)
+  Rendered layout layouts/application.html.erb (Duration: 36.6ms | Allocations: 6061)
+Completed 500 Internal Server Error in 50ms (Allocations: 6390)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `koesszikla' for #<ActionView::Base:0x00000000018a88>):
+    12: <div class="container">
+    13:   <header>
+    14: 
+    15:     <a class="ko-es-szikla"><%= link_to "Kő és Szikla", root_url, class: koesszikla %></a>
+    16:     <ul class="navbar">
+    17:       <li>
+    18:         <a href="home/home" onclick="activateNavItem(this)"
+  
+app/views/home/profilAdatok.html.erb:15
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:49:20 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1392)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 4199)
+Completed 200 OK in 27ms (Views: 22.1ms | Allocations: 5039)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:49:22 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1320)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 3790)
+Completed 200 OK in 14ms (Views: 10.2ms | Allocations: 4141)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:49:23 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 3.0ms | Allocations: 965)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3450)
+Completed 200 OK in 12ms (Views: 9.7ms | Allocations: 3730)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:49:24 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 6.0ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 3396)
+Completed 200 OK in 22ms (Views: 18.6ms | Allocations: 3676)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:49:25 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 3.7ms | Allocations: 965)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 3453)
+Completed 200 OK in 18ms (Views: 13.8ms | Allocations: 3733)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:49:26 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 7.9ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 3384)
+Completed 200 OK in 25ms (Views: 19.9ms | Allocations: 3664)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:49:27 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 4.3ms | Allocations: 965)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 3441)
+Completed 200 OK in 19ms (Views: 14.7ms | Allocations: 3721)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:50:28 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1276)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 4063)
+Completed 200 OK in 21ms (Views: 17.3ms | Allocations: 4908)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:50:44 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1339)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 4166)
+Completed 200 OK in 25ms (Views: 20.9ms | Allocations: 5029)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:50:45 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1320)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 3787)
+Completed 200 OK in 22ms (Views: 17.4ms | Allocations: 4138)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:50:47 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 4.4ms | Allocations: 913)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 3430)
+Completed 200 OK in 17ms (Views: 14.1ms | Allocations: 3711)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:50:48 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 3.0ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 3387)
+Completed 200 OK in 14ms (Views: 10.6ms | Allocations: 3667)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:51:48 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1521)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 4300)
+Completed 200 OK in 28ms (Views: 23.3ms | Allocations: 5145)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:51:57 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1518)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 4291)
+Completed 200 OK in 28ms (Views: 24.0ms | Allocations: 5154)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:52:02 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1518)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 4294)
+Completed 200 OK in 30ms (Views: 23.7ms | Allocations: 5157)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:52:03 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 3.5ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 3405)
+Completed 200 OK in 17ms (Views: 13.9ms | Allocations: 3703)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:52:04 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 5.4ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 3390)
+Completed 200 OK in 19ms (Views: 14.7ms | Allocations: 3670)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:52:04 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 3.9ms | Allocations: 913)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 3415)
+Completed 200 OK in 23ms (Views: 19.4ms | Allocations: 3696)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:52:04 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 3.8ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 3405)
+Completed 200 OK in 17ms (Views: 13.5ms | Allocations: 3685)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:52:06 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 9.4ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 26.1ms | Allocations: 3614)
+Completed 200 OK in 33ms (Views: 27.3ms | Allocations: 3896)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:52:06 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 6.9ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 3378)
+Completed 200 OK in 27ms (Views: 22.5ms | Allocations: 3658)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:52:07 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 4.8ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 3378)
+Completed 200 OK in 22ms (Views: 16.7ms | Allocations: 3659)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:52:07 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1082)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 3567)
+Completed 200 OK in 19ms (Views: 13.8ms | Allocations: 3900)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:52:09 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 4.4ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 3375)
+Completed 200 OK in 18ms (Views: 14.9ms | Allocations: 3655)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:52:11 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 6.6ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 3396)
+Completed 200 OK in 23ms (Views: 18.7ms | Allocations: 3676)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:52:12 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 3.6ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 3396)
+Completed 200 OK in 17ms (Views: 14.3ms | Allocations: 3676)
+
+
+Started GET "/home/profilAdatok" for 127.0.0.1 at 2023-03-29 09:52:13 +0200
+Processing by HomeController#profilAdatok as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/profilAdatok.html.erb within layouts/application
+  Rendered home/profilAdatok.html.erb within layouts/application (Duration: 3.5ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 3405)
+Completed 200 OK in 15ms (Views: 11.8ms | Allocations: 3683)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 09:52:14 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 3.8ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 3389)
+Completed 200 OK in 23ms (Views: 18.1ms | Allocations: 3669)
+
+

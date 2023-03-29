@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
   def home
-    home
+  end
+
+  def profilAdatok
   end
 end
