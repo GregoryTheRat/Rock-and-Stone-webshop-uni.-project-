@@ -1,0 +1,2 @@
+class Kiszallit < ApplicationRecord
+end

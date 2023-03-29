@@ -1,0 +1,32 @@
+<%= form_with(model: rendel) do |form| %>
+  <% if rendel.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(rendel.errors.count, "error") %> prohibited this rendel from being saved:</h2>
+
+      <ul>
+        <% rendel.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :felhaszn_id, style: "display: block" %>
+    <%= form.number_field :felhaszn_id %>
+  </div>
+
+  <div>
+    <%= form.label :hirdetes_id, style: "display: block" %>
+    <%= form.number_field :hirdetes_id %>
+  </div>
+
+  <div>
+    <%= form.label :szallito_id, style: "display: block" %>
+    <%= form.number_field :szallito_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

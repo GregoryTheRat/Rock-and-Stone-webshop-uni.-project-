@@ -1,0 +1,37 @@
+<%= form_with(model: mitszallit) do |form| %>
+  <% if mitszallit.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(mitszallit.errors.count, "error") %> prohibited this mitszallit from being saved:</h2>
+
+      <ul>
+        <% mitszallit.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :mit, style: "display: block" %>
+    <%= form.text_field :mit %>
+  </div>
+
+  <div>
+    <%= form.label :mennyiseg, style: "display: block" %>
+    <%= form.text_field :mennyiseg %>
+  </div>
+
+  <div>
+    <%= form.label :ar_kg, style: "display: block" %>
+    <%= form.text_field :ar_kg %>
+  </div>
+
+  <div>
+    <%= form.label :min_vasarlas, style: "display: block" %>
+    <%= form.number_field :min_vasarlas %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

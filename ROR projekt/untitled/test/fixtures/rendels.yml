@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  felhaszn_id: 1
+  hirdetes_id: 1
+  szallito_id: 1
+
+two:
+  felhaszn_id: 1
+  hirdetes_id: 1
+  szallito_id: 1

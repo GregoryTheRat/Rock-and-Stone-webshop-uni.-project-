@@ -1,0 +1,2 @@
+class Hirdete < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+module MitszallitsHelper
+end

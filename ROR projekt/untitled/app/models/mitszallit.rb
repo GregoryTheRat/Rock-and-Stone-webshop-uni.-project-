@@ -1,0 +1,2 @@
+class Mitszallit < ApplicationRecord
+end

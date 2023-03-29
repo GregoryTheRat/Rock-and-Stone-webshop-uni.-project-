@@ -1,0 +1,2 @@
+class Szallito < ApplicationRecord
+end

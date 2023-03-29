@@ -1,0 +1,2 @@
+class Ertekel < ApplicationRecord
+end

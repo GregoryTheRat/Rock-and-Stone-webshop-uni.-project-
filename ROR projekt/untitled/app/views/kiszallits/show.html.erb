@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @kiszallit %>
+
+<div>
+  <%= link_to "Edit this kiszallit", edit_kiszallit_path(@kiszallit) %> |
+  <%= link_to "Back to kiszallits", kiszallits_path %>
+
+  <%= button_to "Destroy this kiszallit", @kiszallit, method: :delete %>
+</div>

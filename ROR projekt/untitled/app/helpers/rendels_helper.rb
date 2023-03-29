@@ -1,0 +1,2 @@
+module RendelsHelper
+end

@@ -1,0 +1,2 @@
+class Felhasznalo < ApplicationRecord
+end

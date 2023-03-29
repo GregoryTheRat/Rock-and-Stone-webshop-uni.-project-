@@ -1,0 +1,32 @@
+<%= form_with(model: hirdet) do |form| %>
+  <% if hirdet.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(hirdet.errors.count, "error") %> prohibited this hirdet from being saved:</h2>
+
+      <ul>
+        <% hirdet.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :felhaszn_id, style: "display: block" %>
+    <%= form.number_field :felhaszn_id %>
+  </div>
+
+  <div>
+    <%= form.label :hirdetes_id, style: "display: block" %>
+    <%= form.number_field :hirdetes_id %>
+  </div>
+
+  <div>
+    <%= form.label :mikor, style: "display: block" %>
+    <%= form.date_field :mikor %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
