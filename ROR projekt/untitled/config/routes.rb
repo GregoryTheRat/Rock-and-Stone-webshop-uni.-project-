@@ -1,12 +1,19 @@
 Rails.application.routes.draw do
-  resources :kiszallits
-  resources :rendels
-  resources :ertekels
-  resources :hirdets
-  resources :mitszallits
-  resources :szallitos
-  resources :hirdetes
-  resources :felhasznalos
+  get 'carries/index'
+  get 'carries/show'
+  get 'carries/new'
+  get 'carries/edit'
+  get 'carries/create'
+  get 'carries/update'
+  get 'carries/destroy'
+  resources :delivers
+  resources :orders
+  resources :rates
+  resources :advertises
+  resources :suppliers
+  resources :adverts
+  #carries?
+  resources :users
   get 'home/profilAdatok'
   get 'home/home'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

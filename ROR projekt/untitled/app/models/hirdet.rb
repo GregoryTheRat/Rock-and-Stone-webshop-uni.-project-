@@ -1,2 +1,0 @@
-class Hirdet < ApplicationRecord
-end

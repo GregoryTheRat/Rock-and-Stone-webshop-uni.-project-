@@ -1,2 +1,0 @@
-class Felhasznalo < ApplicationRecord
-end

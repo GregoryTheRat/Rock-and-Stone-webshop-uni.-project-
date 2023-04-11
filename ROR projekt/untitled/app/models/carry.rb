@@ -1,0 +1,2 @@
+class Carry < ApplicationRecord
+end

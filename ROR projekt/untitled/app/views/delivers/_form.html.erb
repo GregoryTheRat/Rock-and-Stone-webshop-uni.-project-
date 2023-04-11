@@ -1,0 +1,47 @@
+<%= form_with(model: deliver) do |form| %>
+  <% if deliver.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(deliver.errors.count, "error") %> prohibited this deliver from being saved:</h2>
+
+      <ul>
+        <% deliver.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :order_id, style: "display: block" %>
+    <%= form.number_field :order_id %>
+  </div>
+
+  <div>
+    <%= form.label :supplier_id, style: "display: block" %>
+    <%= form.number_field :supplier_id %>
+  </div>
+
+  <div>
+    <%= form.label :mennyiseg, style: "display: block" %>
+    <%= form.text_field :mennyiseg %>
+  </div>
+
+  <div>
+    <%= form.label :hova, style: "display: block" %>
+    <%= form.text_field :hova %>
+  </div>
+
+  <div>
+    <%= form.label :koltseg, style: "display: block" %>
+    <%= form.text_field :koltseg %>
+  </div>
+
+  <div>
+    <%= form.label :varhato_szallitas, style: "display: block" %>
+    <%= form.date_field :varhato_szallitas %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @advertise %>
+
+<div>
+  <%= link_to "Edit this advertise", edit_advertise_path(@advertise) %> |
+  <%= link_to "Back to advertises", advertises_path %>
+
+  <%= button_to "Destroy this advertise", @advertise, method: :delete %>
+</div>

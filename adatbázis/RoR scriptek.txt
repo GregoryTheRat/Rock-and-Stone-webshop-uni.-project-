@@ -1,0 +1,10 @@
+létrehozott scaffoldok:
+
+rails g scaffold user nev:string email:string jelszo:string
+rails g scaffold advert termek_nev:string mennyiseg:float ar_kg:float min_vasarlas:integer
+rails g scaffold supplier km_ar:float ar_kg:float
+rails g scaffold carry supplier_id:integer mit:string 
+rails g scaffold advertise user_id:integer advert_id:integer mikor:date
+rails g scaffold rate user_id:integer advert_id:integer csillag:integer leiras:text
+rails g scaffold order user_id:integer advert_id:integer supplier_id:integer
+rails g scaffold deliver order_id:integer supplier_id:integer mennyiseg:float hova:string koltseg:float varhato_szallitas:date

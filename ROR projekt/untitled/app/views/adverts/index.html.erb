@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Adverts</h1>
+
+<div id="adverts">
+  <% @adverts.each do |advert| %>
+    <%= render advert %>
+    <p>
+      <%= link_to "Show this advert", advert %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New advert", new_advert_path %>

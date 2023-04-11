@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @rate %>
+
+<div>
+  <%= link_to "Edit this rate", edit_rate_path(@rate) %> |
+  <%= link_to "Back to rates", rates_path %>
+
+  <%= button_to "Destroy this rate", @rate, method: :delete %>
+</div>

@@ -1,0 +1,32 @@
+<%= form_with(model: advertise) do |form| %>
+  <% if advertise.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(advertise.errors.count, "error") %> prohibited this advertise from being saved:</h2>
+
+      <ul>
+        <% advertise.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.label :advert_id, style: "display: block" %>
+    <%= form.number_field :advert_id %>
+  </div>
+
+  <div>
+    <%= form.label :mikor, style: "display: block" %>
+    <%= form.date_field :mikor %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
