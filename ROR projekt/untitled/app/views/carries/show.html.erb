@@ -1,2 +1,10 @@
-<h1>Carries#show</h1>
-<p>Find me in app/views/carries/show.html.erb</p>
+<p style="color: green"><%= notice %></p>
+
+<%= render @carry %>
+
+<div>
+  <%= link_to "Edit this carry", edit_carry_path(@carry) %> |
+  <%= link_to "Back to carries", carries_path %>
+
+  <%= button_to "Destroy this carry", @carry, method: :delete %>
+</div>

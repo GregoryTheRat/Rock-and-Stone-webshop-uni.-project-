@@ -6,6 +6,10 @@ class AdvertsController < ApplicationController
     @adverts = Advert.all
   end
 
+  def osszes
+    @adverts = Advert.all
+  end
+
   # GET /adverts/1 or /adverts/1.json
   def show
   end

@@ -1,2 +1,9 @@
-<h1>Carries#new</h1>
-<p>Find me in app/views/carries/new.html.erb</p>
+<h1>New carry</h1>
+
+<%= render "form", carry: @carry %>
+
+<br>
+
+<div>
+  <%= link_to "Back to carries", carries_path %>
+</div>

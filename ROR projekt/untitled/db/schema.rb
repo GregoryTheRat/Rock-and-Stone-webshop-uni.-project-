@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_10_160822) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_15_120614) do
   create_table "advertises", force: :cascade do |t|
     t.integer "user_id", precision: 38
     t.integer "advert_id", precision: 38
@@ -81,6 +81,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_10_160822) do
   add_foreign_key "advertises", "adverts"
   add_foreign_key "advertises", "users"
   add_foreign_key "carries", "suppliers"
+  add_foreign_key "delivers", "orders"
+  add_foreign_key "delivers", "suppliers"
   add_foreign_key "orders", "adverts"
   add_foreign_key "orders", "suppliers"
   add_foreign_key "orders", "users"
