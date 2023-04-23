@@ -14,8 +14,9 @@ Rails.application.routes.draw do
   resources :adverts
   #carries?
   resources :users
-  get 'home/profilAdatok'
-  get 'home/home'
+  get 'userdata', to: "userdata#userdata"
+  get 'home', to: "home#home"
+  get 'signup', to: "signup#signup"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   root "home#home"
   # Defines the root path route ("/")

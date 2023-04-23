@@ -212,17 +212,16 @@ main {
   flex-direction: column;
   height: 700px;
   width: 60%;
-  margin: 30px;
+  margin: 80px;
+  padding: 60px 0;
   background-color: aliceblue;
-  justify-content: space-between;
+  justify-content: space-evenly;
   box-shadow: 10px 10px 10px grey;
   align-items: center;
-  gap: 10px;
 }
 
 .profil h1 {
   font-size: 2.5rem;
-  margin-top: 160px;
 }
 
 .profil-table {
@@ -230,7 +229,6 @@ main {
   border-radius: 20px;
   padding: 40px;
   font-size: 1.2rem;
-  margin-bottom: 160px;
   text-align: center;
 }
 .profil-table tr td {
@@ -273,4 +271,51 @@ footer {
   color: #fff;
   align-items: center;
   justify-content: center;
+}
+
+.signup {
+  width: 60%;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+.signup label {
+  font-size: 20px;
+  font-weight: 600;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.signup input {
+  align-items: center;
+  width: 60%;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.buttons {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.buttons input{
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: rgb(252, 191, 79);
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 10px 10px 10px grey;
+}
+
+.buttons input:hover {
+  transform: scale(1.08);
+  transition: all 0.2s ease-in;
 }
