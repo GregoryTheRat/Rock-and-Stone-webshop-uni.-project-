@@ -1,38 +1,48 @@
 require "test_helper"
 
 class CarriesControllerTest < ActionDispatch::IntegrationTest
-  test "should get index" do
-    get carries_index_url
-    assert_response :success
+  setup do
+    @carry = carries(:one)
   end
 
-  test "should get show" do
-    get carries_show_url
+  test "should get index" do
+    get carries_url
     assert_response :success
   end
 
   test "should get new" do
-    get carries_new_url
+    get new_carry_url
+    assert_response :success
+  end
+
+  test "should create carry" do
+    assert_difference("Carry.count") do
+      post carries_url, params: { carry: { mit: @carry.mit, supplier_id: @carry.supplier_id } }
+    end
+
+    assert_redirected_to carry_url(Carry.last)
+  end
+
+  test "should show carry" do
+    get carry_url(@carry)
     assert_response :success
   end
 
   test "should get edit" do
-    get carries_edit_url
+    get edit_carry_url(@carry)
     assert_response :success
   end
 
-  test "should get create" do
-    get carries_create_url
-    assert_response :success
+  test "should update carry" do
+    patch carry_url(@carry), params: { carry: { mit: @carry.mit, supplier_id: @carry.supplier_id } }
+    assert_redirected_to carry_url(@carry)
   end
 
-  test "should get update" do
-    get carries_update_url
-    assert_response :success
-  end
+  test "should destroy carry" do
+    assert_difference("Carry.count", -1) do
+      delete carry_url(@carry)
+    end
 
-  test "should get destroy" do
-    get carries_destroy_url
-    assert_response :success
+    assert_redirected_to carries_url
   end
 end

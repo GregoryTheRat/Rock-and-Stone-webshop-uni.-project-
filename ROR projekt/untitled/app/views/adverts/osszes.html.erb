@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h1>SZIA KÖCSÖG</h1>
+  <table>
+    <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @adverts.each do |advert| %>
+      <tr>
+        <td><%= advert.termek_nev %></td>
+        <td><%= advert.mennyiseg %></td>
+        <td><%= advert.ar_kg %></td>
+        <td><%= advert.min_vasarlas %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

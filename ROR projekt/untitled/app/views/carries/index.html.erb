@@ -1,2 +1,14 @@
-<h1>Carries#index</h1>
-<p>Find me in app/views/carries/index.html.erb</p>
+<p style="color: green"><%= notice %></p>
+
+<h1>Carries</h1>
+
+<div id="carries">
+  <% @carries.each do |carry| %>
+    <%= render carry %>
+    <p>
+      <%= link_to "Show this carry", carry %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New carry", new_carry_path %>
