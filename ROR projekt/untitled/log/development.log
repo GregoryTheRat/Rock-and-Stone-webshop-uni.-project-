@@ -9475,3 +9475,436 @@ Processing by LoginController#login as HTML
 Completed 200 OK in 33ms (Views: 28.0ms | Allocations: 4855)
 
 
+Started GET "/" for 127.0.0.1 at 2023-04-25 12:42:05 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 65.3ms | Allocations: 28153)
+  Rendered layout layouts/application.html.erb (Duration: 93.4ms | Allocations: 46172)
+Completed 200 OK in 195ms (Views: 126.3ms | ActiveRecord: 0.0ms | Allocations: 49848)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:42:07 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1193)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3894)
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 0.0ms | Allocations: 4569)
+
+
+Started GET "/signup" for 127.0.0.1 at 2023-04-25 12:42:21 +0200
+Processing by SignupController#signup as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering signup/signup.html.erb within layouts/application
+  Rendered signup/signup.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1186)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3882)
+Completed 200 OK in 15ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 4556)
+
+
+Started GET "/signup" for 127.0.0.1 at 2023-04-25 12:43:25 +0200
+Processing by SignupController#signup as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering signup/signup.html.erb within layouts/application
+  Rendered signup/signup.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1183)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 4087)
+Completed 200 OK in 17ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 4850)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:43:28 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1199)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 3899)
+Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 0.0ms | Allocations: 4493)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:46:26 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1184)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 4078)
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 4840)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:47:51 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 309.9ms | Allocations: 9688)
+  Rendered layout layouts/application.html.erb (Duration: 337.0ms | Allocations: 14555)
+Completed 200 OK in 341ms (Views: 338.4ms | ActiveRecord: 0.0ms | Allocations: 14835)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:48:10 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 16.4ms | Allocations: 2705)
+  Rendered layout layouts/application.html.erb (Duration: 34.5ms | Allocations: 7548)
+Completed 200 OK in 38ms (Views: 35.3ms | Allocations: 7827)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:48:15 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1016)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 3683)
+Completed 200 OK in 14ms (Views: 11.4ms | Allocations: 3962)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:48:17 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 2.0ms | Allocations: 969)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3605)
+Completed 200 OK in 9ms (Views: 7.2ms | Allocations: 3884)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:48:22 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 2.1ms | Allocations: 969)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3593)
+Completed 200 OK in 10ms (Views: 7.0ms | Allocations: 3872)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:48:28 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 16.2ms | Allocations: 2727)
+  Rendered layout layouts/application.html.erb (Duration: 36.2ms | Allocations: 7536)
+Completed 200 OK in 39ms (Views: 37.1ms | Allocations: 7815)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:48:51 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 17.8ms | Allocations: 2700)
+  Rendered layout layouts/application.html.erb (Duration: 39.3ms | Allocations: 7543)
+Completed 200 OK in 43ms (Views: 40.0ms | Allocations: 7823)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:50:14 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 16.4ms | Allocations: 2703)
+  Rendered layout layouts/application.html.erb (Duration: 36.4ms | Allocations: 7549)
+Completed 200 OK in 40ms (Views: 37.4ms | Allocations: 7828)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:50:21 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 22.8ms | Allocations: 2711)
+  Rendered layout layouts/application.html.erb (Duration: 44.5ms | Allocations: 7521)
+Completed 200 OK in 48ms (Views: 45.3ms | Allocations: 7800)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:50:34 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 26.4ms | Allocations: 2710)
+  Rendered layout layouts/application.html.erb (Duration: 45.4ms | Allocations: 7531)
+Completed 200 OK in 48ms (Views: 46.2ms | Allocations: 7810)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:51:02 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 23.7ms | Allocations: 2718)
+  Rendered layout layouts/application.html.erb (Duration: 44.6ms | Allocations: 7553)
+Completed 200 OK in 48ms (Views: 45.4ms | Allocations: 7832)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:51:30 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 25.3ms | Allocations: 2718)
+  Rendered layout layouts/application.html.erb (Duration: 45.3ms | Allocations: 7588)
+Completed 200 OK in 48ms (Views: 46.1ms | Allocations: 7868)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:51:51 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1188)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 4107)
+Completed 200 OK in 16ms (Views: 12.8ms | Allocations: 4869)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:52:14 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 32.4ms | Allocations: 2709)
+  Rendered layout layouts/application.html.erb (Duration: 64.5ms | Allocations: 7525)
+Completed 200 OK in 69ms (Views: 66.0ms | Allocations: 7805)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:52:23 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 23.9ms | Allocations: 2709)
+  Rendered layout layouts/application.html.erb (Duration: 48.0ms | Allocations: 7533)
+Completed 200 OK in 51ms (Views: 48.8ms | Allocations: 7812)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:52:29 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 15.6ms | Allocations: 2702)
+  Rendered layout layouts/application.html.erb (Duration: 35.6ms | Allocations: 7553)
+Completed 200 OK in 39ms (Views: 36.6ms | Allocations: 7832)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:52:51 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 31.8ms | Allocations: 2731)
+  Rendered layout layouts/application.html.erb (Duration: 52.7ms | Allocations: 7541)
+Completed 200 OK in 56ms (Views: 53.3ms | Allocations: 7820)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:53:02 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 19.0ms | Allocations: 2751)
+  Rendered layout layouts/application.html.erb (Duration: 45.1ms | Allocations: 7609)
+Completed 200 OK in 49ms (Views: 46.4ms | Allocations: 7889)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:53:09 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 24.3ms | Allocations: 2732)
+  Rendered layout layouts/application.html.erb (Duration: 42.4ms | Allocations: 7571)
+Completed 200 OK in 46ms (Views: 43.2ms | Allocations: 7851)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:53:18 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 24.8ms | Allocations: 2710)
+  Rendered layout layouts/application.html.erb (Duration: 40.7ms | Allocations: 7520)
+Completed 200 OK in 44ms (Views: 41.7ms | Allocations: 7799)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:53:27 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 15.6ms | Allocations: 2724)
+  Rendered layout layouts/application.html.erb (Duration: 33.3ms | Allocations: 7555)
+Completed 200 OK in 38ms (Views: 34.3ms | Allocations: 7834)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:54:04 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 22.6ms | Allocations: 2711)
+  Rendered layout layouts/application.html.erb (Duration: 42.1ms | Allocations: 7550)
+Completed 200 OK in 45ms (Views: 42.7ms | Allocations: 7829)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:54:13 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 24.6ms | Allocations: 2725)
+  Rendered layout layouts/application.html.erb (Duration: 50.0ms | Allocations: 7547)
+Completed 200 OK in 53ms (Views: 51.0ms | Allocations: 7826)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:54:34 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 24.8ms | Allocations: 2713)
+  Rendered layout layouts/application.html.erb (Duration: 45.5ms | Allocations: 7574)
+Completed 200 OK in 49ms (Views: 46.3ms | Allocations: 7854)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:54:58 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 24.9ms | Allocations: 2734)
+  Rendered layout layouts/application.html.erb (Duration: 48.0ms | Allocations: 7560)
+Completed 200 OK in 51ms (Views: 48.9ms | Allocations: 7840)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:55:29 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 17.8ms | Allocations: 2713)
+  Rendered layout layouts/application.html.erb (Duration: 41.4ms | Allocations: 7523)
+Completed 200 OK in 45ms (Views: 42.1ms | Allocations: 7802)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:55:59 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 19.8ms | Allocations: 2731)
+  Rendered layout layouts/application.html.erb (Duration: 48.0ms | Allocations: 7551)
+Completed 200 OK in 51ms (Views: 48.8ms | Allocations: 7830)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:56:51 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 12.9ms | Allocations: 2722)
+  Rendered layout layouts/application.html.erb (Duration: 30.5ms | Allocations: 7563)
+Completed 200 OK in 34ms (Views: 31.2ms | Allocations: 7842)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:57:11 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 26.5ms | Allocations: 2735)
+  Rendered layout layouts/application.html.erb (Duration: 68.3ms | Allocations: 7584)
+Completed 200 OK in 73ms (Views: 69.6ms | Allocations: 7864)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:57:26 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 2.9ms | Allocations: 970)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 3634)
+Completed 200 OK in 17ms (Views: 12.7ms | Allocations: 3914)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:57:48 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 28.2ms | Allocations: 2720)
+  Rendered layout layouts/application.html.erb (Duration: 66.9ms | Allocations: 7546)
+Completed 200 OK in 72ms (Views: 68.0ms | Allocations: 7825)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:58:17 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 29.6ms | Allocations: 2727)
+  Rendered layout layouts/application.html.erb (Duration: 70.7ms | Allocations: 7549)
+Completed 200 OK in 77ms (Views: 72.3ms | Allocations: 7828)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:58:31 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 34.0ms | Allocations: 2721)
+  Rendered layout layouts/application.html.erb (Duration: 72.4ms | Allocations: 7537)
+Completed 200 OK in 78ms (Views: 73.8ms | Allocations: 7816)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:59:24 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1188)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 4076)
+Completed 200 OK in 26ms (Views: 20.7ms | Allocations: 4836)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:59:38 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1183)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 4089)
+Completed 200 OK in 23ms (Views: 17.8ms | Allocations: 4850)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 12:59:38 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 8.9ms | Allocations: 971)
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 3640)
+Completed 200 OK in 27ms (Views: 21.8ms | Allocations: 3920)
+
+
+Started GET "/signup" for 127.0.0.1 at 2023-04-25 12:59:40 +0200
+Processing by SignupController#signup as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering signup/signup.html.erb within layouts/application
+  Rendered signup/signup.html.erb within layouts/application (Duration: 14.7ms | Allocations: 1184)
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | Allocations: 3884)
+Completed 200 OK in 33ms (Views: 29.3ms | Allocations: 4476)
+
+
+Started GET "/signup" for 127.0.0.1 at 2023-04-25 12:59:57 +0200
+Processing by SignupController#signup as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering signup/signup.html.erb within layouts/application
+  Rendered signup/signup.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1184)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 4094)
+Completed 200 OK in 30ms (Views: 24.0ms | Allocations: 4855)
+
+
+Started GET "/signup" for 127.0.0.1 at 2023-04-25 13:00:09 +0200
+Processing by SignupController#signup as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering signup/signup.html.erb within layouts/application
+  Rendered signup/signup.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1184)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 4093)
+Completed 200 OK in 28ms (Views: 22.7ms | Allocations: 4854)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 13:00:17 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1181)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 3853)
+Completed 200 OK in 25ms (Views: 19.9ms | Allocations: 4443)
+
+
+Started GET "/signup" for 127.0.0.1 at 2023-04-25 13:00:20 +0200
+Processing by SignupController#signup as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering signup/signup.html.erb within layouts/application
+  Rendered signup/signup.html.erb within layouts/application (Duration: 3.5ms | Allocations: 969)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 3602)
+Completed 200 OK in 15ms (Views: 12.3ms | Allocations: 3885)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-25 13:00:21 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 4.3ms | Allocations: 972)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 3608)
+Completed 200 OK in 18ms (Views: 13.8ms | Allocations: 3890)
+
+

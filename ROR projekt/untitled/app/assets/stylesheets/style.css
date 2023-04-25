@@ -213,9 +213,9 @@ main {
   height: 700px;
   width: 60%;
   margin: 80px;
-  padding: 60px 0;
+  padding: 120px 0;
   background-color: aliceblue;
-  justify-content: space-evenly;
+  justify-content: space-between;
   box-shadow: 10px 10px 10px grey;
   align-items: center;
 }
@@ -262,6 +262,21 @@ main {
 .profil-table button:hover {
   background-color: rgb(240, 163, 2);
 }
+
+.profil a {
+  background-color: transparent;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+}
+.profil a:hover {
+  color:rgb(240, 163, 2);
+  letter-spacing: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
 footer {
   display: flex;
   bottom: 0;
