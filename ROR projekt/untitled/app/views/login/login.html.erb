@@ -9,42 +9,34 @@
   <title>Kő és szikla</title>
 </head>
 <body>
-<div class="container">
-  <header>
-
-    <a href="../" class="ko-es-szikla"><span>Kő és szikla</span></a>
-    <ul class="navbar">
-      <li>
-        <a href="/home" onclick="activateNavItem(this)"
-        >Hirdetmények</a
-        >
-      </li>
-      <li><a href="/newads">Új hirdetmény</a></li>
-      <li>
-        <a href="/userdata" onclick="activateNavItem(this)"
-        >Profil adatok</a
-        >
-      </li>
-      <li class="active"><a href="/login">Bejelentkezés/Kijelentkezés</a></li>
-      <li><a href="/signup">Regisztráció</a></li>
-    </ul>
-  </header>
-  <main>
-    <div class="profil">
-      <h1>Bejelentkezés</h1>
-      <div class="signup">
-        <label>Felhasználónév: <input type="text" name="username" placeholder="Add meg a felhasználónevedet!"></input></label>
-        <label>Jelszó: <input type="password" name="password" placeholder="Add meg a jelszavadat!"></input></label>
-      </div>
-      <div class="buttons">
-        <input type="reset" value="Mégse" />
-        <input type="submit" value="Belépés" />
-      </div>
-      <a href="/signup">Sign up here!</a>
-    </div>
-  </main>
-  <footer><p>&copy; Kő és szikla 2023</p></footer>
-</div>
-
-</body>
+  <div class="container">
+    <header>
+      <a href="../" class="ko-es-szikla"><span>Kő és szikla</span></a>
+      <ul class="navbar">
+        <li>
+          <a href="/home" onclick="activateNavItem(this)">Hirdetmények</a>
+        </li>
+        <li><a href="/newads">Új hirdetmény</a></li>
+        <li>
+          <a href="/userdata" onclick="activateNavItem(this)">Profil adatok</a>
+        </li>
+        <li class="active"><a href="/login">Bejelentkezés/Kijelentkezés</a></li>
+        <li><a href="/signup">Regisztráció</a></li>
+      </ul>
+    </header>
+    <main>
+      <form class="profil">
+        <h1>Bejelentkezés</h1>
+        <div class="signup">
+          <label>Felhasználónév: <input type="text" name="username" placeholder="Add meg a felhasználónevedet!"></input></label>
+          <label>Jelszó: <input type="password" name="password" placeholder="Add meg a jelszavadat!"></input></label>
+        </div>
+        <div class="buttons">
+          <input type="reset" value="Mégse" />
+          <input type="submit" value="Belépés" />
+        </div>
+        <a href="/signup">Sign up here!</a>
+      </form></main>
+    <footer><p>&copy; Kő és szikla 2023</p></footer>
+  </div></body>
 </html>

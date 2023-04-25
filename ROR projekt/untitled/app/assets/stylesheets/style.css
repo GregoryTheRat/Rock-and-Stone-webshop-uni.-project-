@@ -90,7 +90,7 @@ main {
 
 .hirdetes {
   display: flex;
-  height: 350px;
+  height: 450px;
   width: 90%;
   margin: 30px;
   background-color: aliceblue;
@@ -108,6 +108,7 @@ main {
   background-color: white;
   border: 2px solid grey;
   border-radius: 10px;
+  box-shadow: 10px 10px 10px grey;
 }
 
 .adatok1 {
@@ -129,11 +130,12 @@ main {
 .adatok2 {
   height: 25%;
   border: 2px solid black;
-  margin-top: 10px;
+  margin-top: 20px;
   border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  box-shadow: 10px 10px 10px grey;
 }
 
 .szallitas-adatok {
@@ -147,6 +149,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 10px 10px 10px grey;
 }
 
 .szallitas-adatok h2 {
@@ -183,6 +186,7 @@ main {
   align-items: center;
   justify-content: space-between;
   padding: 20px;
+  box-shadow: 10px 10px 10px grey;
 }
 
 .egyeb-adatok h2 {
@@ -218,7 +222,7 @@ main {
   height: 700px;
   width: 60%;
   margin: 80px;
-  padding: 120px 0;
+  padding: 100px 0;
   background-color: aliceblue;
   justify-content: space-between;
   box-shadow: 10px 10px 10px grey;
@@ -226,6 +230,7 @@ main {
 }
 
 .profil h1 {
+  margin-bottom: 20px;
   font-size: 2.5rem;
 }
 
@@ -318,6 +323,7 @@ footer {
 }
 
 .buttons {
+  margin-top: 40px;
   width: 60%;
   display: flex;
   justify-content: space-evenly;
@@ -338,4 +344,36 @@ footer {
 .buttons input:hover {
   transform: scale(1.08);
   transition: all 0.2s ease-in;
+}
+
+.new_ads {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 20px;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 10px 10px 10px grey;
+}
+
+.new_ads div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  gap: 20px;
+  width: 100%;
+  padding: 0 20px;
+}
+.new_ads div input{
+  align-items: center;
+  text-align: center;
+  width: 40%;
+  padding: 10px 20px;
 }
