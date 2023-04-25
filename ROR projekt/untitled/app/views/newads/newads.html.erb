@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <% stylesheet_link_tag "style" %>
+  <title>Kő és szikla</title>
+</head>
+<body>
+<div class="container">
+  <header>
+
+    <a href="../" class="ko-es-szikla"><span>Kő és szikla</span></a>
+    <ul class="navbar">
+      <li>
+        <a href="/home" onclick="activateNavItem(this)"
+        >Hirdetmények</a
+        >
+      </li>
+      <li class="active"><a href="/newads">Új hirdetmény</a></li>
+      <li>
+        <a href="/userdata" onclick="activateNavItem(this)"
+        >Profil adatok</a
+        >
+      </li>
+      <li><a href="/login">Bejelentkezés/Kijelentkezés</a></li>
+      <li><a href="/signup">Regisztráció</a></li>
+    </ul>
+  </header>
+  <main>
+    <div class="profil">
+      <h1>Hozz létre saját hírdetéseket!</h1>
+      <div class="signup">
+        <label>Hírdetett termék neve: <input type="text" name="product" placeholder="Termék név"></input></label>
+        <label>Hírdetett termék neve: <input type="text" name="description" placeholder="Termék leírás"></input></label>
+
+      </div>
+      <div class="buttons">
+        <input type="reset" value="Mégse" />
+        <input type="submit" value="Létrehozás" />
+      </div>
+    </div>
+  </main>
+  <footer><p>&copy; Kő és szikla 2023</p></footer>
+</div>
+
+</body>
+</html>

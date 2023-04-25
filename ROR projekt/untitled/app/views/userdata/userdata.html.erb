@@ -12,14 +12,14 @@
 <div class="container">
   <header>
 
-    <a href=".." class="ko-es-szikla"><span>Kő és szikla</span></a>
+    <a href="../" class="ko-es-szikla"><span>Kő és szikla</span></a>
     <ul class="navbar">
       <li>
         <a href="/home" onclick="activateNavItem(this)"
         >Hirdetmények</a
         >
       </li>
-      <li><a href="#">Új hirdetmény</a></li>
+      <li><a href="/newads">Új hirdetmény</a></li>
       <li class="active">
         <a href="/userdata" onclick="activateNavItem(this)"
         >Profil adatok</a
@@ -32,24 +32,15 @@
   <main>
     <div class="profil">
       <h1>Általános profil adatok</h1>
-      <table class="profil-table">
-        <tr>
-          <td>Username:</td>
-          <td>Mek Elek</td>
-        </tr>
-        <tr>
-          <td>E-mail cím:</td>
-          <td>mk.elek@gmail.com</td>
-        </tr>
-        <tr>
-          <td>Jelszó:</td>
-          <td>rock&stone</td>
-        </tr>
-        <tr>
-          <td><button>Törlés</button></td>
-          <td><button>Módosítás</button></td>
-        </tr>
-      </table>
+      <div class="signup">
+        <label>Felhasználónév: <input type="text" name="username" placeholder="Felhasználó neve"></input></label>
+        <label>E-mail: <input type="email" name="email" placeholder="Felhasználó email!"></input></label>
+        <label>Jelszó: <input type="password" name="password" placeholder="Felhasználó jelszó"></input></label>
+      </div>
+      <div class="buttons">
+        <input type="submit" value="Törlés" />
+        <input type="submit" value="Módosítás" />
+      </div>
     </div>
   </main>
   <footer><p>&copy; Kő és szikla 2023</p></footer>

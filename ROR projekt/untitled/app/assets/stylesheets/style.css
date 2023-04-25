@@ -167,6 +167,11 @@ main {
   font-weight: 800;
 }
 
+.szallito-list select{
+  padding: 10px 15px;
+}
+
+
 .egyeb-adatok {
   min-height: 90%;
   width: 20%;
