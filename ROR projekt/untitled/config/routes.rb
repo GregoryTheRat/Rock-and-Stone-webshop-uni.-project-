@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   resources :users
   get 'userdata', to: "userdata#userdata"
   get 'home', to: "home#home"
-  get 'signup', to: "signup#signup"
   get 'login', to: "login#login"
   get 'newads', to: "newads#newads"
 

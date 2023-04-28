@@ -25,9 +25,27 @@
       </ul>
     </header>
     <main>
-      <form class="profil">
+      <%= form_with(model: user) do |form| %>
+        <% if user.errors.any? %>
+          <div style="color: red">
+            <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+            <ul>
+              <% user.errors.each do |error| %>
+                <li><%= error.full_message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <div class="signup">
+          <%= form.label :nev, style: "display: block" %>
+          <%= form.text_field :nev %>
+        </div>
+      <% end %>
+      <!-- <form class="profil">
         <h1>Bejelentkezés</h1>
         <div class="signup">
+
           <label>Felhasználónév: <input type="text" name="username" placeholder="Add meg a felhasználónevedet!"></input></label>
           <label>Jelszó: <input type="password" name="password" placeholder="Add meg a jelszavadat!"></input></label>
         </div>
@@ -36,7 +54,9 @@
           <input type="submit" value="Belépés" />
         </div>
         <a href="/signup">Sign up here!</a>
-      </form></main>
+      </form>
+      -->
+      </main>
     <footer><p>&copy; Kő és szikla 2023</p></footer>
   </div></body>
 </html>

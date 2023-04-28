@@ -1,9 +1,62 @@
-<h1>New user</h1>
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<%= render "form", user: @user %>
+  <% stylesheet_link_tag "style" %>
+  <title>Kő és szikla</title>
+</head>
+<body>
+<div class="container">
+  <header>
 
-<br>
+    <a href="../" class="ko-es-szikla"><span>Kő és szikla</span></a>
+    <ul class="navbar">
+      <li>
+        <a href="/home" onclick="activateNavItem(this)"
+        >Hirdetmények</a
+        >
+      </li>
+      <li><a href="/newads">Új hirdetmény</a></li>
+      <li>
+        <a href="/userdata" onclick="activateNavItem(this)"
+        >Profil adatok</a
+        >
+      </li>
+      <li><a href="/login">Bejelentkezés/Kijelentkezés</a></li>
+      <li class="active"><a href="#">Regisztráció</a></li>
+    </ul>
+  </header>
+  <main>
 
-<div>
-  <%= link_to "Back to users", users_path %>
+    <h1>Új felhasználó</h1>
+
+    <%= render "form", user: @user %>
+
+    <br>
+
+    <div>
+      <%= link_to "Főoldal", home_path %>
+    </div>
+    <!--<form class="profil">
+      <h1>Regisztráció</h1>
+      <div class="signup">
+        <label>Felhasználónév: <input type="text" name="username" placeholder="Add meg a felhasználónevedet!"></input></label>
+        <label>E-mail: <input type="email" name="email" placeholder="Add meg az email címedet!"></input></label>
+        <label>Jelszó: <input type="password" name="password" placeholder="Add meg a jelszavadat!"></input></label>
+      </div>
+      <div class="buttons">
+        <input type="reset" value="Mégse" />
+        <input type="submit" value="Küldés" />
+      </div>
+      <a href="/login">Log in here!</a>
+    </form>
+    -->
+  </main>
+  <footer><p>&copy; Kő és szikla 2023</p></footer>
 </div>
+
+</body>
+</html>

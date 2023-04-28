@@ -12,18 +12,18 @@
   <% end %>
 
   <div>
-    <%= form.label :nev, style: "display: block" %>
-    <%= form.text_field :nev %>
+    <%= form.label :Név, style: "display: block" %>
+    <%= form.text_field :nev, required: true %>
   </div>
 
   <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
+    <%= form.label :Email, style: "display: block" %>
+    <%= form.email_field :email, required: true%>
   </div>
 
   <div>
-    <%= form.label :jelszo, style: "display: block" %>
-    <%= form.text_field :jelszo %>
+    <%= form.label :Jelszó, style: "display: block" %>
+    <%= form.password_field :jelszo, required: true%>
   </div>
 
   <div>
