@@ -12526,3 +12526,300 @@ Processing by SignupController#signup as HTML
 Completed 200 OK in 17ms (Views: 12.8ms | Allocations: 3875)
 
 
+Started GET "/" for 127.0.0.1 at 2023-04-28 10:09:41 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (60.7ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 2090.1ms | Allocations: 49052)
+  Rendered layout layouts/application.html.erb (Duration: 2206.7ms | Allocations: 66945)
+Completed 200 OK in 2409ms (Views: 2267.8ms | ActiveRecord: 0.0ms | Allocations: 70621)
+
+
+Started GET "/newads" for 127.0.0.1 at 2023-04-28 10:09:53 +0200
+Processing by NewadsController#newads as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newads/newads.html.erb within layouts/application
+  Rendered newads/newads.html.erb within layouts/application (Duration: 192.4ms | Allocations: 1209)
+  Rendered layout layouts/application.html.erb (Duration: 199.4ms | Allocations: 3907)
+Completed 200 OK in 210ms (Views: 205.4ms | ActiveRecord: 0.0ms | Allocations: 4582)
+
+
+Started GET "/userdata" for 127.0.0.1 at 2023-04-28 10:09:54 +0200
+Processing by UserdataController#userdata as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userdata/userdata.html.erb within layouts/application
+  Rendered userdata/userdata.html.erb within layouts/application (Duration: 58.1ms | Allocations: 1186)
+  Rendered layout layouts/application.html.erb (Duration: 65.8ms | Allocations: 3876)
+Completed 200 OK in 78ms (Views: 71.9ms | ActiveRecord: 0.0ms | Allocations: 4550)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-04-28 10:09:55 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 4.5ms | Allocations: 970)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 3592)
+Completed 200 OK in 19ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 3876)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-04-28 10:10:15 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 168.2ms | Allocations: 12190)
+  Rendered layout layouts/application.html.erb (Duration: 169.0ms | Allocations: 12272)
+Completed 500 Internal Server Error in 187ms (ActiveRecord: 0.0ms | Allocations: 13032)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    12:   <body>
+    13: 
+    14:     <div class="container">
+    15:       <% @adverts.each do |advert| %>
+    16:         <tr>
+    17:           <td><%= advert.termek_nev %></td>
+    18:           <td><%= advert.mennyiseg %></td>
+  
+app/views/home/home.html.erb:15
+Started GET "/home" for 127.0.0.1 at 2023-04-28 10:11:52 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 6.8ms | Allocations: 2499)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 2582)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms | Allocations: 3323)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    298:         </div>
+    299:       </main>
+    300:       <footer><p>&copy; Kő és szikla 2023</p></footer>
+    301:       <% @adverts.each do |advert| %>
+    302:         <tr>
+    303:           <td><%= advert.termek_nev %></td>
+    304:           <td><%= advert.mennyiseg %></td>
+  
+app/views/home/home.html.erb:301
+Started GET "/home" for 127.0.0.1 at 2023-04-28 10:17:06 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mAdvert Load (308.8ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:301
+  Rendered home/home.html.erb within layouts/application (Duration: 2996.0ms | Allocations: 11143)
+  Rendered layout layouts/application.html.erb (Duration: 3026.6ms | Allocations: 28805)
+Completed 200 OK in 3059ms (Views: 3028.4ms | ActiveRecord: 2814.2ms | Allocations: 30042)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-04-28 11:03:08 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mAdvert Load (1.3ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:301
+  Rendered home/home.html.erb within layouts/application (Duration: 480.4ms | Allocations: 3881)
+  Rendered layout layouts/application.html.erb (Duration: 493.4ms | Allocations: 6531)
+Completed 200 OK in 499ms (Views: 495.0ms | ActiveRecord: 1.3ms | Allocations: 6826)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-04-28 11:05:30 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mAdvert Load (2.1ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:33
+  Rendered home/home.html.erb within layouts/application (Duration: 13.8ms | Allocations: 4304)
+  Rendered layout layouts/application.html.erb (Duration: 43.3ms | Allocations: 7204)
+Completed 200 OK in 178ms (Views: 169.5ms | ActiveRecord: 2.1ms | Allocations: 7981)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-04-28 11:06:14 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mAdvert Load (1.3ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:34
+  Rendered home/home.html.erb within layouts/application (Duration: 10.8ms | Allocations: 4291)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 7185)
+Completed 200 OK in 33ms (Views: 25.9ms | ActiveRecord: 1.3ms | Allocations: 7957)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-04-28 11:06:42 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mAdvert Load (2.2ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:34
+  Rendered home/home.html.erb within layouts/application (Duration: 14.9ms | Allocations: 4295)
+  Rendered layout layouts/application.html.erb (Duration: 29.4ms | Allocations: 7183)
+Completed 200 OK in 47ms (Views: 37.6ms | ActiveRecord: 2.2ms | Allocations: 7959)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-04-28 11:07:13 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mAdvert Load (1.3ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:33
+  Rendered home/home.html.erb within layouts/application (Duration: 9.6ms | Allocations: 4288)
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 7179)
+Completed 200 OK in 32ms (Views: 26.3ms | ActiveRecord: 1.3ms | Allocations: 7951)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-04-28 11:08:40 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mAdvert Load (1.4ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:33
+  Rendered home/home.html.erb within layouts/application (Duration: 10.3ms | Allocations: 4113)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 7013)
+Completed 200 OK in 30ms (Views: 23.0ms | ActiveRecord: 1.4ms | Allocations: 7785)
+
+
+Started GET "/advertises" for 127.0.0.1 at 2023-04-28 11:11:53 +0200
+Processing by AdvertisesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering advertises/index.html.erb within layouts/application
+  [1m[36mAdvertise Load (23.9ms)[0m  [1m[34mSELECT "ADVERTISES".* FROM "ADVERTISES"[0m
+  ↳ app/views/advertises/index.html.erb:6
+  Rendered advertises/_advertise.html.erb (Duration: 9.6ms | Allocations: 262)
+  Rendered advertises/_advertise.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered advertises/_advertise.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered advertises/_advertise.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered advertises/_advertise.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered advertises/_advertise.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered advertises/_advertise.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered advertises/_advertise.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered advertises/_advertise.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered advertises/_advertise.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered advertises/_advertise.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered advertises/_advertise.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered advertises/_advertise.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered advertises/_advertise.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered advertises/_advertise.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered advertises/_advertise.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered advertises/_advertise.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered advertises/_advertise.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered advertises/_advertise.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered advertises/_advertise.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered advertises/_advertise.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered advertises/_advertise.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered advertises/_advertise.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered advertises/_advertise.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered advertises/_advertise.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered advertises/index.html.erb within layouts/application (Duration: 287.4ms | Allocations: 10879)
+  Rendered layout layouts/application.html.erb (Duration: 296.3ms | Allocations: 13676)
+Completed 200 OK in 322ms (Views: 260.2ms | ActiveRecord: 41.3ms | Allocations: 14805)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-28 11:13:52 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mAdvert Load (1.6ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:33
+  Rendered home/home.html.erb within layouts/application (Duration: 14.2ms | Allocations: 3718)
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | Allocations: 6382)
+Completed 200 OK in 30ms (Views: 23.5ms | ActiveRecord: 1.6ms | Allocations: 6676)
+
+
+Started GET "/newads" for 127.0.0.1 at 2023-04-28 11:14:09 +0200
+Processing by NewadsController#newads as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newads/newads.html.erb within layouts/application
+  Rendered newads/newads.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1201)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 3915)
+Completed 200 OK in 25ms (Views: 19.8ms | ActiveRecord: 0.0ms | Allocations: 4585)
+
+
+Started GET "/newads" for 127.0.0.1 at 2023-04-28 11:14:10 +0200
+Processing by NewadsController#newads as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newads/newads.html.erb within layouts/application
+  Rendered newads/newads.html.erb within layouts/application (Duration: 4.3ms | Allocations: 969)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 3617)
+Completed 200 OK in 18ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 3898)
+
+
+Started GET "/newads?product=&description=&description=&description=&description=" for 127.0.0.1 at 2023-04-28 11:14:22 +0200
+Processing by NewadsController#newads as HTML
+  Parameters: {"product"=>"", "description"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering newads/newads.html.erb within layouts/application
+  Rendered newads/newads.html.erb within layouts/application (Duration: 2.8ms | Allocations: 969)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 3611)
+Completed 200 OK in 15ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 3892)
+
+
+Started GET "/newads?product=&description=&description=&description=&description=" for 127.0.0.1 at 2023-04-28 11:14:23 +0200
+Processing by NewadsController#newads as HTML
+  Parameters: {"product"=>"", "description"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering newads/newads.html.erb within layouts/application
+  Rendered newads/newads.html.erb within layouts/application (Duration: 3.9ms | Allocations: 969)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 3617)
+Completed 200 OK in 17ms (Views: 13.4ms | ActiveRecord: 0.0ms | Allocations: 3898)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-28 11:14:24 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 162.8ms | Allocations: 1177)
+  Rendered layout layouts/application.html.erb (Duration: 172.5ms | Allocations: 3870)
+Completed 200 OK in 181ms (Views: 177.3ms | ActiveRecord: 0.0ms | Allocations: 4542)
+
+
+Started GET "/signup" for 127.0.0.1 at 2023-04-28 11:14:27 +0200
+Processing by SignupController#signup as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering signup/signup.html.erb within layouts/application
+  Rendered signup/signup.html.erb within layouts/application (Duration: 120.6ms | Allocations: 1187)
+  Rendered layout layouts/application.html.erb (Duration: 129.6ms | Allocations: 3873)
+Completed 200 OK in 141ms (Views: 136.5ms | ActiveRecord: 0.0ms | Allocations: 4545)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-04-28 11:14:29 +0200
+Processing by LoginController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/login.html.erb within layouts/application
+  Rendered login/login.html.erb within layouts/application (Duration: 3.7ms | Allocations: 969)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 3605)
+Completed 200 OK in 16ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 3887)
+
+
+Started GET "/userdata" for 127.0.0.1 at 2023-04-28 11:14:31 +0200
+Processing by UserdataController#userdata as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userdata/userdata.html.erb within layouts/application
+  Rendered userdata/userdata.html.erb within layouts/application (Duration: 11.4ms | Allocations: 1186)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 3854)
+Completed 200 OK in 30ms (Views: 26.1ms | ActiveRecord: 0.0ms | Allocations: 4524)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-04-28 11:14:33 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mAdvert Load (2.0ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:33
+  Rendered home/home.html.erb within layouts/application (Duration: 8.8ms | Allocations: 3717)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 6356)
+Completed 200 OK in 24ms (Views: 17.7ms | ActiveRecord: 2.0ms | Allocations: 6650)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-04-28 11:20:56 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mAdvert Load (1.6ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:33
+  Rendered home/home.html.erb within layouts/application (Duration: 148.0ms | Allocations: 4263)
+  Rendered layout layouts/application.html.erb (Duration: 157.3ms | Allocations: 7157)
+Completed 200 OK in 172ms (Views: 166.1ms | ActiveRecord: 1.6ms | Allocations: 7928)
+
+
