@@ -5,7 +5,7 @@ class CreateAdverts < ActiveRecord::Migration[7.0]
       t.float :mennyiseg
       t.float :ar_kg
       t.integer :min_vasarlas
-
+      t.string :leiras
       t.timestamps
     end
   end
