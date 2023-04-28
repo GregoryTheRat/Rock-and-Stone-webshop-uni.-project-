@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :suppliers
   resources :adverts
   resources :users
+
+  get '/logout', to: "home#destroy"
   get 'userdata', to: "userdata#userdata"
   get 'home', to: "home#home"
   get 'login', to: "login#login"
