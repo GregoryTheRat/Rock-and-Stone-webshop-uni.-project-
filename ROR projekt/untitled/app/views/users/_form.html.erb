@@ -16,17 +16,22 @@
     <%= form.text_field :nev, required: true %>
   </div>
 
+  <br>
+
   <div>
     <%= form.label :Email, style: "display: block" %>
     <%= form.email_field :email, required: true%>
   </div>
+
+  <br>
 
   <div>
     <%= form.label :Jelszó, style: "display: block" %>
     <%= form.password_field :jelszo, required: true%>
   </div>
 
-  <div>
+
+  <div class="buttons">
     <%= form.submit %>
   </div>
 <% end %>

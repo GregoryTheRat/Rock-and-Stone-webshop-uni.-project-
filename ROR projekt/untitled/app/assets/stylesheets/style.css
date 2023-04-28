@@ -377,3 +377,33 @@ footer {
   width: 40%;
   padding: 10px 20px;
 }
+
+.search-bar{
+  margin-top: 30px;
+}
+
+.search-bar form{
+  background-color: #fff;
+  width: 600px;
+  height: 55px;
+  display: flex;
+}
+
+.search-bar form input {
+  flex: 1;
+  border:none;
+  outline:none;
+  padding: 10px 30px;
+
+}
+
+.search-bar form button{
+  background-color: darkorange;
+  padding: 10px 50px;
+  border:none;
+  outline: none;
+  color: #fff;
+  letter-spacing:1px ;
+  cursor:pointer;
+  font-size: 18px;
+}

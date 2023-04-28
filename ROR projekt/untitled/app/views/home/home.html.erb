@@ -12,7 +12,8 @@
   <body>
 
     <div class="container">
-      <header><a href="../" class="ko-es-szikla"><span>Kő és szikla</span></a>
+      <header>
+        <a href="../" class="ko-es-szikla"><span>Kő és szikla</span></a>
         <ul class="navbar">
           <li class="active">
             <a href="/home" onclick="activateNavItem(this)"
@@ -30,12 +31,18 @@
         </ul>
       </header>
       <main>
+        <div class="search-bar">
+          <form>
+            <input type="text" placeholder="Írd be a keresett termék nevét!">
+            <button type="submit">Keresés</button>
+          </form>
+        </div>
         <% @adverts.each do |advert| %>
           <div class="hirdetes">
             <div class="hirdetes-adatok">
               <div class="adatok1">
                 <h2 class="hirdetett-termek">Hirdetett termék: <%= advert.termek_nev %></h2>
-                <h3 class="hirdeto">Hirdető: Mekk elek></h3>
+                <h3 class="hirdeto">Hirdető: Mekk elek</h3>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
                   molestias laudantium, veniam ducimus magnam ad repellendus
