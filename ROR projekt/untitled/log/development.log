@@ -44723,3 +44723,414 @@ WHERE advertises.User_id=users.id
 Completed 200 OK in 25ms (Views: 17.3ms | ActiveRecord: 1.4ms | Allocations: 6202)
 
 
+  [1m[36mActiveRecord::SchemaMigration Pluck (10.8ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (68.3ms)[0m  [1m[34mSELECT "AR_INTERNAL_METADATA"."VALUE" FROM "AR_INTERNAL_METADATA" WHERE "AR_INTERNAL_METADATA"."KEY" = :a1 FETCH FIRST :a2 ROWS ONLY[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "AR_INTERNAL_METADATA"."VALUE" FROM "AR_INTERNAL_METADATA" WHERE "AR_INTERNAL_METADATA"."KEY" = :a1 FETCH FIRST :a2 ROWS ONLY[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "AR_INTERNAL_METADATA"."VALUE" FROM "AR_INTERNAL_METADATA" WHERE "AR_INTERNAL_METADATA"."KEY" = :a1 FETCH FIRST :a2 ROWS ONLY[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (44.6ms)[0m  [1m[35mDROP SEQUENCE "ADVERTISES_SEQ"[0m
+  [1m[35m (19.9ms)[0m  [1m[35mDROP SEQUENCE "ADVERTS_SEQ"[0m
+  [1m[35m (28.7ms)[0m  [1m[35mDROP SEQUENCE "CARRIES_SEQ"[0m
+  [1m[35m (5.5ms)[0m  [1m[35mDROP SEQUENCE "DELIVERS_SEQ"[0m
+  [1m[35m (12.1ms)[0m  [1m[35mDROP SEQUENCE "ORDERS_SEQ"[0m
+  [1m[35m (15.1ms)[0m  [1m[35mDROP SEQUENCE "RATES_SEQ"[0m
+  [1m[35m (5.8ms)[0m  [1m[35mDROP SEQUENCE "SUPPLIERS_SEQ"[0m
+  [1m[35m (8.0ms)[0m  [1m[35mDROP SEQUENCE "USERS_SEQ"[0m
+  [1m[35m (359.6ms)[0m  [1m[35mDROP TABLE "ADVERTISES" CASCADE CONSTRAINTS[0m
+  [1m[35m (176.5ms)[0m  [1m[35mDROP TABLE "ADVERTS" CASCADE CONSTRAINTS[0m
+  [1m[35m (143.4ms)[0m  [1m[35mDROP TABLE "AR_INTERNAL_METADATA" CASCADE CONSTRAINTS[0m
+  [1m[35m (144.8ms)[0m  [1m[35mDROP TABLE "CARRIES" CASCADE CONSTRAINTS[0m
+  [1m[35m (393.5ms)[0m  [1m[35mDROP TABLE "DELIVERS" CASCADE CONSTRAINTS[0m
+  [1m[35m (107.8ms)[0m  [1m[35mDROP TABLE "ORDERS" CASCADE CONSTRAINTS[0m
+  [1m[35m (118.3ms)[0m  [1m[35mDROP TABLE "RATES" CASCADE CONSTRAINTS[0m
+  [1m[35m (115.0ms)[0m  [1m[35mDROP TABLE "SCHEMA_MIGRATIONS" CASCADE CONSTRAINTS[0m
+  [1m[35m (67.0ms)[0m  [1m[35mDROP TABLE "SUPPLIERS" CASCADE CONSTRAINTS[0m
+  [1m[35m (132.6ms)[0m  [1m[35mDROP TABLE "USERS" CASCADE CONSTRAINTS[0m
+  [1m[35m (287.0ms)[0m  [1m[35mCREATE TABLE "SCHEMA_MIGRATIONS" ("VERSION" VARCHAR2(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (15.5ms)[0m  [1m[35mCREATE TABLE "AR_INTERNAL_METADATA" ("KEY" VARCHAR2(255) NOT NULL PRIMARY KEY, "VALUE" VARCHAR2(255), "CREATED_AT" TIMESTAMP(6) NOT NULL, "UPDATED_AT" TIMESTAMP(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (12.6ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+Migrating to CreateUsers (20230415120312)
+  [1m[35m (29.4ms)[0m  [1m[35mCREATE TABLE "USERS" ("ID" NUMBER(38) NOT NULL PRIMARY KEY, "NEV" VARCHAR2(255), "EMAIL" VARCHAR2(255), "JELSZO" VARCHAR2(255), "CREATED_AT" TIMESTAMP(6) NOT NULL, "UPDATED_AT" TIMESTAMP(6) NOT NULL)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE SEQUENCE "USERS_SEQ" START WITH 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (90.2ms)[0m  [1m[32mINSERT INTO "SCHEMA_MIGRATIONS" ("VERSION") VALUES (:a1)[0m  [["version", "20230415120312"]]
+Migrating to CreateAdverts (20230415120330)
+  [1m[35m (16.7ms)[0m  [1m[35mCREATE TABLE "ADVERTS" ("ID" NUMBER(38) NOT NULL PRIMARY KEY, "TERMEK_NEV" VARCHAR2(255), "MENNYISEG" BINARY_FLOAT, "AR_KG" BINARY_FLOAT, "MIN_VASARLAS" NUMBER(38), "LEIRAS" VARCHAR2(255), "CREATED_AT" TIMESTAMP(6) NOT NULL, "UPDATED_AT" TIMESTAMP(6) NOT NULL)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE SEQUENCE "ADVERTS_SEQ" START WITH 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "SCHEMA_MIGRATIONS" ("VERSION") VALUES (:a1)[0m  [["version", "20230415120330"]]
+Migrating to CreateSuppliers (20230415120401)
+  [1m[35m (13.3ms)[0m  [1m[35mCREATE TABLE "SUPPLIERS" ("ID" NUMBER(38) NOT NULL PRIMARY KEY, "KM_AR" BINARY_FLOAT, "AR_KG" BINARY_FLOAT, "CREATED_AT" TIMESTAMP(6) NOT NULL, "UPDATED_AT" TIMESTAMP(6) NOT NULL)[0m
+  [1m[35m (12.7ms)[0m  [1m[35mCREATE SEQUENCE "SUPPLIERS_SEQ" START WITH 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "SCHEMA_MIGRATIONS" ("VERSION") VALUES (:a1)[0m  [["version", "20230415120401"]]
+Migrating to CreateCarries (20230415120420)
+  [1m[35m (26.9ms)[0m  [1m[35mCREATE TABLE "CARRIES" ("ID" NUMBER(38) NOT NULL PRIMARY KEY, "SUPPLIER_ID" NUMBER(38), "MIT" VARCHAR2(255), "CREATED_AT" TIMESTAMP(6) NOT NULL, "UPDATED_AT" TIMESTAMP(6) NOT NULL)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE SEQUENCE "CARRIES_SEQ" START WITH 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "SCHEMA_MIGRATIONS" ("VERSION") VALUES (:a1)[0m  [["version", "20230415120420"]]
+Migrating to CreateAdvertises (20230415120433)
+  [1m[35m (21.7ms)[0m  [1m[35mCREATE TABLE "ADVERTISES" ("ID" NUMBER(38) NOT NULL PRIMARY KEY, "USER_ID" NUMBER(38), "ADVERT_ID" NUMBER(38), "MIKOR" DATE, "CREATED_AT" TIMESTAMP(6) NOT NULL, "UPDATED_AT" TIMESTAMP(6) NOT NULL)[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE SEQUENCE "ADVERTISES_SEQ" START WITH 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "SCHEMA_MIGRATIONS" ("VERSION") VALUES (:a1)[0m  [["version", "20230415120433"]]
+Migrating to CreateRates (20230415120448)
+  [1m[35m (18.5ms)[0m  [1m[35mCREATE TABLE "RATES" ("ID" NUMBER(38) NOT NULL PRIMARY KEY, "USER_ID" NUMBER(38), "ADVERT_ID" NUMBER(38), "CSILLAG" NUMBER(38), "LEIRAS" CLOB, "CREATED_AT" TIMESTAMP(6) NOT NULL, "UPDATED_AT" TIMESTAMP(6) NOT NULL)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE SEQUENCE "RATES_SEQ" START WITH 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "SCHEMA_MIGRATIONS" ("VERSION") VALUES (:a1)[0m  [["version", "20230415120448"]]
+Migrating to CreateOrders (20230415120457)
+  [1m[35m (22.5ms)[0m  [1m[35mCREATE TABLE "ORDERS" ("ID" NUMBER(38) NOT NULL PRIMARY KEY, "USER_ID" NUMBER(38), "ADVERT_ID" NUMBER(38), "SUPPLIER_ID" NUMBER(38), "CREATED_AT" TIMESTAMP(6) NOT NULL, "UPDATED_AT" TIMESTAMP(6) NOT NULL)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE SEQUENCE "ORDERS_SEQ" START WITH 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "SCHEMA_MIGRATIONS" ("VERSION") VALUES (:a1)[0m  [["version", "20230415120457"]]
+Migrating to CreateDelivers (20230415120513)
+  [1m[35m (22.7ms)[0m  [1m[35mCREATE TABLE "DELIVERS" ("ID" NUMBER(38) NOT NULL PRIMARY KEY, "ORDER_ID" NUMBER(38), "SUPPLIER_ID" NUMBER(38), "MENNYISEG" BINARY_FLOAT, "HOVA" VARCHAR2(255), "KOLTSEG" BINARY_FLOAT, "VARHATO_SZALLITAS" DATE, "CREATED_AT" TIMESTAMP(6) NOT NULL, "UPDATED_AT" TIMESTAMP(6) NOT NULL)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE SEQUENCE "DELIVERS_SEQ" START WITH 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "SCHEMA_MIGRATIONS" ("VERSION") VALUES (:a1)[0m  [["version", "20230415120513"]]
+Migrating to AddForeignKeysToTables (20230415120614)
+  [1m[35m (60.6ms)[0m  [1m[35mALTER TABLE "CARRIES" ADD CONSTRAINT "FK_RAILS_ADEEF3AE87"
+FOREIGN KEY ("SUPPLIER_ID")
+  REFERENCES "SUPPLIERS" ("ID")
+[0m
+  [1m[35m (54.9ms)[0m  [1m[35mALTER TABLE "ADVERTISES" ADD CONSTRAINT "FK_RAILS_A6FE8F3196"
+FOREIGN KEY ("USER_ID")
+  REFERENCES "USERS" ("ID")
+[0m
+  [1m[35m (8.7ms)[0m  [1m[35mALTER TABLE "ADVERTISES" ADD CONSTRAINT "FK_RAILS_8985F1EF99"
+FOREIGN KEY ("ADVERT_ID")
+  REFERENCES "ADVERTS" ("ID")
+[0m
+  [1m[35m (20.6ms)[0m  [1m[35mALTER TABLE "RATES" ADD CONSTRAINT "FK_RAILS_4A29085CE0"
+FOREIGN KEY ("USER_ID")
+  REFERENCES "USERS" ("ID")
+[0m
+  [1m[35m (20.5ms)[0m  [1m[35mALTER TABLE "RATES" ADD CONSTRAINT "FK_RAILS_42C71375E6"
+FOREIGN KEY ("ADVERT_ID")
+  REFERENCES "ADVERTS" ("ID")
+[0m
+  [1m[35m (43.8ms)[0m  [1m[35mALTER TABLE "ORDERS" ADD CONSTRAINT "FK_RAILS_F868B47F6A"
+FOREIGN KEY ("USER_ID")
+  REFERENCES "USERS" ("ID")
+[0m
+  [1m[35m (14.9ms)[0m  [1m[35mALTER TABLE "ORDERS" ADD CONSTRAINT "FK_RAILS_67964D5ED4"
+FOREIGN KEY ("ADVERT_ID")
+  REFERENCES "ADVERTS" ("ID")
+[0m
+  [1m[35m (14.2ms)[0m  [1m[35mALTER TABLE "ORDERS" ADD CONSTRAINT "FK_RAILS_D426350910"
+FOREIGN KEY ("SUPPLIER_ID")
+  REFERENCES "SUPPLIERS" ("ID")
+[0m
+  [1m[35m (43.7ms)[0m  [1m[35mALTER TABLE "DELIVERS" ADD CONSTRAINT "FK_RAILS_5931B86088"
+FOREIGN KEY ("ORDER_ID")
+  REFERENCES "ORDERS" ("ID")
+[0m
+  [1m[35m (11.3ms)[0m  [1m[35mALTER TABLE "DELIVERS" ADD CONSTRAINT "FK_RAILS_F429715E55"
+FOREIGN KEY ("SUPPLIER_ID")
+  REFERENCES "SUPPLIERS" ("ID")
+[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "SCHEMA_MIGRATIONS" ("VERSION") VALUES (:a1)[0m  [["version", "20230415120614"]]
+Migrating to RenameJelszo (20230428192834)
+  [1m[35m (41.4ms)[0m  [1m[35mALTER TABLE "USERS" RENAME COLUMN "JELSZO" to "PASSWORD_DIGEST"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "SCHEMA_MIGRATIONS" ("VERSION") VALUES (:a1)[0m  [["version", "20230428192834"]]
+Migrating to AddAdminToUsers (20230429094103)
+  [1m[35m (18.8ms)[0m  [1m[35mALTER TABLE "USERS" ADD "ADMIN" NUMBER(1) DEFAULT 0[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "SCHEMA_MIGRATIONS" ("VERSION") VALUES (:a1)[0m  [["version", "20230429094103"]]
+  [1m[36mActiveRecord::InternalMetadata Load (5.0ms)[0m  [1m[34mSELECT "AR_INTERNAL_METADATA".* FROM "AR_INTERNAL_METADATA" WHERE "AR_INTERNAL_METADATA"."KEY" = :a1 FETCH FIRST :a2 ROWS ONLY[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Create (71.8ms)[0m  [1m[32mINSERT INTO "AR_INTERNAL_METADATA" ("KEY", "VALUE", "CREATED_AT", "UPDATED_AT") VALUES (:a1, :a2, :a3, :a4)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-04-29 18:47:25.769010"], ["updated_at", "2023-04-29 18:47:25.769010"]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.9ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+  [1m[36mUser Create (215.3ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Szabo Peter"], ["email", "szabp@citromail.hu"], ["password_digest", "$2a$12$D7QvbdOzToxSnoHwy18pxeZolrCHEqK8w6cFKrB1VGm26xbZ36EHi"], ["created_at", "2023-04-29 18:48:16.250559"], ["updated_at", "2023-04-29 18:48:16.250559"], ["admin", "0"], ["id", 1]]
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Tamas Eszter"], ["email", "tas@citromail.hu"], ["password_digest", "$2a$12$nOyVOOX/iHzcvvcUNf9OpO1xnKhnJBq9MJbMWP0w65MAZPt/v686."], ["created_at", "2023-04-29 18:48:16.764534"], ["updated_at", "2023-04-29 18:48:16.764534"], ["admin", "0"], ["id", 2]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Kerek Huba"], ["email", "kerhub@freemail.hu"], ["password_digest", "$2a$12$hUqqzmL/luUtO03eLWrUy.BigbfimRQCmrXKJ3qjC4diIFlf3SCFG"], ["created_at", "2023-04-29 18:48:16.989304"], ["updated_at", "2023-04-29 18:48:16.989304"], ["admin", "0"], ["id", 3]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Csoma Taksony"], ["email", "csomag@gmail.com"], ["password_digest", "$2a$12$bLATOwRYPqn6oQJztotEs.xRKuEe0StH4b4S2oqUg5ini9tshvXi2"], ["created_at", "2023-04-29 18:48:17.205108"], ["updated_at", "2023-04-29 18:48:17.205108"], ["admin", "0"], ["id", 4]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Kalapos Gertrud"], ["email", "kalapge@citromail.hu"], ["password_digest", "$2a$12$u4pe4CFr9HU.JgIw4Ib7k.7Oq2UOl/j74qbo.Bm1WkJW5E3mbNup6"], ["created_at", "2023-04-29 18:48:17.425372"], ["updated_at", "2023-04-29 18:48:17.425372"], ["admin", "0"], ["id", 5]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Lakatos Emanuel"], ["email", "lakatm@citromail.hu"], ["password_digest", "$2a$12$/SfBe1duZo0isincGy2BxuPQa6fwCND5RNBT/.QXocRSe5pLqoTGq"], ["created_at", "2023-04-29 18:48:17.645321"], ["updated_at", "2023-04-29 18:48:17.645321"], ["admin", "0"], ["id", 6]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Pecsi Zsofi"], ["email", "pezso@citromail.hu"], ["password_digest", "$2a$12$wbKQ7uW5Olv6viZffkfJnOaUKlo2Iox8KXMIHlkEHjk8IclWj5/R2"], ["created_at", "2023-04-29 18:48:17.862697"], ["updated_at", "2023-04-29 18:48:17.862697"], ["admin", "0"], ["id", 7]]
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "geri"], ["email", "geri@gmail.com"], ["password_digest", "$2a$12$TLq2sxjsHDJhcrCUzz.aXe4nIUjRbfsoykhZc4PKGcoo7NkYZaHGe"], ["created_at", "2023-04-29 18:48:18.084689"], ["updated_at", "2023-04-29 18:48:18.084689"], ["admin", "1"], ["id", 8]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Lakatos Alfonz"], ["email", "lafikobra@citromail.hu"], ["password_digest", "$2a$12$Ug/QLuYPQ9CcziRnbeVtMOf7z8orbvUyCug0XPtXnQgG18rD1aNKO"], ["created_at", "2023-04-29 18:48:18.301224"], ["updated_at", "2023-04-29 18:48:18.301224"], ["admin", "0"], ["id", 9]]
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Dombovari Istvan"], ["email", "veryfunny@citromail.hu"], ["password_digest", "$2a$12$YEg30rP5uZpgSBZ/qLVfJOx6ZVN.LPZ/w9mLzQo2AP8IFHwMk5XT6"], ["created_at", "2023-04-29 18:48:18.522087"], ["updated_at", "2023-04-29 18:48:18.522087"], ["admin", "0"], ["id", 10]]
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Puskas Tivadar"], ["email", "imold@citromail.hu"], ["password_digest", "$2a$12$b944gO3PK4ILrxAfwTgJluWjBeNexNz8S.c7Wk5NRDJANiZQUI8UK"], ["created_at", "2023-04-29 18:48:18.747101"], ["updated_at", "2023-04-29 18:48:18.747101"], ["admin", "0"], ["id", 11]]
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Pepe Frog"], ["email", "pepe@citromail.hu"], ["password_digest", "$2a$12$FT1ENhNvZllcxucvTtsCFOAhe78Vl0tJ0oVGnBq1idB25hfwqhjlS"], ["created_at", "2023-04-29 18:48:18.974127"], ["updated_at", "2023-04-29 18:48:18.974127"], ["admin", "0"], ["id", 12]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Gorilla Harambe"], ["email", "HarambethebigG@citromail.hu"], ["password_digest", "$2a$12$FIfXmdx9QaYfsSwA8ayfBubKA5LW6rUy6qTwoz7Nc6arcwgceNemS"], ["created_at", "2023-04-29 18:48:19.199396"], ["updated_at", "2023-04-29 18:48:19.199396"], ["admin", "0"], ["id", 13]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Szep Virag"], ["email", "flowerpower@citromail.hu"], ["password_digest", "$2a$12$pbIBzWWKOT0EQfdes/eXae.7YiYBELku59oUJVRZ.s.9qWlYrYlW6"], ["created_at", "2023-04-29 18:48:19.416646"], ["updated_at", "2023-04-29 18:48:19.416646"], ["admin", "0"], ["id", 14]]
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Horthy istvan"], ["email", "admiralisgeneralis@citromail.hu"], ["password_digest", "$2a$12$kxUz.PUFtR08EKots695I.2iXT6xxRhHXULloll0LXj39NPojcs2a"], ["created_at", "2023-04-29 18:48:19.641351"], ["updated_at", "2023-04-29 18:48:19.641351"], ["admin", "0"], ["id", 15]]
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Adolf Alfonzo"], ["email", "alfonz@citromail.hu"], ["password_digest", "$2a$12$CRdOLfeaqaoqnf32GpAPfuo.9N5GfyFmNLUPGbv2U8P.4vb8qC4FO"], ["created_at", "2023-04-29 18:48:19.856282"], ["updated_at", "2023-04-29 18:48:19.856282"], ["admin", "0"], ["id", 16]]
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Chadwik Chad"], ["email", "chad@citromail.hu"], ["password_digest", "$2a$12$tt.0oG7zQqDe0sfBIX56ROzNBIfGcdTV3XV15fXWwjx7nHNJyC7wK"], ["created_at", "2023-04-29 18:48:20.093666"], ["updated_at", "2023-04-29 18:48:20.093666"], ["admin", "0"], ["id", 17]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Biro Zsoka"], ["email", "birozs@citromail.hu"], ["password_digest", "$2a$12$wqCh37LlxDnnr6X3ISngl.B2LblY1rN2GGlBP9MG0YLdI7R.zxy/K"], ["created_at", "2023-04-29 18:48:20.313710"], ["updated_at", "2023-04-29 18:48:20.313710"], ["admin", "0"], ["id", 18]]
+  [1m[36mAdvert Create (142.6ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Bolgar Lyukacsos Szikla"], ["mennyiseg", 32000.0], ["ar_kg", 180.0], ["min_vasarlas", 1000], ["leiras", "Kivallo minosegu bolgar lyukacsos szikla elado kedvezo aron "], ["created_at", "2023-04-29 18:48:20.430677"], ["updated_at", "2023-04-29 18:48:20.430677"], ["id", 1]]
+  [1m[36mAdvert Create (12.6ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Bazalt"], ["mennyiseg", 120000.0], ["ar_kg", 990.0], ["min_vasarlas", 1000], ["leiras", "kiskamospuszati elso osztályu  haza  fejtettt bazalt 8-10 cm atmeroju"], ["created_at", "2023-04-29 18:48:20.662269"], ["updated_at", "2023-04-29 18:48:20.662269"], ["id", 2]]
+  [1m[36mAdvert Create (1.0ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Gorog hofeher szikla"], ["mennyiseg", 76030.0], ["ar_kg", 1501000.0], ["min_vasarlas", 1000], ["leiras", "Eredeti hellenistica feher szikla a atticai felszigetrol rednkivul olcson "], ["created_at", "2023-04-29 18:48:20.680585"], ["updated_at", "2023-04-29 18:48:20.680585"], ["id", 3]]
+  [1m[36mAdvert Create (0.6ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Tahiti Uveg Turkiz"], ["mennyiseg", 99995.0], ["ar_kg", 1050.0], ["min_vasarlas", 1000], ["leiras", "Magyarorszagon eloszor a hires tahiti uveg turkiz. premium vagasok excluziv embereknek"], ["created_at", "2023-04-29 18:48:20.686985"], ["updated_at", "2023-04-29 18:48:20.686985"], ["id", 4]]
+  [1m[36mAdvert Create (0.8ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Szivarvanyko"], ["mennyiseg", 62000.0], ["ar_kg", 574.0], ["min_vasarlas", 1000], ["leiras", "Pride, kert , egy csepp szinesseg asziklekrtbe hogy atalgos helyett kiemelkedo  legyen"], ["created_at", "2023-04-29 18:48:20.691970"], ["updated_at", "2023-04-29 18:48:20.691970"], ["id", 5]]
+  [1m[36mAdvert Create (0.5ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Gardenit Extra"], ["mennyiseg", 52020.0], ["ar_kg", 2269.0], ["min_vasarlas", 1000], ["leiras", "Cseh import Gradenit Extra a volt Monarchia egyik leghiresebb banyajabol"], ["created_at", "2023-04-29 18:48:20.697143"], ["updated_at", "2023-04-29 18:48:20.697143"], ["id", 6]]
+  [1m[36mAdvert Create (0.6ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Marvany"], ["mennyiseg", 909856.0], ["ar_kg", 2986.0], ["min_vasarlas", 1000], ["leiras", "Kiraly kis marvany elado prima minoseg meretre vagast illetve fektetest vagy beszerelest vallaok"], ["created_at", "2023-04-29 18:48:20.700577"], ["updated_at", "2023-04-29 18:48:20.700577"], ["id", 7]]
+  [1m[36mAdvert Create (0.8ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Spagetti Koral Szikla"], ["mennyiseg", 351000.0], ["ar_kg", 250.0], ["min_vasarlas", 1000], ["leiras", " sziklakert vagy csak disz ko mi segitunk ilyen olcsomeg soah enm volt sziklakertet epiteni a Spagetti koral sziklankal"], ["created_at", "2023-04-29 18:48:20.704623"], ["updated_at", "2023-04-29 18:48:20.704623"], ["id", 8]]
+  [1m[36mAdvert Create (0.8ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Barnas Meszko"], ["mennyiseg", 32000.0], ["ar_kg", 130.0], ["min_vasarlas", 1000], ["leiras", "Barna meszko a bakony labatol egezsen az udvarig dobja fel unalams kocsi beallojat ezzel a kivallo köfajtaval"], ["created_at", "2023-04-29 18:48:20.709284"], ["updated_at", "2023-04-29 18:48:20.709284"], ["id", 9]]
+  [1m[36mAdvert Create (1.0ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Szorny Szikla"], ["mennyiseg", 89600.0], ["ar_kg", 250.0], ["min_vasarlas", 1000], ["leiras", "ez a ko fajta meg nem trejdt  el kis haznankban de a   nemet alfoldon mar nagyot hoditott ezert elhoztuk neked a hollandok kedvencet a szorny sziklat"], ["created_at", "2023-04-29 18:48:20.714607"], ["updated_at", "2023-04-29 18:48:20.714607"], ["id", 10]]
+  [1m[36mAdvert Create (0.8ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Riolit"], ["mennyiseg", 34000.0], ["ar_kg", 1500.0], ["min_vasarlas", 1000], ["leiras", "egy kalsszikus mindeki ismeri rengeteg eu-s projekthez hazsnaltak es most a te otthonodba is elhozhatja azta z elokeloseget es modernitast amit kepvisel"], ["created_at", "2023-04-29 18:48:20.720529"], ["updated_at", "2023-04-29 18:48:20.720529"], ["id", 11]]
+  [1m[36mAdvert Create (0.8ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Opal"], ["mennyiseg", 34000.0], ["ar_kg", 1500.0], ["min_vasarlas", 1000], ["leiras", "mindeki ismeri a kovek gyongyszeme szo szerint es most egy forinttal se dragabb mint 1500 ft / kg "], ["created_at", "2023-04-29 18:48:20.725327"], ["updated_at", "2023-04-29 18:48:20.725327"], ["id", 12]]
+  [1m[36mAdvert Create (0.6ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Bezs Meszko Sziklak"], ["mennyiseg", 74000.0], ["ar_kg", 55.0], ["min_vasarlas", 1000], ["leiras", "szep bezsko szikla elado olcsoba"], ["created_at", "2023-04-29 18:48:20.729733"], ["updated_at", "2023-04-29 18:48:20.729733"], ["id", 13]]
+  [1m[36mAdvert Create (0.9ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Meteora Meszko"], ["mennyiseg", 74000.0], ["ar_kg", 250.0], ["min_vasarlas", 100], ["leiras", "Gorogorszag masodik csaoidtol az on hazaig szallitva meteora meszko hogy feldobja az unalmas udvarat"], ["created_at", "2023-04-29 18:48:20.750246"], ["updated_at", "2023-04-29 18:48:20.750246"], ["id", 14]]
+  [1m[36mAdvert Create (0.6ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Sivatagi Rozsa"], ["mennyiseg", 6500.0], ["ar_kg", 1900.0], ["min_vasarlas", 10], ["leiras", "ez a rozsa soha nem szarad el telen is nyaron is ekesiti a sziklakertet"], ["created_at", "2023-04-29 18:48:20.756720"], ["updated_at", "2023-04-29 18:48:20.756720"], ["id", 15]]
+  [1m[36mAdvert Create (0.9ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Fekete Pala"], ["mennyiseg", 84000.0], ["ar_kg", 550.0], ["min_vasarlas", 1000], ["leiras", "gyonoru matt fekete pala kivallo konyhapultnak avgy jarolapnak nagy kemenyseg es gyonyoru latvany"], ["created_at", "2023-04-29 18:48:20.761058"], ["updated_at", "2023-04-29 18:48:20.761058"], ["id", 16]]
+  [1m[36mAdvert Create (0.7ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Granit Golyok"], ["mennyiseg", 90231.0], ["ar_kg", 330.0], ["min_vasarlas", 1000], ["leiras", "ha unod a szabalytalan formakat akkor ezek a golyok neked valok garantaltan feldobjak a koves agyast"], ["created_at", "2023-04-29 18:48:20.768441"], ["updated_at", "2023-04-29 18:48:20.768441"], ["id", 17]]
+  [1m[36mAdvert Create (0.8ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Erezett Marvany"], ["mennyiseg", 21000.0], ["ar_kg", 200.0], ["min_vasarlas", 1000], ["leiras", "a klasszikus elegencia zaloga nem is kell mit mondani rola ugy tokeletes ahogy van "], ["created_at", "2023-04-29 18:48:20.772893"], ["updated_at", "2023-04-29 18:48:20.772893"], ["id", 18]]
+  [1m[36mAdvert Create (1.0ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Vraca Meszko"], ["mennyiseg", 64000.0], ["ar_kg", 250.0], ["min_vasarlas", 1000], ["leiras", "akar homlokzati burkolas akar padlo eza ko mindent tud nem fogja megbanni ha  ezt valasztja"], ["created_at", "2023-04-29 18:48:20.777524"], ["updated_at", "2023-04-29 18:48:20.777524"], ["id", 19]]
+  [1m[36mAdvert Create (1.1ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Akron"], ["mennyiseg", 64000.0], ["ar_kg", 700.0], ["min_vasarlas", 1000], ["leiras", "klasszikus hegyi lak feeling ki ne ismerni az akront"], ["created_at", "2023-04-29 18:48:20.783427"], ["updated_at", "2023-04-29 18:48:20.783427"], ["id", 20]]
+  [1m[36mAdvert Create (0.7ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Jade"], ["mennyiseg", 64000.0], ["ar_kg", 2000.0], ["min_vasarlas", 10], ["leiras", "Jade ez  gyonoru zold kozet minden kertet feldob"], ["created_at", "2023-04-29 18:48:20.789686"], ["updated_at", "2023-04-29 18:48:20.789686"], ["id", 21]]
+  [1m[36mAdvert Create (0.8ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Travertin"], ["mennyiseg", 44000.0], ["ar_kg", 600.0], ["min_vasarlas", 1000], ["leiras", "szebb es olcsobb is mint a marvany  uygan ugy homlokzatra vagy burkolasra is hazsnalhato kivallo ar/ertek arany"], ["created_at", "2023-04-29 18:48:20.794741"], ["updated_at", "2023-04-29 18:48:20.794741"], ["id", 22]]
+  [1m[36mAdvert Create (0.5ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Brazil Pala"], ["mennyiseg", 54000.0], ["ar_kg", 320.0], ["min_vasarlas", 1000], ["leiras", "a messzi braziliabol importalt pala kozet "], ["created_at", "2023-04-29 18:48:20.799818"], ["updated_at", "2023-04-29 18:48:20.799818"], ["id", 23]]
+  [1m[36mAdvert Create (0.6ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Indiai Homokko"], ["mennyiseg", 34000.0], ["ar_kg", 410.0], ["min_vasarlas", 1000], ["leiras", "Indiai homokko rendkivuli minoseg kedvezo ar "], ["created_at", "2023-04-29 18:48:20.803708"], ["updated_at", "2023-04-29 18:48:20.803708"], ["id", 24]]
+  [1m[36mAdvert Create (0.9ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Perlato Meszko"], ["mennyiseg", 22000.0], ["ar_kg", 890.0], ["min_vasarlas", 1000], ["leiras", "Perlato meszko burkoasra homlokzatra burkolas"], ["created_at", "2023-04-29 18:48:20.808142"], ["updated_at", "2023-04-29 18:48:20.808142"], ["id", 25]]
+  [1m[36mSupplier Create (158.5ms)[0m  [1m[32mINSERT INTO "SUPPLIERS" ("KM_AR", "AR_KG", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["km_ar", 200.0], ["ar_kg", 45.0], ["created_at", "2023-04-29 18:48:20.918058"], ["updated_at", "2023-04-29 18:48:20.918058"], ["id", 1]]
+  [1m[36mSupplier Create (0.8ms)[0m  [1m[32mINSERT INTO "SUPPLIERS" ("KM_AR", "AR_KG", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["km_ar", 210.0], ["ar_kg", 37.0], ["created_at", "2023-04-29 18:48:21.162406"], ["updated_at", "2023-04-29 18:48:21.162406"], ["id", 2]]
+  [1m[36mSupplier Create (0.5ms)[0m  [1m[32mINSERT INTO "SUPPLIERS" ("KM_AR", "AR_KG", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["km_ar", 310.0], ["ar_kg", 20.0], ["created_at", "2023-04-29 18:48:21.166728"], ["updated_at", "2023-04-29 18:48:21.166728"], ["id", 3]]
+  [1m[36mSupplier Create (1.1ms)[0m  [1m[32mINSERT INTO "SUPPLIERS" ("KM_AR", "AR_KG", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["km_ar", 290.0], ["ar_kg", 25.0], ["created_at", "2023-04-29 18:48:21.170848"], ["updated_at", "2023-04-29 18:48:21.170848"], ["id", 4]]
+  [1m[36mSupplier Create (1.2ms)[0m  [1m[32mINSERT INTO "SUPPLIERS" ("KM_AR", "AR_KG", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["km_ar", 500.0], ["ar_kg", 5.0], ["created_at", "2023-04-29 18:48:21.177151"], ["updated_at", "2023-04-29 18:48:21.177151"], ["id", 5]]
+  [1m[36mSupplier Create (0.8ms)[0m  [1m[32mINSERT INTO "SUPPLIERS" ("KM_AR", "AR_KG", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["km_ar", 450.0], ["ar_kg", 30.0], ["created_at", "2023-04-29 18:48:21.183746"], ["updated_at", "2023-04-29 18:48:21.183746"], ["id", 6]]
+  [1m[36mSupplier Create (0.6ms)[0m  [1m[32mINSERT INTO "SUPPLIERS" ("KM_AR", "AR_KG", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["km_ar", 210.0], ["ar_kg", 45.0], ["created_at", "2023-04-29 18:48:21.188342"], ["updated_at", "2023-04-29 18:48:21.188342"], ["id", 7]]
+  [1m[36mSupplier Create (0.4ms)[0m  [1m[32mINSERT INTO "SUPPLIERS" ("KM_AR", "AR_KG", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["km_ar", 220.0], ["ar_kg", 19.0], ["created_at", "2023-04-29 18:48:21.192799"], ["updated_at", "2023-04-29 18:48:21.192799"], ["id", 8]]
+  [1m[36mSupplier Create (0.7ms)[0m  [1m[32mINSERT INTO "SUPPLIERS" ("KM_AR", "AR_KG", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["km_ar", 170.0], ["ar_kg", 60.0], ["created_at", "2023-04-29 18:48:21.196383"], ["updated_at", "2023-04-29 18:48:21.196383"], ["id", 9]]
+  [1m[36mSupplier Create (0.4ms)[0m  [1m[32mINSERT INTO "SUPPLIERS" ("KM_AR", "AR_KG", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["km_ar", 390.0], ["ar_kg", 12.0], ["created_at", "2023-04-29 18:48:21.200301"], ["updated_at", "2023-04-29 18:48:21.200301"], ["id", 10]]
+  [1m[36mSupplier Create (0.4ms)[0m  [1m[32mINSERT INTO "SUPPLIERS" ("KM_AR", "AR_KG", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["km_ar", 430.0], ["ar_kg", 36.0], ["created_at", "2023-04-29 18:48:21.203285"], ["updated_at", "2023-04-29 18:48:21.203285"], ["id", 11]]
+  [1m[36mSupplier Create (0.4ms)[0m  [1m[32mINSERT INTO "SUPPLIERS" ("KM_AR", "AR_KG", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["km_ar", 330.0], ["ar_kg", 30.0], ["created_at", "2023-04-29 18:48:21.208026"], ["updated_at", "2023-04-29 18:48:21.208026"], ["id", 12]]
+  [1m[36mCarry Create (87.9ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 1], ["mit", "Lyukacsos Szikla"], ["created_at", "2023-04-29 18:48:21.302975"], ["updated_at", "2023-04-29 18:48:21.302975"], ["id", 1]]
+  [1m[36mCarry Create (0.6ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 1], ["mit", "Bazalt"], ["created_at", "2023-04-29 18:48:21.484224"], ["updated_at", "2023-04-29 18:48:21.484224"], ["id", 2]]
+  [1m[36mCarry Create (0.5ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 1], ["mit", "Gorog Hofeher Szikla"], ["created_at", "2023-04-29 18:48:21.488190"], ["updated_at", "2023-04-29 18:48:21.488190"], ["id", 3]]
+  [1m[36mCarry Create (0.4ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 1], ["mit", "Tahiti uveg Turkiz"], ["created_at", "2023-04-29 18:48:21.491596"], ["updated_at", "2023-04-29 18:48:21.491596"], ["id", 4]]
+  [1m[36mCarry Create (0.6ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 2], ["mit", "Szivarvanyko"], ["created_at", "2023-04-29 18:48:21.494425"], ["updated_at", "2023-04-29 18:48:21.494425"], ["id", 5]]
+  [1m[36mCarry Create (0.6ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 2], ["mit", "Gardenit Extra"], ["created_at", "2023-04-29 18:48:21.497923"], ["updated_at", "2023-04-29 18:48:21.497923"], ["id", 6]]
+  [1m[36mCarry Create (0.4ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 6], ["mit", "Marvany"], ["created_at", "2023-04-29 18:48:21.501620"], ["updated_at", "2023-04-29 18:48:21.501620"], ["id", 7]]
+  [1m[36mCarry Create (0.4ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 3], ["mit", "Spagettikoral Szikla"], ["created_at", "2023-04-29 18:48:21.505007"], ["updated_at", "2023-04-29 18:48:21.505007"], ["id", 8]]
+  [1m[36mCarry Create (0.5ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 4], ["mit", "Barnas Meszko"], ["created_at", "2023-04-29 18:48:21.509455"], ["updated_at", "2023-04-29 18:48:21.509455"], ["id", 9]]
+  [1m[36mCarry Create (0.7ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 4], ["mit", "Szorny Szikla"], ["created_at", "2023-04-29 18:48:21.513387"], ["updated_at", "2023-04-29 18:48:21.513387"], ["id", 10]]
+  [1m[36mCarry Create (0.8ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 4], ["mit", "Riolit"], ["created_at", "2023-04-29 18:48:21.517789"], ["updated_at", "2023-04-29 18:48:21.517789"], ["id", 11]]
+  [1m[36mCarry Create (0.4ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 5], ["mit", "Opal"], ["created_at", "2023-04-29 18:48:21.521759"], ["updated_at", "2023-04-29 18:48:21.521759"], ["id", 12]]
+  [1m[36mCarry Create (0.5ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 5], ["mit", "Bezs Meszko"], ["created_at", "2023-04-29 18:48:21.527078"], ["updated_at", "2023-04-29 18:48:21.527078"], ["id", 13]]
+  [1m[36mCarry Create (0.7ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 5], ["mit", "Meteora Meszko"], ["created_at", "2023-04-29 18:48:21.530446"], ["updated_at", "2023-04-29 18:48:21.530446"], ["id", 14]]
+  [1m[36mCarry Create (0.4ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 6], ["mit", "Sivatagi Rozsa"], ["created_at", "2023-04-29 18:48:21.534136"], ["updated_at", "2023-04-29 18:48:21.534136"], ["id", 15]]
+  [1m[36mCarry Create (0.6ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 7], ["mit", "Fekete Pala"], ["created_at", "2023-04-29 18:48:21.537065"], ["updated_at", "2023-04-29 18:48:21.537065"], ["id", 16]]
+  [1m[36mCarry Create (0.6ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 8], ["mit", "Granit Golyok"], ["created_at", "2023-04-29 18:48:21.540880"], ["updated_at", "2023-04-29 18:48:21.540880"], ["id", 17]]
+  [1m[36mCarry Create (0.5ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 9], ["mit", "Erezett Marvany"], ["created_at", "2023-04-29 18:48:21.544516"], ["updated_at", "2023-04-29 18:48:21.544516"], ["id", 18]]
+  [1m[36mCarry Create (0.6ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 10], ["mit", "Vraca Meszko"], ["created_at", "2023-04-29 18:48:21.548488"], ["updated_at", "2023-04-29 18:48:21.548488"], ["id", 19]]
+  [1m[36mCarry Create (0.7ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 11], ["mit", "Akron"], ["created_at", "2023-04-29 18:48:21.557901"], ["updated_at", "2023-04-29 18:48:21.557901"], ["id", 20]]
+  [1m[36mCarry Create (0.4ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 10], ["mit", "Jade"], ["created_at", "2023-04-29 18:48:21.562101"], ["updated_at", "2023-04-29 18:48:21.562101"], ["id", 21]]
+  [1m[36mCarry Create (0.4ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 9], ["mit", "Travertin"], ["created_at", "2023-04-29 18:48:21.566270"], ["updated_at", "2023-04-29 18:48:21.566270"], ["id", 22]]
+  [1m[36mCarry Create (0.5ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 7], ["mit", "Brazil Pala"], ["created_at", "2023-04-29 18:48:21.570205"], ["updated_at", "2023-04-29 18:48:21.570205"], ["id", 23]]
+  [1m[36mCarry Create (0.6ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 6], ["mit", "Indiai Homokko"], ["created_at", "2023-04-29 18:48:21.573788"], ["updated_at", "2023-04-29 18:48:21.573788"], ["id", 24]]
+  [1m[36mCarry Create (0.4ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 5], ["mit", "Perlato Meszko"], ["created_at", "2023-04-29 18:48:21.577708"], ["updated_at", "2023-04-29 18:48:21.577708"], ["id", 25]]
+  [1m[36mAdvertise Create (1008.5ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 1], ["advert_id", 1], ["mikor", "1999-11-11"], ["created_at", "2023-04-29 18:48:21.662025"], ["updated_at", "2023-04-29 18:48:21.662025"], ["id", 1]]
+  [1m[36mAdvertise Create (0.4ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 1], ["advert_id", 2], ["mikor", "1999-11-11"], ["created_at", "2023-04-29 18:48:22.756462"], ["updated_at", "2023-04-29 18:48:22.756462"], ["id", 2]]
+  [1m[36mAdvertise Create (0.7ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 1], ["advert_id", 3], ["mikor", "1999-06-11"], ["created_at", "2023-04-29 18:48:22.760044"], ["updated_at", "2023-04-29 18:48:22.760044"], ["id", 3]]
+  [1m[36mAdvertise Create (0.7ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 1], ["advert_id", 4], ["mikor", "1999-11-11"], ["created_at", "2023-04-29 18:48:22.764615"], ["updated_at", "2023-04-29 18:48:22.764615"], ["id", 4]]
+  [1m[36mAdvertise Create (0.8ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 1], ["advert_id", 5], ["mikor", "1999-11-12"], ["created_at", "2023-04-29 18:48:22.769733"], ["updated_at", "2023-04-29 18:48:22.769733"], ["id", 5]]
+  [1m[36mAdvertise Create (0.5ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 1], ["advert_id", 6], ["mikor", "2002-06-12"], ["created_at", "2023-04-29 18:48:22.774619"], ["updated_at", "2023-04-29 18:48:22.774619"], ["id", 6]]
+  [1m[36mAdvertise Create (0.4ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 1], ["advert_id", 7], ["mikor", "2003-04-11"], ["created_at", "2023-04-29 18:48:22.778295"], ["updated_at", "2023-04-29 18:48:22.778295"], ["id", 7]]
+  [1m[36mAdvertise Create (0.5ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 2], ["advert_id", 8], ["mikor", "1999-11-11"], ["created_at", "2023-04-29 18:48:22.782561"], ["updated_at", "2023-04-29 18:48:22.782561"], ["id", 8]]
+  [1m[36mAdvertise Create (0.7ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 3], ["advert_id", 9], ["mikor", "1999-11-11"], ["created_at", "2023-04-29 18:48:22.787040"], ["updated_at", "2023-04-29 18:48:22.787040"], ["id", 9]]
+  [1m[36mAdvertise Create (0.7ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 4], ["advert_id", 10], ["mikor", "2003-07-11"], ["created_at", "2023-04-29 18:48:22.791499"], ["updated_at", "2023-04-29 18:48:22.791499"], ["id", 10]]
+  [1m[36mAdvertise Create (0.5ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 5], ["advert_id", 11], ["mikor", "2007-11-11"], ["created_at", "2023-04-29 18:48:22.796425"], ["updated_at", "2023-04-29 18:48:22.796425"], ["id", 11]]
+  [1m[36mAdvertise Create (0.3ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 5], ["advert_id", 12], ["mikor", "2005-04-01"], ["created_at", "2023-04-29 18:48:22.800555"], ["updated_at", "2023-04-29 18:48:22.800555"], ["id", 12]]
+  [1m[36mAdvertise Create (0.8ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 5], ["advert_id", 13], ["mikor", "2022-06-11"], ["created_at", "2023-04-29 18:48:22.803487"], ["updated_at", "2023-04-29 18:48:22.803487"], ["id", 13]]
+  [1m[36mAdvertise Create (0.7ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 4], ["advert_id", 14], ["mikor", "2022-11-11"], ["created_at", "2023-04-29 18:48:22.808171"], ["updated_at", "2023-04-29 18:48:22.808171"], ["id", 14]]
+  [1m[36mAdvertise Create (0.5ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 3], ["advert_id", 15], ["mikor", "2022-11-11"], ["created_at", "2023-04-29 18:48:22.813223"], ["updated_at", "2023-04-29 18:48:22.813223"], ["id", 15]]
+  [1m[36mAdvertise Create (0.5ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 2], ["advert_id", 16], ["mikor", "2022-11-03"], ["created_at", "2023-04-29 18:48:22.817293"], ["updated_at", "2023-04-29 18:48:22.817293"], ["id", 16]]
+  [1m[36mAdvertise Create (0.6ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 1], ["advert_id", 17], ["mikor", "2022-04-11"], ["created_at", "2023-04-29 18:48:22.821269"], ["updated_at", "2023-04-29 18:48:22.821269"], ["id", 17]]
+  [1m[36mAdvertise Create (0.6ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 2], ["advert_id", 18], ["mikor", "2019-11-02"], ["created_at", "2023-04-29 18:48:22.825993"], ["updated_at", "2023-04-29 18:48:22.825993"], ["id", 18]]
+  [1m[36mAdvertise Create (0.4ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 3], ["advert_id", 19], ["mikor", "2019-11-11"], ["created_at", "2023-04-29 18:48:22.830735"], ["updated_at", "2023-04-29 18:48:22.830735"], ["id", 19]]
+  [1m[36mAdvertise Create (0.4ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 3], ["advert_id", 20], ["mikor", "2019-06-08"], ["created_at", "2023-04-29 18:48:22.834037"], ["updated_at", "2023-04-29 18:48:22.834037"], ["id", 20]]
+  [1m[36mAdvertise Create (1.0ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 4], ["advert_id", 21], ["mikor", "2019-07-08"], ["created_at", "2023-04-29 18:48:22.837900"], ["updated_at", "2023-04-29 18:48:22.837900"], ["id", 21]]
+  [1m[36mAdvertise Create (0.5ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 5], ["advert_id", 22], ["mikor", "2019-07-07"], ["created_at", "2023-04-29 18:48:22.844193"], ["updated_at", "2023-04-29 18:48:22.844193"], ["id", 22]]
+  [1m[36mAdvertise Create (0.4ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 6], ["advert_id", 23], ["mikor", "2019-04-09"], ["created_at", "2023-04-29 18:48:22.848126"], ["updated_at", "2023-04-29 18:48:22.848126"], ["id", 23]]
+  [1m[36mAdvertise Create (0.8ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 5], ["advert_id", 24], ["mikor", "2019-04-06"], ["created_at", "2023-04-29 18:48:22.851703"], ["updated_at", "2023-04-29 18:48:22.851703"], ["id", 24]]
+  [1m[36mAdvertise Create (1.1ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 5], ["advert_id", 25], ["mikor", "2019-04-09"], ["created_at", "2023-04-29 18:48:22.856864"], ["updated_at", "2023-04-29 18:48:22.856864"], ["id", 25]]
+  [1m[36mRate Create (866.4ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 6], ["advert_id", 1], ["csillag", 5], ["leiras", #<OCI8::CLOB:0x00000273a6f4eb30>], ["created_at", "2023-04-29 18:48:22.985465"], ["updated_at", "2023-04-29 18:48:22.985465"], ["id", 1]]
+  [1m[36mRate Create (1.1ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 6], ["advert_id", 2], ["csillag", 5], ["leiras", #<OCI8::CLOB:0x00000273a6f46b60>], ["created_at", "2023-04-29 18:48:23.982546"], ["updated_at", "2023-04-29 18:48:23.982546"], ["id", 2]]
+  [1m[36mRate Create (1.0ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 13], ["advert_id", 2], ["csillag", 5], ["leiras", #<OCI8::CLOB:0x00000273a6eff620>], ["created_at", "2023-04-29 18:48:23.988483"], ["updated_at", "2023-04-29 18:48:23.988483"], ["id", 3]]
+  [1m[36mRate Create (0.6ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 11], ["advert_id", 2], ["csillag", 5], ["leiras", #<OCI8::CLOB:0x00000273a6ef7c68>], ["created_at", "2023-04-29 18:48:23.993581"], ["updated_at", "2023-04-29 18:48:23.993581"], ["id", 4]]
+  [1m[36mRate Create (1.2ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 7], ["advert_id", 3], ["csillag", 5], ["leiras", #<OCI8::CLOB:0x00000273a6ef0328>], ["created_at", "2023-04-29 18:48:23.997227"], ["updated_at", "2023-04-29 18:48:23.997227"], ["id", 5]]
+  [1m[36mRate Create (1.1ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 7], ["advert_id", 4], ["csillag", 5], ["leiras", #<OCI8::CLOB:0x00000273a7038bb8>], ["created_at", "2023-04-29 18:48:24.003020"], ["updated_at", "2023-04-29 18:48:24.003020"], ["id", 6]]
+  [1m[36mRate Create (0.8ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 7], ["advert_id", 5], ["csillag", 5], ["leiras", #<OCI8::CLOB:0x00000273a7031278>], ["created_at", "2023-04-29 18:48:24.009165"], ["updated_at", "2023-04-29 18:48:24.009165"], ["id", 7]]
+  [1m[36mRate Create (0.9ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 8], ["advert_id", 5], ["csillag", 5], ["leiras", #<OCI8::CLOB:0x00000273a7009ea8>], ["created_at", "2023-04-29 18:48:24.013850"], ["updated_at", "2023-04-29 18:48:24.013850"], ["id", 8]]
+  [1m[36mRate Create (0.9ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 8], ["advert_id", 4], ["csillag", 5], ["leiras", #<OCI8::CLOB:0x00000273a7002568>], ["created_at", "2023-04-29 18:48:24.019634"], ["updated_at", "2023-04-29 18:48:24.019634"], ["id", 9]]
+  [1m[36mRate Create (0.7ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 9], ["advert_id", 6], ["csillag", 5], ["leiras", #<OCI8::CLOB:0x00000273a725b080>], ["created_at", "2023-04-29 18:48:24.024553"], ["updated_at", "2023-04-29 18:48:24.024553"], ["id", 10]]
+  [1m[36mRate Create (0.6ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 10], ["advert_id", 7], ["csillag", 5], ["leiras", #<OCI8::CLOB:0x00000273a72537b8>], ["created_at", "2023-04-29 18:48:24.029309"], ["updated_at", "2023-04-29 18:48:24.029309"], ["id", 11]]
+  [1m[36mRate Create (0.9ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 11], ["advert_id", 8], ["csillag", 3], ["leiras", #<OCI8::CLOB:0x00000273a73bbfb0>], ["created_at", "2023-04-29 18:48:24.033183"], ["updated_at", "2023-04-29 18:48:24.033183"], ["id", 12]]
+  [1m[36mRate Create (0.6ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 10], ["advert_id", 9], ["csillag", 3], ["leiras", #<OCI8::CLOB:0x00000273a73b46e8>], ["created_at", "2023-04-29 18:48:24.037436"], ["updated_at", "2023-04-29 18:48:24.037436"], ["id", 13]]
+  [1m[36mRate Create (1.0ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 10], ["advert_id", 10], ["csillag", 3], ["leiras", #<OCI8::CLOB:0x00000273a732d2b0>], ["created_at", "2023-04-29 18:48:24.042585"], ["updated_at", "2023-04-29 18:48:24.042585"], ["id", 14]]
+  [1m[36mRate Create (0.7ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 13], ["advert_id", 11], ["csillag", 3], ["leiras", #<OCI8::CLOB:0x00000273a3b3d0f8>], ["created_at", "2023-04-29 18:48:24.051837"], ["updated_at", "2023-04-29 18:48:24.051837"], ["id", 15]]
+  [1m[36mRate Create (1.1ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 14], ["advert_id", 12], ["csillag", 3], ["leiras", #<OCI8::CLOB:0x00000273a2b37550>], ["created_at", "2023-04-29 18:48:24.055681"], ["updated_at", "2023-04-29 18:48:24.055681"], ["id", 16]]
+  [1m[36mRate Create (0.8ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 15], ["advert_id", 13], ["csillag", 3], ["leiras", #<OCI8::CLOB:0x000002739ad73100>], ["created_at", "2023-04-29 18:48:24.061198"], ["updated_at", "2023-04-29 18:48:24.061198"], ["id", 17]]
+  [1m[36mRate Create (0.6ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 6], ["advert_id", 14], ["csillag", 3], ["leiras", #<OCI8::CLOB:0x00000273a4b2c900>], ["created_at", "2023-04-29 18:48:24.066804"], ["updated_at", "2023-04-29 18:48:24.066804"], ["id", 18]]
+  [1m[36mRate Create (0.8ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 13], ["advert_id", 15], ["csillag", 2], ["leiras", #<OCI8::CLOB:0x00000273a458f1a0>], ["created_at", "2023-04-29 18:48:24.070189"], ["updated_at", "2023-04-29 18:48:24.070189"], ["id", 19]]
+  [1m[36mRate Create (1.8ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 14], ["advert_id", 16], ["csillag", 2], ["leiras", #<OCI8::CLOB:0x00000273a3fee638>], ["created_at", "2023-04-29 18:48:24.074907"], ["updated_at", "2023-04-29 18:48:24.074907"], ["id", 20]]
+  [1m[36mRate Create (0.6ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 15], ["advert_id", 17], ["csillag", 1], ["leiras", #<OCI8::CLOB:0x00000273a55d3c28>], ["created_at", "2023-04-29 18:48:24.080871"], ["updated_at", "2023-04-29 18:48:24.080871"], ["id", 21]]
+  [1m[36mRate Create (0.6ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 16], ["advert_id", 18], ["csillag", 2], ["leiras", #<OCI8::CLOB:0x00000273a4f99010>], ["created_at", "2023-04-29 18:48:24.085271"], ["updated_at", "2023-04-29 18:48:24.085271"], ["id", 22]]
+  [1m[36mRate Create (0.8ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 11], ["advert_id", 19], ["csillag", 4], ["leiras", #<OCI8::CLOB:0x00000273a4d69358>], ["created_at", "2023-04-29 18:48:24.088843"], ["updated_at", "2023-04-29 18:48:24.088843"], ["id", 23]]
+  [1m[36mRate Create (0.8ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 7], ["advert_id", 20], ["csillag", 4], ["leiras", #<OCI8::CLOB:0x00000273a59f4578>], ["created_at", "2023-04-29 18:48:24.093851"], ["updated_at", "2023-04-29 18:48:24.093851"], ["id", 24]]
+  [1m[36mRate Create (0.6ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 7], ["advert_id", 21], ["csillag", 4], ["leiras", #<OCI8::CLOB:0x00000273a5866cb0>], ["created_at", "2023-04-29 18:48:24.098336"], ["updated_at", "2023-04-29 18:48:24.098336"], ["id", 25]]
+  [1m[36mRate Create (0.7ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 9], ["advert_id", 21], ["csillag", 4], ["leiras", #<OCI8::CLOB:0x00000273a57841f8>], ["created_at", "2023-04-29 18:48:24.102111"], ["updated_at", "2023-04-29 18:48:24.102111"], ["id", 26]]
+  [1m[36mRate Create (0.6ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 9], ["advert_id", 22], ["csillag", 4], ["leiras", #<OCI8::CLOB:0x00000273a5f0fc60>], ["created_at", "2023-04-29 18:48:24.106960"], ["updated_at", "2023-04-29 18:48:24.106960"], ["id", 27]]
+  [1m[36mRate Create (0.6ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 9], ["advert_id", 23], ["csillag", 4], ["leiras", #<OCI8::CLOB:0x00000273a5e74f58>], ["created_at", "2023-04-29 18:48:24.111681"], ["updated_at", "2023-04-29 18:48:24.111681"], ["id", 28]]
+  [1m[36mRate Create (0.6ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 7], ["advert_id", 24], ["csillag", 4], ["leiras", #<OCI8::CLOB:0x00000273a5df37a0>], ["created_at", "2023-04-29 18:48:24.115468"], ["updated_at", "2023-04-29 18:48:24.115468"], ["id", 29]]
+  [1m[36mRate Create (0.6ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 6], ["advert_id", 25], ["csillag", 4], ["leiras", #<OCI8::CLOB:0x00000273a634af28>], ["created_at", "2023-04-29 18:48:24.119858"], ["updated_at", "2023-04-29 18:48:24.119858"], ["id", 30]]
+  [1m[36mOrder Create (20.3ms)[0m  [1m[32mINSERT INTO "ORDERS" ("USER_ID", "ADVERT_ID", "SUPPLIER_ID", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 6], ["advert_id", 4], ["supplier_id", 1], ["created_at", "2023-04-29 18:48:24.222293"], ["updated_at", "2023-04-29 18:48:24.222293"], ["id", 1]]
+  [1m[36mOrder Create (0.6ms)[0m  [1m[32mINSERT INTO "ORDERS" ("USER_ID", "ADVERT_ID", "SUPPLIER_ID", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 3], ["advert_id", 4], ["supplier_id", 1], ["created_at", "2023-04-29 18:48:24.333937"], ["updated_at", "2023-04-29 18:48:24.333937"], ["id", 2]]
+  [1m[36mOrder Create (0.7ms)[0m  [1m[32mINSERT INTO "ORDERS" ("USER_ID", "ADVERT_ID", "SUPPLIER_ID", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 13], ["advert_id", 1], ["supplier_id", 1], ["created_at", "2023-04-29 18:48:24.338760"], ["updated_at", "2023-04-29 18:48:24.338760"], ["id", 3]]
+  [1m[36mOrder Create (0.5ms)[0m  [1m[32mINSERT INTO "ORDERS" ("USER_ID", "ADVERT_ID", "SUPPLIER_ID", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 13], ["advert_id", 12], ["supplier_id", 5], ["created_at", "2023-04-29 18:48:24.343130"], ["updated_at", "2023-04-29 18:48:24.343130"], ["id", 4]]
+  [1m[36mOrder Create (0.4ms)[0m  [1m[32mINSERT INTO "ORDERS" ("USER_ID", "ADVERT_ID", "SUPPLIER_ID", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 13], ["advert_id", 23], ["supplier_id", 7], ["created_at", "2023-04-29 18:48:24.347552"], ["updated_at", "2023-04-29 18:48:24.347552"], ["id", 5]]
+  [1m[36mOrder Create (0.9ms)[0m  [1m[32mINSERT INTO "ORDERS" ("USER_ID", "ADVERT_ID", "SUPPLIER_ID", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 13], ["advert_id", 21], ["supplier_id", 10], ["created_at", "2023-04-29 18:48:24.351464"], ["updated_at", "2023-04-29 18:48:24.351464"], ["id", 6]]
+  [1m[36mOrder Create (0.9ms)[0m  [1m[32mINSERT INTO "ORDERS" ("USER_ID", "ADVERT_ID", "SUPPLIER_ID", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 13], ["advert_id", 20], ["supplier_id", 11], ["created_at", "2023-04-29 18:48:24.356741"], ["updated_at", "2023-04-29 18:48:24.356741"], ["id", 7]]
+  [1m[36mDeliver Create (6.2ms)[0m  [1m[32mINSERT INTO "DELIVERS" ("ORDER_ID", "SUPPLIER_ID", "MENNYISEG", "HOVA", "KOLTSEG", "VARHATO_SZALLITAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9)[0m  [["order_id", 1], ["supplier_id", 1], ["mennyiseg", 1500.0], ["hova", "Kiskerepes Vitez utca 27"], ["koltseg", 1600000.0], ["varhato_szallitas", "2023-03-29"], ["created_at", "2023-04-29 18:48:24.455120"], ["updated_at", "2023-04-29 18:48:24.455120"], ["id", 1]]
+  [1m[36mDeliver Create (0.8ms)[0m  [1m[32mINSERT INTO "DELIVERS" ("ORDER_ID", "SUPPLIER_ID", "MENNYISEG", "HOVA", "KOLTSEG", "VARHATO_SZALLITAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9)[0m  [["order_id", 2], ["supplier_id", 1], ["mennyiseg", 2500.0], ["hova", "Fot Petofi koz 13"], ["koltseg", 1600000.0], ["varhato_szallitas", "2023-03-29"], ["created_at", "2023-04-29 18:48:24.537878"], ["updated_at", "2023-04-29 18:48:24.537878"], ["id", 2]]
+  [1m[36mDeliver Create (0.7ms)[0m  [1m[32mINSERT INTO "DELIVERS" ("ORDER_ID", "SUPPLIER_ID", "MENNYISEG", "HOVA", "KOLTSEG", "VARHATO_SZALLITAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9)[0m  [["order_id", 3], ["supplier_id", 1], ["mennyiseg", 2500.0], ["hova", "Budapest Galamb utca 10"], ["koltseg", 1650000.0], ["varhato_szallitas", "2023-03-26"], ["created_at", "2023-04-29 18:48:24.543315"], ["updated_at", "2023-04-29 18:48:24.543315"], ["id", 3]]
+  [1m[36mDeliver Create (0.5ms)[0m  [1m[32mINSERT INTO "DELIVERS" ("ORDER_ID", "SUPPLIER_ID", "MENNYISEG", "HOVA", "KOLTSEG", "VARHATO_SZALLITAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9)[0m  [["order_id", 4], ["supplier_id", 1], ["mennyiseg", 1500.0], ["hova", "Budapest Galamb utca 10"], ["koltseg", 1650000.0], ["varhato_szallitas", "2023-03-26"], ["created_at", "2023-04-29 18:48:24.547677"], ["updated_at", "2023-04-29 18:48:24.547677"], ["id", 4]]
+  [1m[36mDeliver Create (0.6ms)[0m  [1m[32mINSERT INTO "DELIVERS" ("ORDER_ID", "SUPPLIER_ID", "MENNYISEG", "HOVA", "KOLTSEG", "VARHATO_SZALLITAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9)[0m  [["order_id", 5], ["supplier_id", 1], ["mennyiseg", 1500.0], ["hova", "Budapest Galamb utca 10"], ["koltseg", 1650000.0], ["varhato_szallitas", "2023-03-26"], ["created_at", "2023-04-29 18:48:24.550696"], ["updated_at", "2023-04-29 18:48:24.550696"], ["id", 5]]
+  [1m[36mDeliver Create (0.5ms)[0m  [1m[32mINSERT INTO "DELIVERS" ("ORDER_ID", "SUPPLIER_ID", "MENNYISEG", "HOVA", "KOLTSEG", "VARHATO_SZALLITAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9)[0m  [["order_id", 6], ["supplier_id", 1], ["mennyiseg", 1500.0], ["hova", "Budapest Galamb utca 10"], ["koltseg", 1665000.0], ["varhato_szallitas", "2023-03-28"], ["created_at", "2023-04-29 18:48:24.554526"], ["updated_at", "2023-04-29 18:48:24.554526"], ["id", 6]]
+  [1m[36mDeliver Create (0.7ms)[0m  [1m[32mINSERT INTO "DELIVERS" ("ORDER_ID", "SUPPLIER_ID", "MENNYISEG", "HOVA", "KOLTSEG", "VARHATO_SZALLITAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9)[0m  [["order_id", 7], ["supplier_id", 1], ["mennyiseg", 1500.0], ["hova", "Budapest Galambutca 10"], ["koltseg", 1780000.0], ["varhato_szallitas", "2023-03-28"], ["created_at", "2023-04-29 18:48:24.557931"], ["updated_at", "2023-04-29 18:48:24.557931"], ["id", 7]]
+Started GET "/" for 127.0.0.1 at 2023-04-29 20:49:28 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 45.3ms | Allocations: 912)
+  [1m[36mAdvert Load (21.8ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:29
+  Rendered home/home.html.erb within layouts/application (Duration: 375.8ms | Allocations: 42705)
+  Rendered layout layouts/application.html.erb (Duration: 443.9ms | Allocations: 60372)
+Completed 200 OK in 505ms (Views: 350.3ms | ActiveRecord: 110.8ms | Allocations: 64724)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-04-29 20:49:32 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.9ms | Allocations: 330)
+  [1m[36mAdvert Load (1.8ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:29
+  Rendered home/home.html.erb within layouts/application (Duration: 13.0ms | Allocations: 5445)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 7921)
+Completed 200 OK in 29ms (Views: 21.9ms | ActiveRecord: 1.8ms | Allocations: 8221)
+
+
+Started GET "/newads" for 127.0.0.1 at 2023-04-29 20:49:33 +0200
+Processing by NewadsController#newads as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newads/newads.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 364)
+  Rendered newads/newads.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1633)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 4155)
+Completed 200 OK in 23ms (Views: 18.4ms | ActiveRecord: 0.0ms | Allocations: 4831)
+
+
+Started GET "/bag" for 127.0.0.1 at 2023-04-29 20:49:34 +0200
+Processing by BagController#bag as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bag/bag.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.3ms | Allocations: 373)
+  Rendered bag/bag.html.erb within layouts/application (Duration: 1518.7ms | Allocations: 1637)
+  Rendered layout layouts/application.html.erb (Duration: 1542.5ms | Allocations: 4186)
+Completed 200 OK in 1555ms (Views: 1548.7ms | ActiveRecord: 0.0ms | Allocations: 4859)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-04-29 20:49:42 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 337)
+  [1m[36mAdvert Load (2.0ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:29
+  Rendered home/home.html.erb within layouts/application (Duration: 12.9ms | Allocations: 5451)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 7929)
+Completed 200 OK in 28ms (Views: 21.4ms | ActiveRecord: 2.0ms | Allocations: 8229)
+
+
+Started GET "/newads" for 127.0.0.1 at 2023-04-29 20:49:43 +0200
+Processing by NewadsController#newads as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newads/newads.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 343)
+  Rendered newads/newads.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1372)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 3847)
+Completed 200 OK in 21ms (Views: 16.5ms | ActiveRecord: 0.0ms | Allocations: 4129)
+
+
+Started GET "/bag" for 127.0.0.1 at 2023-04-29 20:49:43 +0200
+Processing by BagController#bag as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bag/bag.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.3ms | Allocations: 346)
+  Rendered bag/bag.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1374)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 3849)
+Completed 200 OK in 21ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 4130)
+
+
+Started GET "/newads" for 127.0.0.1 at 2023-04-29 20:49:43 +0200
+Processing by NewadsController#newads as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newads/newads.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.9ms | Allocations: 340)
+  Rendered newads/newads.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1368)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 3843)
+Completed 200 OK in 20ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 4124)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-04-29 20:49:44 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.6ms | Allocations: 355)
+  [1m[36mAdvert Load (2.5ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:29
+  Rendered home/home.html.erb within layouts/application (Duration: 16.7ms | Allocations: 5467)
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 7942)
+Completed 200 OK in 31ms (Views: 24.0ms | ActiveRecord: 2.5ms | Allocations: 8239)
+
+
+Started GET "/newads" for 127.0.0.1 at 2023-04-29 20:49:44 +0200
+Processing by NewadsController#newads as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newads/newads.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.1ms | Allocations: 349)
+  Rendered newads/newads.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1377)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 3855)
+Completed 200 OK in 22ms (Views: 17.2ms | ActiveRecord: 0.0ms | Allocations: 4136)
+
+
+Started GET "/bag" for 127.0.0.1 at 2023-04-29 20:49:44 +0200
+Processing by BagController#bag as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bag/bag.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.8ms | Allocations: 340)
+  Rendered bag/bag.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1368)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 3843)
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 0.0ms | Allocations: 4124)
+
+
+Started GET "/newads" for 127.0.0.1 at 2023-04-29 20:49:45 +0200
+Processing by NewadsController#newads as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newads/newads.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.4ms | Allocations: 340)
+  Rendered newads/newads.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1368)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 3843)
+Completed 200 OK in 21ms (Views: 17.2ms | ActiveRecord: 0.0ms | Allocations: 4124)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-04-29 20:49:45 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 337)
+  [1m[36mAdvert Load (1.6ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:29
+  Rendered home/home.html.erb within layouts/application (Duration: 10.6ms | Allocations: 5441)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 7916)
+Completed 200 OK in 23ms (Views: 18.4ms | ActiveRecord: 1.6ms | Allocations: 8209)
+
+
+Started GET "/newads" for 127.0.0.1 at 2023-04-29 20:49:46 +0200
+Processing by NewadsController#newads as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newads/newads.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 340)
+  Rendered newads/newads.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1368)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 3843)
+Completed 200 OK in 19ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 4124)
+
+
