@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get 'login', to: "sessions#new"
   post 'login', to: "sessions#create"
   get 'newads', to: "newads#newads"
+  get 'bag', to: "bag#bag"
 
   get 'osszes', to: 'adverts#osszes'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
