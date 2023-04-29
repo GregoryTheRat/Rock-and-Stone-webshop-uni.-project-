@@ -5,25 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80373b3c-3dd1-4d6a-9163-d5b0c95c885d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/views/userdata/profile.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/login_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/login_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/userdata_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/userdata_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/_navbar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_navbar.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/login/login.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/sessions/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/userdata/userdata.html.erb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/2g/2gzZPGR_rQLHD-S-alXDEFNbOsDMsOfX3bp_FLgIVsM.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/2g/2gzZPGR_rQLHD-S-alXDEFNbOsDMsOfX3bp_FLgIVsM.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/8u/8UkLhmJIhebVxSe1p2wx8lv3inwyaCKIl6jNV6IQ8co.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/8u/8UkLhmJIhebVxSe1p2wx8lv3inwyaCKIl6jNV6IQ8co.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/Qd/Qd5FaGKMVjStI-nG5YNc9iDlxS3AEWKfc6RdtIlpauo.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/Qd/Qd5FaGKMVjStI-nG5YNc9iDlxS3AEWKfc6RdtIlpauo.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/Yx/Yx0twjm6K3pSyocYeVAE-IgqB3hNAdfvrDtx5xOXqhg.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/Yx/Yx0twjm6K3pSyocYeVAE-IgqB3hNAdfvrDtx5xOXqhg.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache-iseq/35/7659b6aae66978" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache-iseq/35/7659b6aae66978" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache-iseq/51/d6fa041c045dd5" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache-iseq/51/d6fa041c045dd5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache-iseq/70/a76d103b5e296e" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache-iseq/70/a76d103b5e296e" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache-iseq/8b/98cb6d46ca6615" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache-iseq/8b/98cb6d46ca6615" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache-iseq/53/7e56432b6a3367" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache-iseq/53/7e56432b6a3367" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache-iseq/ce/6f27cee7c3cb4c" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache-iseq/ce/6f27cee7c3cb4c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/pids/server.pid" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/pids/server.pid" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +155,7 @@
       <option name="presentableId" value="Default" />
       <updated>1682699084461</updated>
       <workItem from="1682699087256" duration="12837000" />
-      <workItem from="1682759724092" duration="4972000" />
+      <workItem from="1682759724092" duration="6348000" />
     </task>
     <servers />
   </component>
@@ -170,6 +163,6 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/untitled@untitled.rcov" NAME="untitled Coverage Results" MODIFIED="1682764638417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="untitled" />
+    <SUITE FILE_PATH="coverage/untitled@untitled.rcov" NAME="untitled Coverage Results" MODIFIED="1682765936169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="untitled" />
   </component>
 </project>

@@ -1,7 +1,6 @@
 class SessionsController < ApplicationController
 
   def new
-
   end
   def create
     user = User.find_by(nev: params[:nev])
@@ -14,7 +13,10 @@ class SessionsController < ApplicationController
       redirect_to login_path
       flash[:notice] = 'Név és/vagy jelszó nem jó.'
     end
+  end
 
+  def profile
+    @user = User.find_by(id: session[:user_id])
   end
 
 end

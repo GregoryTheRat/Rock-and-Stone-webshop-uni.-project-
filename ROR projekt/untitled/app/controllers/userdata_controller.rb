@@ -1,4 +1,4 @@
 class UserdataController < ApplicationController
-  def userdata
+  def profile
   end
 end

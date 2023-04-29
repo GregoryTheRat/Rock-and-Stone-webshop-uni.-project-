@@ -7,11 +7,8 @@
     </li>
     <li><a href="/newads">Új hirdetmény</a></li>
     <li>
-      <a href="/userdata" onclick="activateNavItem(this)"
-      >Profil adatok</a
-      >
       <% if logged_in? %>
-        <%= current_user.nev %>
+      <li><%= link_to "Profil adatok", profile_path %></li>
       <% end %>
     </li>
     <% if logged_in? %>

@@ -11,11 +11,7 @@ class UsersController < ApplicationController
   end
 
 
-  def login
-    @user = User.new
 
-
-  end
 
   # GET /users/new
   def new
