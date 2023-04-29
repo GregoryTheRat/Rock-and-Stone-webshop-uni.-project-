@@ -44723,3 +44723,997 @@ WHERE advertises.User_id=users.id
 Completed 200 OK in 25ms (Views: 17.3ms | ActiveRecord: 1.4ms | Allocations: 6202)
 
 
+  [1m[36mActiveRecord::SchemaMigration Pluck (7.8ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (4.3ms)[0m  [1m[34mSELECT "AR_INTERNAL_METADATA"."VALUE" FROM "AR_INTERNAL_METADATA" WHERE "AR_INTERNAL_METADATA"."KEY" = :a1 FETCH FIRST :a2 ROWS ONLY[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "AR_INTERNAL_METADATA"."VALUE" FROM "AR_INTERNAL_METADATA" WHERE "AR_INTERNAL_METADATA"."KEY" = :a1 FETCH FIRST :a2 ROWS ONLY[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "AR_INTERNAL_METADATA"."VALUE" FROM "AR_INTERNAL_METADATA" WHERE "AR_INTERNAL_METADATA"."KEY" = :a1 FETCH FIRST :a2 ROWS ONLY[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (170.4ms)[0m  [1m[35mDROP SEQUENCE "ADVERTISES_SEQ"[0m
+  [1m[35m (3.6ms)[0m  [1m[35mDROP SEQUENCE "ADVERTS_SEQ"[0m
+  [1m[35m (2.7ms)[0m  [1m[35mDROP SEQUENCE "CARRIES_SEQ"[0m
+  [1m[35m (3.3ms)[0m  [1m[35mDROP SEQUENCE "DELIVERS_SEQ"[0m
+  [1m[35m (2.4ms)[0m  [1m[35mDROP SEQUENCE "ORDERS_SEQ"[0m
+  [1m[35m (2.4ms)[0m  [1m[35mDROP SEQUENCE "RATES_SEQ"[0m
+  [1m[35m (2.6ms)[0m  [1m[35mDROP SEQUENCE "SUPPLIERS_SEQ"[0m
+  [1m[35m (2.6ms)[0m  [1m[35mDROP SEQUENCE "USERS_SEQ"[0m
+  [1m[35m (4.9ms)[0m  [1m[35mDROP TABLE "ADVERTISES" CASCADE CONSTRAINTS[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "AR_INTERNAL_METADATA"."VALUE" FROM "AR_INTERNAL_METADATA" WHERE "AR_INTERNAL_METADATA"."KEY" = :a1 FETCH FIRST :a2 ROWS ONLY[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "AR_INTERNAL_METADATA"."VALUE" FROM "AR_INTERNAL_METADATA" WHERE "AR_INTERNAL_METADATA"."KEY" = :a1 FETCH FIRST :a2 ROWS ONLY[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "AR_INTERNAL_METADATA"."VALUE" FROM "AR_INTERNAL_METADATA" WHERE "AR_INTERNAL_METADATA"."KEY" = :a1 FETCH FIRST :a2 ROWS ONLY[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (97.3ms)[0m  [1m[35mDROP TABLE "ADVERTISES" CASCADE CONSTRAINTS[0m
+  [1m[35m (19.6ms)[0m  [1m[35mDROP TABLE "ADVERTS" CASCADE CONSTRAINTS[0m
+  [1m[35m (15.9ms)[0m  [1m[35mDROP TABLE "AR_INTERNAL_METADATA" CASCADE CONSTRAINTS[0m
+  [1m[35m (14.3ms)[0m  [1m[35mDROP TABLE "CARRIES" CASCADE CONSTRAINTS[0m
+  [1m[35m (16.5ms)[0m  [1m[35mDROP TABLE "DELIVERS" CASCADE CONSTRAINTS[0m
+  [1m[35m (15.7ms)[0m  [1m[35mDROP TABLE "ORDERS" CASCADE CONSTRAINTS[0m
+  [1m[35m (19.9ms)[0m  [1m[35mDROP TABLE "RATES" CASCADE CONSTRAINTS[0m
+  [1m[35m (11.9ms)[0m  [1m[35mDROP TABLE "SCHEMA_MIGRATIONS" CASCADE CONSTRAINTS[0m
+  [1m[35m (13.8ms)[0m  [1m[35mDROP TABLE "SUPPLIERS" CASCADE CONSTRAINTS[0m
+  [1m[35m (62.6ms)[0m  [1m[35mDROP TABLE "USERS" CASCADE CONSTRAINTS[0m
+  [1m[35m (61.8ms)[0m  [1m[35mCREATE TABLE "SCHEMA_MIGRATIONS" ("VERSION" VARCHAR2(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "AR_INTERNAL_METADATA" ("KEY" VARCHAR2(255) NOT NULL PRIMARY KEY, "VALUE" VARCHAR2(255), "CREATED_AT" TIMESTAMP(6) NOT NULL, "UPDATED_AT" TIMESTAMP(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.7ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+Migrating to CreateUsers (20230415120312)
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "USERS" ("ID" NUMBER(38) NOT NULL PRIMARY KEY, "NEV" VARCHAR2(255), "EMAIL" VARCHAR2(255), "JELSZO" VARCHAR2(255), "CREATED_AT" TIMESTAMP(6) NOT NULL, "UPDATED_AT" TIMESTAMP(6) NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE SEQUENCE "USERS_SEQ" START WITH 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (107.6ms)[0m  [1m[32mINSERT INTO "SCHEMA_MIGRATIONS" ("VERSION") VALUES (:a1)[0m  [["version", "20230415120312"]]
+Migrating to CreateAdverts (20230415120330)
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "ADVERTS" ("ID" NUMBER(38) NOT NULL PRIMARY KEY, "TERMEK_NEV" VARCHAR2(255), "MENNYISEG" BINARY_FLOAT, "AR_KG" BINARY_FLOAT, "MIN_VASARLAS" NUMBER(38), "LEIRAS" VARCHAR2(255), "CREATED_AT" TIMESTAMP(6) NOT NULL, "UPDATED_AT" TIMESTAMP(6) NOT NULL)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE SEQUENCE "ADVERTS_SEQ" START WITH 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "SCHEMA_MIGRATIONS" ("VERSION") VALUES (:a1)[0m  [["version", "20230415120330"]]
+Migrating to CreateSuppliers (20230415120401)
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "SUPPLIERS" ("ID" NUMBER(38) NOT NULL PRIMARY KEY, "KM_AR" BINARY_FLOAT, "AR_KG" BINARY_FLOAT, "CREATED_AT" TIMESTAMP(6) NOT NULL, "UPDATED_AT" TIMESTAMP(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE SEQUENCE "SUPPLIERS_SEQ" START WITH 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "SCHEMA_MIGRATIONS" ("VERSION") VALUES (:a1)[0m  [["version", "20230415120401"]]
+Migrating to CreateCarries (20230415120420)
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "CARRIES" ("ID" NUMBER(38) NOT NULL PRIMARY KEY, "SUPPLIER_ID" NUMBER(38), "MIT" VARCHAR2(255), "CREATED_AT" TIMESTAMP(6) NOT NULL, "UPDATED_AT" TIMESTAMP(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE SEQUENCE "CARRIES_SEQ" START WITH 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "SCHEMA_MIGRATIONS" ("VERSION") VALUES (:a1)[0m  [["version", "20230415120420"]]
+Migrating to CreateAdvertises (20230415120433)
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "ADVERTISES" ("ID" NUMBER(38) NOT NULL PRIMARY KEY, "USER_ID" NUMBER(38), "ADVERT_ID" NUMBER(38), "MIKOR" DATE, "CREATED_AT" TIMESTAMP(6) NOT NULL, "UPDATED_AT" TIMESTAMP(6) NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE SEQUENCE "ADVERTISES_SEQ" START WITH 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "SCHEMA_MIGRATIONS" ("VERSION") VALUES (:a1)[0m  [["version", "20230415120433"]]
+Migrating to CreateRates (20230415120448)
+  [1m[35m (11.0ms)[0m  [1m[35mCREATE TABLE "RATES" ("ID" NUMBER(38) NOT NULL PRIMARY KEY, "USER_ID" NUMBER(38), "ADVERT_ID" NUMBER(38), "CSILLAG" NUMBER(38), "LEIRAS" CLOB, "CREATED_AT" TIMESTAMP(6) NOT NULL, "UPDATED_AT" TIMESTAMP(6) NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE SEQUENCE "RATES_SEQ" START WITH 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "SCHEMA_MIGRATIONS" ("VERSION") VALUES (:a1)[0m  [["version", "20230415120448"]]
+Migrating to CreateOrders (20230415120457)
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "ORDERS" ("ID" NUMBER(38) NOT NULL PRIMARY KEY, "USER_ID" NUMBER(38), "ADVERT_ID" NUMBER(38), "SUPPLIER_ID" NUMBER(38), "CREATED_AT" TIMESTAMP(6) NOT NULL, "UPDATED_AT" TIMESTAMP(6) NOT NULL)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE SEQUENCE "ORDERS_SEQ" START WITH 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "SCHEMA_MIGRATIONS" ("VERSION") VALUES (:a1)[0m  [["version", "20230415120457"]]
+Migrating to CreateDelivers (20230415120513)
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "DELIVERS" ("ID" NUMBER(38) NOT NULL PRIMARY KEY, "ORDER_ID" NUMBER(38), "SUPPLIER_ID" NUMBER(38), "MENNYISEG" BINARY_FLOAT, "HOVA" VARCHAR2(255), "KOLTSEG" BINARY_FLOAT, "VARHATO_SZALLITAS" DATE, "CREATED_AT" TIMESTAMP(6) NOT NULL, "UPDATED_AT" TIMESTAMP(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE SEQUENCE "DELIVERS_SEQ" START WITH 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "SCHEMA_MIGRATIONS" ("VERSION") VALUES (:a1)[0m  [["version", "20230415120513"]]
+Migrating to AddForeignKeysToTables (20230415120614)
+  [1m[35m (10.6ms)[0m  [1m[35mALTER TABLE "CARRIES" ADD CONSTRAINT "FK_RAILS_ADEEF3AE87"
+FOREIGN KEY ("SUPPLIER_ID")
+  REFERENCES "SUPPLIERS" ("ID")
+[0m
+  [1m[35m (7.0ms)[0m  [1m[35mALTER TABLE "ADVERTISES" ADD CONSTRAINT "FK_RAILS_A6FE8F3196"
+FOREIGN KEY ("USER_ID")
+  REFERENCES "USERS" ("ID")
+[0m
+  [1m[35m (6.0ms)[0m  [1m[35mALTER TABLE "ADVERTISES" ADD CONSTRAINT "FK_RAILS_8985F1EF99"
+FOREIGN KEY ("ADVERT_ID")
+  REFERENCES "ADVERTS" ("ID")
+[0m
+  [1m[35m (8.0ms)[0m  [1m[35mALTER TABLE "RATES" ADD CONSTRAINT "FK_RAILS_4A29085CE0"
+FOREIGN KEY ("USER_ID")
+  REFERENCES "USERS" ("ID")
+[0m
+  [1m[35m (12.8ms)[0m  [1m[35mALTER TABLE "RATES" ADD CONSTRAINT "FK_RAILS_42C71375E6"
+FOREIGN KEY ("ADVERT_ID")
+  REFERENCES "ADVERTS" ("ID")
+[0m
+  [1m[35m (6.9ms)[0m  [1m[35mALTER TABLE "ORDERS" ADD CONSTRAINT "FK_RAILS_F868B47F6A"
+FOREIGN KEY ("USER_ID")
+  REFERENCES "USERS" ("ID")
+[0m
+  [1m[35m (4.7ms)[0m  [1m[35mALTER TABLE "ORDERS" ADD CONSTRAINT "FK_RAILS_67964D5ED4"
+FOREIGN KEY ("ADVERT_ID")
+  REFERENCES "ADVERTS" ("ID")
+[0m
+  [1m[35m (5.5ms)[0m  [1m[35mALTER TABLE "ORDERS" ADD CONSTRAINT "FK_RAILS_D426350910"
+FOREIGN KEY ("SUPPLIER_ID")
+  REFERENCES "SUPPLIERS" ("ID")
+[0m
+  [1m[35m (8.5ms)[0m  [1m[35mALTER TABLE "DELIVERS" ADD CONSTRAINT "FK_RAILS_5931B86088"
+FOREIGN KEY ("ORDER_ID")
+  REFERENCES "ORDERS" ("ID")
+[0m
+  [1m[35m (4.9ms)[0m  [1m[35mALTER TABLE "DELIVERS" ADD CONSTRAINT "FK_RAILS_F429715E55"
+FOREIGN KEY ("SUPPLIER_ID")
+  REFERENCES "SUPPLIERS" ("ID")
+[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "SCHEMA_MIGRATIONS" ("VERSION") VALUES (:a1)[0m  [["version", "20230415120614"]]
+Migrating to RenameJelszo (20230428192834)
+  [1m[35m (12.6ms)[0m  [1m[35mALTER TABLE "USERS" RENAME COLUMN "JELSZO" to "PASSWORD_DIGEST"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "SCHEMA_MIGRATIONS" ("VERSION") VALUES (:a1)[0m  [["version", "20230428192834"]]
+Migrating to AddAdminToUsers (20230429094103)
+  [1m[35m (12.3ms)[0m  [1m[35mALTER TABLE "USERS" ADD "ADMIN" NUMBER(1) DEFAULT 0[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "SCHEMA_MIGRATIONS" ("VERSION") VALUES (:a1)[0m  [["version", "20230429094103"]]
+  [1m[36mActiveRecord::InternalMetadata Load (3.2ms)[0m  [1m[34mSELECT "AR_INTERNAL_METADATA".* FROM "AR_INTERNAL_METADATA" WHERE "AR_INTERNAL_METADATA"."KEY" = :a1 FETCH FIRST :a2 ROWS ONLY[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Create (17.8ms)[0m  [1m[32mINSERT INTO "AR_INTERNAL_METADATA" ("KEY", "VALUE", "CREATED_AT", "UPDATED_AT") VALUES (:a1, :a2, :a3, :a4)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-04-29 18:50:00.822973"], ["updated_at", "2023-04-29 18:50:00.822973"]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+Started GET "/" for 127.0.0.1 at 2023-04-29 21:35:04 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 39.6ms | Allocations: 696)
+  [1m[36mAdvert Load (12.5ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:29
+  Rendered home/home.html.erb within layouts/application (Duration: 504.7ms | Allocations: 29883)
+  Rendered layout layouts/application.html.erb (Duration: 611.6ms | Allocations: 45498)
+Completed 200 OK in 781ms (Views: 647.4ms | ActiveRecord: 12.5ms | Allocations: 50080)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-29 21:35:12 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 361)
+  [1m[36mAdvert Load (0.6ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:29
+  Rendered home/home.html.erb within layouts/application (Duration: 7.5ms | Allocations: 3344)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 5654)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.6ms | Allocations: 6022)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-29 21:35:44 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 298)
+  [1m[36mAdvert Load (0.4ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:29
+  Rendered home/home.html.erb within layouts/application (Duration: 6.1ms | Allocations: 3045)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 5338)
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.4ms | Allocations: 5639)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+  [1m[36mUser Create (24.2ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Szabo Peter"], ["email", "szabp@citromail.hu"], ["password_digest", "$2a$12$GiL/nLSnbTUwbYqIMXFa9.eiZa7nIfZXyboGwy8DNqS0JMauH.25i"], ["created_at", "2023-04-29 19:35:45.240483"], ["updated_at", "2023-04-29 19:35:45.240483"], ["admin", "0"], ["id", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Tamas Eszter"], ["email", "tas@citromail.hu"], ["password_digest", "$2a$12$aMUeqoVJemmOFca90qkvFe31NpmtsD0pLsz6dApOz3BPL5Xu/3bY2"], ["created_at", "2023-04-29 19:35:45.511105"], ["updated_at", "2023-04-29 19:35:45.511105"], ["admin", "0"], ["id", 2]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Kerek Huba"], ["email", "kerhub@freemail.hu"], ["password_digest", "$2a$12$sh/8keSrPs/8Jbyr9p0RNur6SL519p6ObrQFyI3SSRHE5qPE.MEIW"], ["created_at", "2023-04-29 19:35:45.783415"], ["updated_at", "2023-04-29 19:35:45.783415"], ["admin", "0"], ["id", 3]]
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Csoma Taksony"], ["email", "csomag@gmail.com"], ["password_digest", "$2a$12$jGCDza5R3pWZMzawSDTHROlwnHgnrb0cOt.2KoqVrMNYjy7gi0C3i"], ["created_at", "2023-04-29 19:35:45.990851"], ["updated_at", "2023-04-29 19:35:45.990851"], ["admin", "0"], ["id", 4]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Kalapos Gertrud"], ["email", "kalapge@citromail.hu"], ["password_digest", "$2a$12$W5gMwVGu3SMeCQ3h7BjF0uiaY4SDxtvjKnWN5ieGypCJglqtun.5q"], ["created_at", "2023-04-29 19:35:46.202985"], ["updated_at", "2023-04-29 19:35:46.202985"], ["admin", "0"], ["id", 5]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Lakatos Emanuel"], ["email", "lakatm@citromail.hu"], ["password_digest", "$2a$12$BURxk96jiVla7.SQ7uPIKetsnciMupomNQF3cMXJeFh6zGjM6Ilcu"], ["created_at", "2023-04-29 19:35:46.399491"], ["updated_at", "2023-04-29 19:35:46.399491"], ["admin", "0"], ["id", 6]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Pecsi Zsofi"], ["email", "pezso@citromail.hu"], ["password_digest", "$2a$12$JZWxcpgYeHY13f4b6fAwoO2AieWFLcPoof44fPmqUpA9PbeiSTwBa"], ["created_at", "2023-04-29 19:35:46.600195"], ["updated_at", "2023-04-29 19:35:46.600195"], ["admin", "0"], ["id", 7]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "geri"], ["email", "geri@gmail.com"], ["password_digest", "$2a$12$Ptj9tqjHAOqSynApAaZE0OBWOgKIbIj4QHcRr3vM23QC4khGbs.Pu"], ["created_at", "2023-04-29 19:35:46.799624"], ["updated_at", "2023-04-29 19:35:46.799624"], ["admin", "1"], ["id", 8]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Lakatos Alfonz"], ["email", "lafikobra@citromail.hu"], ["password_digest", "$2a$12$WS.vFxRwF.JmgIcde4CD6uqx2/D4Yz.t/DrLynDMX6r2OYMtrk0I2"], ["created_at", "2023-04-29 19:35:47.015668"], ["updated_at", "2023-04-29 19:35:47.015668"], ["admin", "0"], ["id", 9]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Dombovari Istvan"], ["email", "veryfunny@citromail.hu"], ["password_digest", "$2a$12$MAMROCvlMAVWmYKUKJNSnOkb4sBlU1tq3snfdW1Su1/sO0GdmE5S6"], ["created_at", "2023-04-29 19:35:47.229047"], ["updated_at", "2023-04-29 19:35:47.229047"], ["admin", "0"], ["id", 10]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Puskas Tivadar"], ["email", "imold@citromail.hu"], ["password_digest", "$2a$12$X/0RnA75bvKu3qUoUNXg0uUapOqpkPMrRBVrqeLvoyKQ0qBcluFoC"], ["created_at", "2023-04-29 19:35:47.439529"], ["updated_at", "2023-04-29 19:35:47.439529"], ["admin", "0"], ["id", 11]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Pepe Frog"], ["email", "pepe@citromail.hu"], ["password_digest", "$2a$12$HwZnb7X468uythpY.FNhw.7unk7mlhum18E4Guwmyer45T86cdmY2"], ["created_at", "2023-04-29 19:35:47.699251"], ["updated_at", "2023-04-29 19:35:47.699251"], ["admin", "0"], ["id", 12]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Gorilla Harambe"], ["email", "HarambethebigG@citromail.hu"], ["password_digest", "$2a$12$kc4CyYKYvLFFNrNY//pLJuAnohG599g234pQ6u.yxtIqNf8S8WxsS"], ["created_at", "2023-04-29 19:35:47.913877"], ["updated_at", "2023-04-29 19:35:47.913877"], ["admin", "0"], ["id", 13]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Szep Virag"], ["email", "flowerpower@citromail.hu"], ["password_digest", "$2a$12$SDeIofmJDPLQJhMJI2gEMOSH2algEe2bHcFPH9.ynP.ZCsXluNqD2"], ["created_at", "2023-04-29 19:35:48.195809"], ["updated_at", "2023-04-29 19:35:48.195809"], ["admin", "0"], ["id", 14]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Horthy istvan"], ["email", "admiralisgeneralis@citromail.hu"], ["password_digest", "$2a$12$V46hl3Bwm/YlBsG792HUWOgYoj/JlcLK1M51bQ22i7ToBNMpVfmgO"], ["created_at", "2023-04-29 19:35:48.411636"], ["updated_at", "2023-04-29 19:35:48.411636"], ["admin", "0"], ["id", 15]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Adolf Alfonzo"], ["email", "alfonz@citromail.hu"], ["password_digest", "$2a$12$890BbDVizi3v1YkMaH2bM.oT.m.itqwfJWXJa0cDWDfiiSxy7ylXa"], ["created_at", "2023-04-29 19:35:48.628706"], ["updated_at", "2023-04-29 19:35:48.628706"], ["admin", "0"], ["id", 16]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Chadwik Chad"], ["email", "chad@citromail.hu"], ["password_digest", "$2a$12$Um1Ey8vd33bWeZpksim93e.mgirzJu63Qmsq2UlcB/qfH4isSeEWG"], ["created_at", "2023-04-29 19:35:48.856724"], ["updated_at", "2023-04-29 19:35:48.856724"], ["admin", "0"], ["id", 17]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "USERS" ("NEV", "EMAIL", "PASSWORD_DIGEST", "CREATED_AT", "UPDATED_AT", "ADMIN", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["nev", "Biro Zsoka"], ["email", "birozs@citromail.hu"], ["password_digest", "$2a$12$b7h6EfxURhWcUvWFOIiByufD1UIjJvdRNTPa5bGYzQzN4zSwbU0/y"], ["created_at", "2023-04-29 19:35:49.189236"], ["updated_at", "2023-04-29 19:35:49.189236"], ["admin", "0"], ["id", 18]]
+  [1m[36mAdvert Create (28.5ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Bolgar Lyukacsos Szikla"], ["mennyiseg", 32000.0], ["ar_kg", 180.0], ["min_vasarlas", 1000], ["leiras", "Kivallo minosegu bolgar lyukacsos szikla elado kedvezo aron "], ["created_at", "2023-04-29 19:35:49.283338"], ["updated_at", "2023-04-29 19:35:49.283338"], ["id", 1]]
+  [1m[36mAdvert Create (6.1ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Bazalt"], ["mennyiseg", 120000.0], ["ar_kg", 990.0], ["min_vasarlas", 1000], ["leiras", "kiskamospuszati elso osztályu  haza  fejtettt bazalt 8-10 cm atmeroju"], ["created_at", "2023-04-29 19:35:49.347185"], ["updated_at", "2023-04-29 19:35:49.347185"], ["id", 2]]
+  [1m[36mAdvert Create (0.3ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Gorog hofeher szikla"], ["mennyiseg", 76030.0], ["ar_kg", 1501000.0], ["min_vasarlas", 1000], ["leiras", "Eredeti hellenistica feher szikla a atticai felszigetrol rednkivul olcson "], ["created_at", "2023-04-29 19:35:49.355834"], ["updated_at", "2023-04-29 19:35:49.355834"], ["id", 3]]
+  [1m[36mAdvert Create (0.3ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Tahiti Uveg Turkiz"], ["mennyiseg", 99995.0], ["ar_kg", 1050.0], ["min_vasarlas", 1000], ["leiras", "Magyarorszagon eloszor a hires tahiti uveg turkiz. premium vagasok excluziv embereknek"], ["created_at", "2023-04-29 19:35:49.358030"], ["updated_at", "2023-04-29 19:35:49.358030"], ["id", 4]]
+  [1m[36mAdvert Create (0.7ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Szivarvanyko"], ["mennyiseg", 62000.0], ["ar_kg", 574.0], ["min_vasarlas", 1000], ["leiras", "Pride, kert , egy csepp szinesseg asziklekrtbe hogy atalgos helyett kiemelkedo  legyen"], ["created_at", "2023-04-29 19:35:49.360664"], ["updated_at", "2023-04-29 19:35:49.360664"], ["id", 5]]
+  [1m[36mAdvert Create (0.3ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Gardenit Extra"], ["mennyiseg", 52020.0], ["ar_kg", 2269.0], ["min_vasarlas", 1000], ["leiras", "Cseh import Gradenit Extra a volt Monarchia egyik leghiresebb banyajabol"], ["created_at", "2023-04-29 19:35:49.365090"], ["updated_at", "2023-04-29 19:35:49.365090"], ["id", 6]]
+  [1m[36mAdvert Create (0.2ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Marvany"], ["mennyiseg", 909856.0], ["ar_kg", 2986.0], ["min_vasarlas", 1000], ["leiras", "Kiraly kis marvany elado prima minoseg meretre vagast illetve fektetest vagy beszerelest vallaok"], ["created_at", "2023-04-29 19:35:49.367282"], ["updated_at", "2023-04-29 19:35:49.367282"], ["id", 7]]
+  [1m[36mAdvert Create (0.2ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Spagetti Koral Szikla"], ["mennyiseg", 351000.0], ["ar_kg", 250.0], ["min_vasarlas", 1000], ["leiras", " sziklakert vagy csak disz ko mi segitunk ilyen olcsomeg soah enm volt sziklakertet epiteni a Spagetti koral sziklankal"], ["created_at", "2023-04-29 19:35:49.369447"], ["updated_at", "2023-04-29 19:35:49.369447"], ["id", 8]]
+  [1m[36mAdvert Create (0.3ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Barnas Meszko"], ["mennyiseg", 32000.0], ["ar_kg", 130.0], ["min_vasarlas", 1000], ["leiras", "Barna meszko a bakony labatol egezsen az udvarig dobja fel unalams kocsi beallojat ezzel a kivallo köfajtaval"], ["created_at", "2023-04-29 19:35:49.371467"], ["updated_at", "2023-04-29 19:35:49.371467"], ["id", 9]]
+  [1m[36mAdvert Create (0.2ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Szorny Szikla"], ["mennyiseg", 89600.0], ["ar_kg", 250.0], ["min_vasarlas", 1000], ["leiras", "ez a ko fajta meg nem trejdt  el kis haznankban de a   nemet alfoldon mar nagyot hoditott ezert elhoztuk neked a hollandok kedvencet a szorny sziklat"], ["created_at", "2023-04-29 19:35:49.373425"], ["updated_at", "2023-04-29 19:35:49.373425"], ["id", 10]]
+  [1m[36mAdvert Create (0.2ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Riolit"], ["mennyiseg", 34000.0], ["ar_kg", 1500.0], ["min_vasarlas", 1000], ["leiras", "egy kalsszikus mindeki ismeri rengeteg eu-s projekthez hazsnaltak es most a te otthonodba is elhozhatja azta z elokeloseget es modernitast amit kepvisel"], ["created_at", "2023-04-29 19:35:49.375321"], ["updated_at", "2023-04-29 19:35:49.375321"], ["id", 11]]
+  [1m[36mAdvert Create (0.4ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Opal"], ["mennyiseg", 34000.0], ["ar_kg", 1500.0], ["min_vasarlas", 1000], ["leiras", "mindeki ismeri a kovek gyongyszeme szo szerint es most egy forinttal se dragabb mint 1500 ft / kg "], ["created_at", "2023-04-29 19:35:49.378844"], ["updated_at", "2023-04-29 19:35:49.378844"], ["id", 12]]
+  [1m[36mAdvert Create (0.4ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Bezs Meszko Sziklak"], ["mennyiseg", 74000.0], ["ar_kg", 55.0], ["min_vasarlas", 1000], ["leiras", "szep bezsko szikla elado olcsoba"], ["created_at", "2023-04-29 19:35:49.381864"], ["updated_at", "2023-04-29 19:35:49.381864"], ["id", 13]]
+  [1m[36mAdvert Create (0.4ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Meteora Meszko"], ["mennyiseg", 74000.0], ["ar_kg", 250.0], ["min_vasarlas", 100], ["leiras", "Gorogorszag masodik csaoidtol az on hazaig szallitva meteora meszko hogy feldobja az unalmas udvarat"], ["created_at", "2023-04-29 19:35:49.385154"], ["updated_at", "2023-04-29 19:35:49.385154"], ["id", 14]]
+  [1m[36mAdvert Create (0.4ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Sivatagi Rozsa"], ["mennyiseg", 6500.0], ["ar_kg", 1900.0], ["min_vasarlas", 10], ["leiras", "ez a rozsa soha nem szarad el telen is nyaron is ekesiti a sziklakertet"], ["created_at", "2023-04-29 19:35:49.388054"], ["updated_at", "2023-04-29 19:35:49.388054"], ["id", 15]]
+  [1m[36mAdvert Create (0.3ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Fekete Pala"], ["mennyiseg", 84000.0], ["ar_kg", 550.0], ["min_vasarlas", 1000], ["leiras", "gyonoru matt fekete pala kivallo konyhapultnak avgy jarolapnak nagy kemenyseg es gyonyoru latvany"], ["created_at", "2023-04-29 19:35:49.390965"], ["updated_at", "2023-04-29 19:35:49.390965"], ["id", 16]]
+  [1m[36mAdvert Create (0.4ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Granit Golyok"], ["mennyiseg", 90231.0], ["ar_kg", 330.0], ["min_vasarlas", 1000], ["leiras", "ha unod a szabalytalan formakat akkor ezek a golyok neked valok garantaltan feldobjak a koves agyast"], ["created_at", "2023-04-29 19:35:49.401868"], ["updated_at", "2023-04-29 19:35:49.401868"], ["id", 17]]
+  [1m[36mAdvert Create (0.6ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Erezett Marvany"], ["mennyiseg", 21000.0], ["ar_kg", 200.0], ["min_vasarlas", 1000], ["leiras", "a klasszikus elegencia zaloga nem is kell mit mondani rola ugy tokeletes ahogy van "], ["created_at", "2023-04-29 19:35:49.405342"], ["updated_at", "2023-04-29 19:35:49.405342"], ["id", 18]]
+  [1m[36mAdvert Create (0.4ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Vraca Meszko"], ["mennyiseg", 64000.0], ["ar_kg", 250.0], ["min_vasarlas", 1000], ["leiras", "akar homlokzati burkolas akar padlo eza ko mindent tud nem fogja megbanni ha  ezt valasztja"], ["created_at", "2023-04-29 19:35:49.408524"], ["updated_at", "2023-04-29 19:35:49.408524"], ["id", 19]]
+  [1m[36mAdvert Create (0.5ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Akron"], ["mennyiseg", 64000.0], ["ar_kg", 700.0], ["min_vasarlas", 1000], ["leiras", "klasszikus hegyi lak feeling ki ne ismerni az akront"], ["created_at", "2023-04-29 19:35:49.412471"], ["updated_at", "2023-04-29 19:35:49.412471"], ["id", 20]]
+  [1m[36mAdvert Create (0.3ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Jade"], ["mennyiseg", 64000.0], ["ar_kg", 2000.0], ["min_vasarlas", 10], ["leiras", "Jade ez  gyonoru zold kozet minden kertet feldob"], ["created_at", "2023-04-29 19:35:49.415461"], ["updated_at", "2023-04-29 19:35:49.415461"], ["id", 21]]
+  [1m[36mAdvert Create (0.3ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Travertin"], ["mennyiseg", 44000.0], ["ar_kg", 600.0], ["min_vasarlas", 1000], ["leiras", "szebb es olcsobb is mint a marvany  uygan ugy homlokzatra vagy burkolasra is hazsnalhato kivallo ar/ertek arany"], ["created_at", "2023-04-29 19:35:49.418519"], ["updated_at", "2023-04-29 19:35:49.418519"], ["id", 22]]
+  [1m[36mAdvert Create (0.4ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Brazil Pala"], ["mennyiseg", 54000.0], ["ar_kg", 320.0], ["min_vasarlas", 1000], ["leiras", "a messzi braziliabol importalt pala kozet "], ["created_at", "2023-04-29 19:35:49.421137"], ["updated_at", "2023-04-29 19:35:49.421137"], ["id", 23]]
+  [1m[36mAdvert Create (0.3ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Indiai Homokko"], ["mennyiseg", 34000.0], ["ar_kg", 410.0], ["min_vasarlas", 1000], ["leiras", "Indiai homokko rendkivuli minoseg kedvezo ar "], ["created_at", "2023-04-29 19:35:49.423990"], ["updated_at", "2023-04-29 19:35:49.423990"], ["id", 24]]
+  [1m[36mAdvert Create (0.6ms)[0m  [1m[32mINSERT INTO "ADVERTS" ("TERMEK_NEV", "MENNYISEG", "AR_KG", "MIN_VASARLAS", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8)[0m  [["termek_nev", "Perlato Meszko"], ["mennyiseg", 22000.0], ["ar_kg", 890.0], ["min_vasarlas", 1000], ["leiras", "Perlato meszko burkoasra homlokzatra burkolas"], ["created_at", "2023-04-29 19:35:49.426432"], ["updated_at", "2023-04-29 19:35:49.426432"], ["id", 25]]
+  [1m[36mSupplier Create (18.9ms)[0m  [1m[32mINSERT INTO "SUPPLIERS" ("KM_AR", "AR_KG", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["km_ar", 200.0], ["ar_kg", 45.0], ["created_at", "2023-04-29 19:35:49.478462"], ["updated_at", "2023-04-29 19:35:49.478462"], ["id", 1]]
+  [1m[36mSupplier Create (0.2ms)[0m  [1m[32mINSERT INTO "SUPPLIERS" ("KM_AR", "AR_KG", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["km_ar", 210.0], ["ar_kg", 37.0], ["created_at", "2023-04-29 19:35:49.533962"], ["updated_at", "2023-04-29 19:35:49.533962"], ["id", 2]]
+  [1m[36mSupplier Create (0.2ms)[0m  [1m[32mINSERT INTO "SUPPLIERS" ("KM_AR", "AR_KG", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["km_ar", 310.0], ["ar_kg", 20.0], ["created_at", "2023-04-29 19:35:49.536087"], ["updated_at", "2023-04-29 19:35:49.536087"], ["id", 3]]
+  [1m[36mSupplier Create (0.2ms)[0m  [1m[32mINSERT INTO "SUPPLIERS" ("KM_AR", "AR_KG", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["km_ar", 290.0], ["ar_kg", 25.0], ["created_at", "2023-04-29 19:35:49.537683"], ["updated_at", "2023-04-29 19:35:49.537683"], ["id", 4]]
+  [1m[36mSupplier Create (0.3ms)[0m  [1m[32mINSERT INTO "SUPPLIERS" ("KM_AR", "AR_KG", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["km_ar", 500.0], ["ar_kg", 5.0], ["created_at", "2023-04-29 19:35:49.539016"], ["updated_at", "2023-04-29 19:35:49.539016"], ["id", 5]]
+  [1m[36mSupplier Create (0.4ms)[0m  [1m[32mINSERT INTO "SUPPLIERS" ("KM_AR", "AR_KG", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["km_ar", 450.0], ["ar_kg", 30.0], ["created_at", "2023-04-29 19:35:49.540869"], ["updated_at", "2023-04-29 19:35:49.540869"], ["id", 6]]
+  [1m[36mSupplier Create (0.7ms)[0m  [1m[32mINSERT INTO "SUPPLIERS" ("KM_AR", "AR_KG", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["km_ar", 210.0], ["ar_kg", 45.0], ["created_at", "2023-04-29 19:35:49.543132"], ["updated_at", "2023-04-29 19:35:49.543132"], ["id", 7]]
+  [1m[36mSupplier Create (0.3ms)[0m  [1m[32mINSERT INTO "SUPPLIERS" ("KM_AR", "AR_KG", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["km_ar", 220.0], ["ar_kg", 19.0], ["created_at", "2023-04-29 19:35:49.547623"], ["updated_at", "2023-04-29 19:35:49.547623"], ["id", 8]]
+  [1m[36mSupplier Create (0.3ms)[0m  [1m[32mINSERT INTO "SUPPLIERS" ("KM_AR", "AR_KG", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["km_ar", 170.0], ["ar_kg", 60.0], ["created_at", "2023-04-29 19:35:49.550426"], ["updated_at", "2023-04-29 19:35:49.550426"], ["id", 9]]
+  [1m[36mSupplier Create (0.4ms)[0m  [1m[32mINSERT INTO "SUPPLIERS" ("KM_AR", "AR_KG", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["km_ar", 390.0], ["ar_kg", 12.0], ["created_at", "2023-04-29 19:35:49.553389"], ["updated_at", "2023-04-29 19:35:49.553389"], ["id", 10]]
+  [1m[36mSupplier Create (0.4ms)[0m  [1m[32mINSERT INTO "SUPPLIERS" ("KM_AR", "AR_KG", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["km_ar", 430.0], ["ar_kg", 36.0], ["created_at", "2023-04-29 19:35:49.555865"], ["updated_at", "2023-04-29 19:35:49.555865"], ["id", 11]]
+  [1m[36mSupplier Create (0.3ms)[0m  [1m[32mINSERT INTO "SUPPLIERS" ("KM_AR", "AR_KG", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["km_ar", 330.0], ["ar_kg", 30.0], ["created_at", "2023-04-29 19:35:49.558255"], ["updated_at", "2023-04-29 19:35:49.558255"], ["id", 12]]
+  [1m[36mCarry Create (23.4ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 1], ["mit", "Lyukacsos Szikla"], ["created_at", "2023-04-29 19:35:49.618100"], ["updated_at", "2023-04-29 19:35:49.618100"], ["id", 1]]
+  [1m[36mCarry Create (0.4ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 1], ["mit", "Bazalt"], ["created_at", "2023-04-29 19:35:49.681957"], ["updated_at", "2023-04-29 19:35:49.681957"], ["id", 2]]
+  [1m[36mCarry Create (0.3ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 1], ["mit", "Gorog Hofeher Szikla"], ["created_at", "2023-04-29 19:35:49.685744"], ["updated_at", "2023-04-29 19:35:49.685744"], ["id", 3]]
+  [1m[36mCarry Create (0.3ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 1], ["mit", "Tahiti uveg Turkiz"], ["created_at", "2023-04-29 19:35:49.688104"], ["updated_at", "2023-04-29 19:35:49.688104"], ["id", 4]]
+  [1m[36mCarry Create (0.3ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 2], ["mit", "Szivarvanyko"], ["created_at", "2023-04-29 19:35:49.690274"], ["updated_at", "2023-04-29 19:35:49.690274"], ["id", 5]]
+  [1m[36mCarry Create (0.4ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 2], ["mit", "Gardenit Extra"], ["created_at", "2023-04-29 19:35:49.692361"], ["updated_at", "2023-04-29 19:35:49.692361"], ["id", 6]]
+  [1m[36mCarry Create (0.4ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 6], ["mit", "Marvany"], ["created_at", "2023-04-29 19:35:49.695386"], ["updated_at", "2023-04-29 19:35:49.695386"], ["id", 7]]
+  [1m[36mCarry Create (0.4ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 3], ["mit", "Spagettikoral Szikla"], ["created_at", "2023-04-29 19:35:49.698197"], ["updated_at", "2023-04-29 19:35:49.698197"], ["id", 8]]
+  [1m[36mCarry Create (0.4ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 4], ["mit", "Barnas Meszko"], ["created_at", "2023-04-29 19:35:49.700481"], ["updated_at", "2023-04-29 19:35:49.700481"], ["id", 9]]
+  [1m[36mCarry Create (0.4ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 4], ["mit", "Szorny Szikla"], ["created_at", "2023-04-29 19:35:49.702684"], ["updated_at", "2023-04-29 19:35:49.702684"], ["id", 10]]
+  [1m[36mCarry Create (0.3ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 4], ["mit", "Riolit"], ["created_at", "2023-04-29 19:35:49.704899"], ["updated_at", "2023-04-29 19:35:49.704899"], ["id", 11]]
+  [1m[36mCarry Create (0.4ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 5], ["mit", "Opal"], ["created_at", "2023-04-29 19:35:49.707517"], ["updated_at", "2023-04-29 19:35:49.707517"], ["id", 12]]
+  [1m[36mCarry Create (0.4ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 5], ["mit", "Bezs Meszko"], ["created_at", "2023-04-29 19:35:49.710069"], ["updated_at", "2023-04-29 19:35:49.710069"], ["id", 13]]
+  [1m[36mCarry Create (0.3ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 5], ["mit", "Meteora Meszko"], ["created_at", "2023-04-29 19:35:49.713057"], ["updated_at", "2023-04-29 19:35:49.713057"], ["id", 14]]
+  [1m[36mCarry Create (0.3ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 6], ["mit", "Sivatagi Rozsa"], ["created_at", "2023-04-29 19:35:49.715593"], ["updated_at", "2023-04-29 19:35:49.715593"], ["id", 15]]
+  [1m[36mCarry Create (0.3ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 7], ["mit", "Fekete Pala"], ["created_at", "2023-04-29 19:35:49.718418"], ["updated_at", "2023-04-29 19:35:49.718418"], ["id", 16]]
+  [1m[36mCarry Create (0.3ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 8], ["mit", "Granit Golyok"], ["created_at", "2023-04-29 19:35:49.720758"], ["updated_at", "2023-04-29 19:35:49.720758"], ["id", 17]]
+  [1m[36mCarry Create (0.3ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 9], ["mit", "Erezett Marvany"], ["created_at", "2023-04-29 19:35:49.722911"], ["updated_at", "2023-04-29 19:35:49.722911"], ["id", 18]]
+  [1m[36mCarry Create (0.4ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 10], ["mit", "Vraca Meszko"], ["created_at", "2023-04-29 19:35:49.725429"], ["updated_at", "2023-04-29 19:35:49.725429"], ["id", 19]]
+  [1m[36mCarry Create (0.4ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 11], ["mit", "Akron"], ["created_at", "2023-04-29 19:35:49.746448"], ["updated_at", "2023-04-29 19:35:49.746448"], ["id", 20]]
+  [1m[36mCarry Create (0.6ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 10], ["mit", "Jade"], ["created_at", "2023-04-29 19:35:49.757088"], ["updated_at", "2023-04-29 19:35:49.757088"], ["id", 21]]
+  [1m[36mCarry Create (0.4ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 9], ["mit", "Travertin"], ["created_at", "2023-04-29 19:35:49.761712"], ["updated_at", "2023-04-29 19:35:49.761712"], ["id", 22]]
+  [1m[36mCarry Create (0.3ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 7], ["mit", "Brazil Pala"], ["created_at", "2023-04-29 19:35:49.765701"], ["updated_at", "2023-04-29 19:35:49.765701"], ["id", 23]]
+  [1m[36mCarry Create (0.2ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 6], ["mit", "Indiai Homokko"], ["created_at", "2023-04-29 19:35:49.767838"], ["updated_at", "2023-04-29 19:35:49.767838"], ["id", 24]]
+  [1m[36mCarry Create (0.3ms)[0m  [1m[32mINSERT INTO "CARRIES" ("SUPPLIER_ID", "MIT", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5)[0m  [["supplier_id", 5], ["mit", "Perlato Meszko"], ["created_at", "2023-04-29 19:35:49.769772"], ["updated_at", "2023-04-29 19:35:49.769772"], ["id", 25]]
+  [1m[36mAdvertise Create (22.6ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 1], ["advert_id", 1], ["mikor", "1999-11-11"], ["created_at", "2023-04-29 19:35:49.831420"], ["updated_at", "2023-04-29 19:35:49.831420"], ["id", 1]]
+  [1m[36mAdvertise Create (0.4ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 1], ["advert_id", 2], ["mikor", "1999-11-11"], ["created_at", "2023-04-29 19:35:49.896896"], ["updated_at", "2023-04-29 19:35:49.896896"], ["id", 2]]
+  [1m[36mAdvertise Create (0.3ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 1], ["advert_id", 3], ["mikor", "1999-06-11"], ["created_at", "2023-04-29 19:35:49.900399"], ["updated_at", "2023-04-29 19:35:49.900399"], ["id", 3]]
+  [1m[36mAdvertise Create (0.3ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 1], ["advert_id", 4], ["mikor", "1999-11-11"], ["created_at", "2023-04-29 19:35:49.906135"], ["updated_at", "2023-04-29 19:35:49.906135"], ["id", 4]]
+  [1m[36mAdvertise Create (0.4ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 1], ["advert_id", 5], ["mikor", "1999-11-12"], ["created_at", "2023-04-29 19:35:49.908749"], ["updated_at", "2023-04-29 19:35:49.908749"], ["id", 5]]
+  [1m[36mAdvertise Create (0.5ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 1], ["advert_id", 6], ["mikor", "2002-06-12"], ["created_at", "2023-04-29 19:35:49.913622"], ["updated_at", "2023-04-29 19:35:49.913622"], ["id", 6]]
+  [1m[36mAdvertise Create (0.5ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 1], ["advert_id", 7], ["mikor", "2003-04-11"], ["created_at", "2023-04-29 19:35:49.916835"], ["updated_at", "2023-04-29 19:35:49.916835"], ["id", 7]]
+  [1m[36mAdvertise Create (0.4ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 2], ["advert_id", 8], ["mikor", "1999-11-11"], ["created_at", "2023-04-29 19:35:49.920823"], ["updated_at", "2023-04-29 19:35:49.920823"], ["id", 8]]
+  [1m[36mAdvertise Create (0.4ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 3], ["advert_id", 9], ["mikor", "1999-11-11"], ["created_at", "2023-04-29 19:35:49.923799"], ["updated_at", "2023-04-29 19:35:49.923799"], ["id", 9]]
+  [1m[36mAdvertise Create (0.7ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 4], ["advert_id", 10], ["mikor", "2003-07-11"], ["created_at", "2023-04-29 19:35:49.927506"], ["updated_at", "2023-04-29 19:35:49.927506"], ["id", 10]]
+  [1m[36mAdvertise Create (0.5ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 5], ["advert_id", 11], ["mikor", "2007-11-11"], ["created_at", "2023-04-29 19:35:49.932447"], ["updated_at", "2023-04-29 19:35:49.932447"], ["id", 11]]
+  [1m[36mAdvertise Create (0.3ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 5], ["advert_id", 12], ["mikor", "2005-04-01"], ["created_at", "2023-04-29 19:35:49.935607"], ["updated_at", "2023-04-29 19:35:49.935607"], ["id", 12]]
+  [1m[36mAdvertise Create (0.2ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 5], ["advert_id", 13], ["mikor", "2022-06-11"], ["created_at", "2023-04-29 19:35:49.937953"], ["updated_at", "2023-04-29 19:35:49.937953"], ["id", 13]]
+  [1m[36mAdvertise Create (0.3ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 4], ["advert_id", 14], ["mikor", "2022-11-11"], ["created_at", "2023-04-29 19:35:49.940347"], ["updated_at", "2023-04-29 19:35:49.940347"], ["id", 14]]
+  [1m[36mAdvertise Create (0.5ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 3], ["advert_id", 15], ["mikor", "2022-11-11"], ["created_at", "2023-04-29 19:35:49.942508"], ["updated_at", "2023-04-29 19:35:49.942508"], ["id", 15]]
+  [1m[36mAdvertise Create (0.5ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 2], ["advert_id", 16], ["mikor", "2022-11-03"], ["created_at", "2023-04-29 19:35:49.947149"], ["updated_at", "2023-04-29 19:35:49.947149"], ["id", 16]]
+  [1m[36mAdvertise Create (0.4ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 1], ["advert_id", 17], ["mikor", "2022-04-11"], ["created_at", "2023-04-29 19:35:49.951255"], ["updated_at", "2023-04-29 19:35:49.951255"], ["id", 17]]
+  [1m[36mAdvertise Create (0.4ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 2], ["advert_id", 18], ["mikor", "2019-11-02"], ["created_at", "2023-04-29 19:35:49.954502"], ["updated_at", "2023-04-29 19:35:49.954502"], ["id", 18]]
+  [1m[36mAdvertise Create (0.4ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 3], ["advert_id", 19], ["mikor", "2019-11-11"], ["created_at", "2023-04-29 19:35:49.957198"], ["updated_at", "2023-04-29 19:35:49.957198"], ["id", 19]]
+  [1m[36mAdvertise Create (1.2ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 3], ["advert_id", 20], ["mikor", "2019-06-08"], ["created_at", "2023-04-29 19:35:49.959608"], ["updated_at", "2023-04-29 19:35:49.959608"], ["id", 20]]
+  [1m[36mAdvertise Create (0.5ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 4], ["advert_id", 21], ["mikor", "2019-07-08"], ["created_at", "2023-04-29 19:35:49.964827"], ["updated_at", "2023-04-29 19:35:49.964827"], ["id", 21]]
+  [1m[36mAdvertise Create (0.3ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 5], ["advert_id", 22], ["mikor", "2019-07-07"], ["created_at", "2023-04-29 19:35:49.968243"], ["updated_at", "2023-04-29 19:35:49.968243"], ["id", 22]]
+  [1m[36mAdvertise Create (0.4ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 6], ["advert_id", 23], ["mikor", "2019-04-09"], ["created_at", "2023-04-29 19:35:49.970899"], ["updated_at", "2023-04-29 19:35:49.970899"], ["id", 23]]
+  [1m[36mAdvertise Create (0.4ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 5], ["advert_id", 24], ["mikor", "2019-04-06"], ["created_at", "2023-04-29 19:35:49.974086"], ["updated_at", "2023-04-29 19:35:49.974086"], ["id", 24]]
+  [1m[36mAdvertise Create (1.1ms)[0m  [1m[32mINSERT INTO "ADVERTISES" ("USER_ID", "ADVERT_ID", "MIKOR", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 5], ["advert_id", 25], ["mikor", "2019-04-09"], ["created_at", "2023-04-29 19:35:49.977542"], ["updated_at", "2023-04-29 19:35:49.977542"], ["id", 25]]
+  [1m[36mRate Create (72.1ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 6], ["advert_id", 1], ["csillag", 5], ["leiras", #<OCI8::CLOB:0x000002168d9102d0>], ["created_at", "2023-04-29 19:35:50.043880"], ["updated_at", "2023-04-29 19:35:50.043880"], ["id", 1]]
+  [1m[36mRate Create (0.5ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 6], ["advert_id", 2], ["csillag", 5], ["leiras", #<OCI8::CLOB:0x000002168d7fe298>], ["created_at", "2023-04-29 19:35:50.162876"], ["updated_at", "2023-04-29 19:35:50.162876"], ["id", 2]]
+  [1m[36mRate Create (0.4ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 13], ["advert_id", 2], ["csillag", 5], ["leiras", #<OCI8::CLOB:0x000002168d9ca4a0>], ["created_at", "2023-04-29 19:35:50.166670"], ["updated_at", "2023-04-29 19:35:50.166670"], ["id", 3]]
+  [1m[36mRate Create (0.4ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 11], ["advert_id", 2], ["csillag", 5], ["leiras", #<OCI8::CLOB:0x000002168d97ac98>], ["created_at", "2023-04-29 19:35:50.169764"], ["updated_at", "2023-04-29 19:35:50.169764"], ["id", 4]]
+  [1m[36mRate Create (0.4ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 7], ["advert_id", 3], ["csillag", 5], ["leiras", #<OCI8::CLOB:0x000002168da0ba40>], ["created_at", "2023-04-29 19:35:50.172715"], ["updated_at", "2023-04-29 19:35:50.172715"], ["id", 5]]
+  [1m[36mRate Create (0.6ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 7], ["advert_id", 4], ["csillag", 5], ["leiras", #<OCI8::CLOB:0x000002168d9eae08>], ["created_at", "2023-04-29 19:35:50.175807"], ["updated_at", "2023-04-29 19:35:50.175807"], ["id", 6]]
+  [1m[36mRate Create (0.5ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 7], ["advert_id", 5], ["csillag", 5], ["leiras", #<OCI8::CLOB:0x000002168da8bc90>], ["created_at", "2023-04-29 19:35:50.179421"], ["updated_at", "2023-04-29 19:35:50.179421"], ["id", 7]]
+  [1m[36mRate Create (0.7ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 8], ["advert_id", 5], ["csillag", 5], ["leiras", #<OCI8::CLOB:0x000002168da3bec0>], ["created_at", "2023-04-29 19:35:50.182675"], ["updated_at", "2023-04-29 19:35:50.182675"], ["id", 8]]
+  [1m[36mRate Create (0.8ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 8], ["advert_id", 4], ["csillag", 5], ["leiras", #<OCI8::CLOB:0x000002168dad4d50>], ["created_at", "2023-04-29 19:35:50.186469"], ["updated_at", "2023-04-29 19:35:50.186469"], ["id", 9]]
+  [1m[36mRate Create (0.4ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 9], ["advert_id", 6], ["csillag", 5], ["leiras", #<OCI8::CLOB:0x000002168dab7ed0>], ["created_at", "2023-04-29 19:35:50.189840"], ["updated_at", "2023-04-29 19:35:50.189840"], ["id", 10]]
+  [1m[36mRate Create (0.7ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 10], ["advert_id", 7], ["csillag", 5], ["leiras", #<OCI8::CLOB:0x000002168dbadb78>], ["created_at", "2023-04-29 19:35:50.192663"], ["updated_at", "2023-04-29 19:35:50.192663"], ["id", 11]]
+  [1m[36mRate Create (0.4ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 11], ["advert_id", 8], ["csillag", 3], ["leiras", #<OCI8::CLOB:0x000002168db0cb38>], ["created_at", "2023-04-29 19:35:50.196896"], ["updated_at", "2023-04-29 19:35:50.196896"], ["id", 12]]
+  [1m[36mRate Create (0.4ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 10], ["advert_id", 9], ["csillag", 3], ["leiras", #<OCI8::CLOB:0x000002168aac8fd0>], ["created_at", "2023-04-29 19:35:50.199967"], ["updated_at", "2023-04-29 19:35:50.199967"], ["id", 13]]
+  [1m[36mRate Create (0.4ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 10], ["advert_id", 10], ["csillag", 3], ["leiras", #<OCI8::CLOB:0x000002168dc593b0>], ["created_at", "2023-04-29 19:35:50.202957"], ["updated_at", "2023-04-29 19:35:50.202957"], ["id", 14]]
+  [1m[36mRate Create (0.4ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 13], ["advert_id", 11], ["csillag", 3], ["leiras", #<OCI8::CLOB:0x000002168dcf66d8>], ["created_at", "2023-04-29 19:35:50.205783"], ["updated_at", "2023-04-29 19:35:50.205783"], ["id", 15]]
+  [1m[36mRate Create (0.3ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 14], ["advert_id", 12], ["csillag", 3], ["leiras", #<OCI8::CLOB:0x000002168dcc9b10>], ["created_at", "2023-04-29 19:35:50.208966"], ["updated_at", "2023-04-29 19:35:50.208966"], ["id", 16]]
+  [1m[36mRate Create (0.4ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 15], ["advert_id", 13], ["csillag", 3], ["leiras", #<OCI8::CLOB:0x000002168de074a0>], ["created_at", "2023-04-29 19:35:50.212013"], ["updated_at", "2023-04-29 19:35:50.212013"], ["id", 17]]
+  [1m[36mRate Create (0.5ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 6], ["advert_id", 14], ["csillag", 3], ["leiras", #<OCI8::CLOB:0x000002168dddb0a8>], ["created_at", "2023-04-29 19:35:50.215678"], ["updated_at", "2023-04-29 19:35:50.215678"], ["id", 18]]
+  [1m[36mRate Create (0.4ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 13], ["advert_id", 15], ["csillag", 2], ["leiras", #<OCI8::CLOB:0x000002168dcfd2d0>], ["created_at", "2023-04-29 19:35:50.219337"], ["updated_at", "2023-04-29 19:35:50.219337"], ["id", 19]]
+  [1m[36mRate Create (0.4ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 14], ["advert_id", 16], ["csillag", 2], ["leiras", #<OCI8::CLOB:0x000002168de52ec8>], ["created_at", "2023-04-29 19:35:50.222609"], ["updated_at", "2023-04-29 19:35:50.222609"], ["id", 20]]
+  [1m[36mRate Create (0.8ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 15], ["advert_id", 17], ["csillag", 1], ["leiras", #<OCI8::CLOB:0x000002168de0dc60>], ["created_at", "2023-04-29 19:35:50.225805"], ["updated_at", "2023-04-29 19:35:50.225805"], ["id", 21]]
+  [1m[36mRate Create (0.4ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 16], ["advert_id", 18], ["csillag", 2], ["leiras", #<OCI8::CLOB:0x000002168ded8208>], ["created_at", "2023-04-29 19:35:50.230208"], ["updated_at", "2023-04-29 19:35:50.230208"], ["id", 22]]
+  [1m[36mRate Create (0.3ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 11], ["advert_id", 19], ["csillag", 4], ["leiras", #<OCI8::CLOB:0x000002168de99080>], ["created_at", "2023-04-29 19:35:50.233005"], ["updated_at", "2023-04-29 19:35:50.233005"], ["id", 23]]
+  [1m[36mRate Create (0.3ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 7], ["advert_id", 20], ["csillag", 4], ["leiras", #<OCI8::CLOB:0x000002168df1a6f8>], ["created_at", "2023-04-29 19:35:50.235721"], ["updated_at", "2023-04-29 19:35:50.235721"], ["id", 24]]
+  [1m[36mRate Create (0.4ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 7], ["advert_id", 21], ["csillag", 4], ["leiras", #<OCI8::CLOB:0x000002168def3df0>], ["created_at", "2023-04-29 19:35:50.238387"], ["updated_at", "2023-04-29 19:35:50.238387"], ["id", 25]]
+  [1m[36mRate Create (0.5ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 9], ["advert_id", 21], ["csillag", 4], ["leiras", #<OCI8::CLOB:0x000002168df58b38>], ["created_at", "2023-04-29 19:35:50.241177"], ["updated_at", "2023-04-29 19:35:50.241177"], ["id", 26]]
+  [1m[36mRate Create (0.5ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 9], ["advert_id", 22], ["csillag", 4], ["leiras", #<OCI8::CLOB:0x000002168df39b98>], ["created_at", "2023-04-29 19:35:50.244275"], ["updated_at", "2023-04-29 19:35:50.244275"], ["id", 27]]
+  [1m[36mRate Create (0.4ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 9], ["advert_id", 23], ["csillag", 4], ["leiras", #<OCI8::CLOB:0x000002168dfa3278>], ["created_at", "2023-04-29 19:35:50.248039"], ["updated_at", "2023-04-29 19:35:50.248039"], ["id", 28]]
+  [1m[36mRate Create (0.5ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 7], ["advert_id", 24], ["csillag", 4], ["leiras", #<OCI8::CLOB:0x000002168df814e8>], ["created_at", "2023-04-29 19:35:50.251137"], ["updated_at", "2023-04-29 19:35:50.251137"], ["id", 29]]
+  [1m[36mRate Create (0.5ms)[0m  [1m[32mINSERT INTO "RATES" ("USER_ID", "ADVERT_ID", "CSILLAG", "LEIRAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7)[0m  [["user_id", 6], ["advert_id", 25], ["csillag", 4], ["leiras", #<OCI8::CLOB:0x000002168dfd8590>], ["created_at", "2023-04-29 19:35:50.254290"], ["updated_at", "2023-04-29 19:35:50.254290"], ["id", 30]]
+  [1m[36mOrder Create (3.3ms)[0m  [1m[32mINSERT INTO "ORDERS" ("USER_ID", "ADVERT_ID", "SUPPLIER_ID", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 6], ["advert_id", 4], ["supplier_id", 1], ["created_at", "2023-04-29 19:35:50.308049"], ["updated_at", "2023-04-29 19:35:50.308049"], ["id", 1]]
+  [1m[36mOrder Create (0.5ms)[0m  [1m[32mINSERT INTO "ORDERS" ("USER_ID", "ADVERT_ID", "SUPPLIER_ID", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 3], ["advert_id", 4], ["supplier_id", 1], ["created_at", "2023-04-29 19:35:50.346067"], ["updated_at", "2023-04-29 19:35:50.346067"], ["id", 2]]
+  [1m[36mOrder Create (0.6ms)[0m  [1m[32mINSERT INTO "ORDERS" ("USER_ID", "ADVERT_ID", "SUPPLIER_ID", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 13], ["advert_id", 1], ["supplier_id", 1], ["created_at", "2023-04-29 19:35:50.349215"], ["updated_at", "2023-04-29 19:35:50.349215"], ["id", 3]]
+  [1m[36mOrder Create (0.3ms)[0m  [1m[32mINSERT INTO "ORDERS" ("USER_ID", "ADVERT_ID", "SUPPLIER_ID", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 13], ["advert_id", 12], ["supplier_id", 5], ["created_at", "2023-04-29 19:35:50.352028"], ["updated_at", "2023-04-29 19:35:50.352028"], ["id", 4]]
+  [1m[36mOrder Create (0.3ms)[0m  [1m[32mINSERT INTO "ORDERS" ("USER_ID", "ADVERT_ID", "SUPPLIER_ID", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 13], ["advert_id", 23], ["supplier_id", 7], ["created_at", "2023-04-29 19:35:50.354354"], ["updated_at", "2023-04-29 19:35:50.354354"], ["id", 5]]
+  [1m[36mOrder Create (0.2ms)[0m  [1m[32mINSERT INTO "ORDERS" ("USER_ID", "ADVERT_ID", "SUPPLIER_ID", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 13], ["advert_id", 21], ["supplier_id", 10], ["created_at", "2023-04-29 19:35:50.356597"], ["updated_at", "2023-04-29 19:35:50.356597"], ["id", 6]]
+  [1m[36mOrder Create (0.3ms)[0m  [1m[32mINSERT INTO "ORDERS" ("USER_ID", "ADVERT_ID", "SUPPLIER_ID", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6)[0m  [["user_id", 13], ["advert_id", 20], ["supplier_id", 11], ["created_at", "2023-04-29 19:35:50.358509"], ["updated_at", "2023-04-29 19:35:50.358509"], ["id", 7]]
+  [1m[36mDeliver Create (3.3ms)[0m  [1m[32mINSERT INTO "DELIVERS" ("ORDER_ID", "SUPPLIER_ID", "MENNYISEG", "HOVA", "KOLTSEG", "VARHATO_SZALLITAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9)[0m  [["order_id", 1], ["supplier_id", 1], ["mennyiseg", 1500.0], ["hova", "Kiskerepes Vitez utca 27"], ["koltseg", 1600000.0], ["varhato_szallitas", "2023-03-29"], ["created_at", "2023-04-29 19:35:50.415164"], ["updated_at", "2023-04-29 19:35:50.415164"], ["id", 1]]
+  [1m[36mDeliver Create (0.7ms)[0m  [1m[32mINSERT INTO "DELIVERS" ("ORDER_ID", "SUPPLIER_ID", "MENNYISEG", "HOVA", "KOLTSEG", "VARHATO_SZALLITAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9)[0m  [["order_id", 2], ["supplier_id", 1], ["mennyiseg", 2500.0], ["hova", "Fot Petofi koz 13"], ["koltseg", 1600000.0], ["varhato_szallitas", "2023-03-29"], ["created_at", "2023-04-29 19:35:50.459046"], ["updated_at", "2023-04-29 19:35:50.459046"], ["id", 2]]
+  [1m[36mDeliver Create (0.4ms)[0m  [1m[32mINSERT INTO "DELIVERS" ("ORDER_ID", "SUPPLIER_ID", "MENNYISEG", "HOVA", "KOLTSEG", "VARHATO_SZALLITAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9)[0m  [["order_id", 3], ["supplier_id", 1], ["mennyiseg", 2500.0], ["hova", "Budapest Galamb utca 10"], ["koltseg", 1650000.0], ["varhato_szallitas", "2023-03-26"], ["created_at", "2023-04-29 19:35:50.462641"], ["updated_at", "2023-04-29 19:35:50.462641"], ["id", 3]]
+  [1m[36mDeliver Create (0.4ms)[0m  [1m[32mINSERT INTO "DELIVERS" ("ORDER_ID", "SUPPLIER_ID", "MENNYISEG", "HOVA", "KOLTSEG", "VARHATO_SZALLITAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9)[0m  [["order_id", 4], ["supplier_id", 1], ["mennyiseg", 1500.0], ["hova", "Budapest Galamb utca 10"], ["koltseg", 1650000.0], ["varhato_szallitas", "2023-03-26"], ["created_at", "2023-04-29 19:35:50.465538"], ["updated_at", "2023-04-29 19:35:50.465538"], ["id", 4]]
+  [1m[36mDeliver Create (0.4ms)[0m  [1m[32mINSERT INTO "DELIVERS" ("ORDER_ID", "SUPPLIER_ID", "MENNYISEG", "HOVA", "KOLTSEG", "VARHATO_SZALLITAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9)[0m  [["order_id", 5], ["supplier_id", 1], ["mennyiseg", 1500.0], ["hova", "Budapest Galamb utca 10"], ["koltseg", 1650000.0], ["varhato_szallitas", "2023-03-26"], ["created_at", "2023-04-29 19:35:50.468185"], ["updated_at", "2023-04-29 19:35:50.468185"], ["id", 5]]
+  [1m[36mDeliver Create (0.3ms)[0m  [1m[32mINSERT INTO "DELIVERS" ("ORDER_ID", "SUPPLIER_ID", "MENNYISEG", "HOVA", "KOLTSEG", "VARHATO_SZALLITAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9)[0m  [["order_id", 6], ["supplier_id", 1], ["mennyiseg", 1500.0], ["hova", "Budapest Galamb utca 10"], ["koltseg", 1665000.0], ["varhato_szallitas", "2023-03-28"], ["created_at", "2023-04-29 19:35:50.471349"], ["updated_at", "2023-04-29 19:35:50.471349"], ["id", 6]]
+  [1m[36mDeliver Create (0.5ms)[0m  [1m[32mINSERT INTO "DELIVERS" ("ORDER_ID", "SUPPLIER_ID", "MENNYISEG", "HOVA", "KOLTSEG", "VARHATO_SZALLITAS", "CREATED_AT", "UPDATED_AT", "ID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9)[0m  [["order_id", 7], ["supplier_id", 1], ["mennyiseg", 1500.0], ["hova", "Budapest Galambutca 10"], ["koltseg", 1780000.0], ["varhato_szallitas", "2023-03-28"], ["created_at", "2023-04-29 19:35:50.473938"], ["updated_at", "2023-04-29 19:35:50.473938"], ["id", 7]]
+Started GET "/" for 127.0.0.1 at 2023-04-29 21:36:22 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 295)
+  [1m[36mAdvert Load (54.5ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:29
+  Rendered home/home.html.erb within layouts/application (Duration: 221.6ms | Allocations: 26611)
+  Rendered layout layouts/application.html.erb (Duration: 222.5ms | Allocations: 26702)
+Completed 500 Internal Server Error in 225ms (ActiveRecord: 86.0ms | Allocations: 27016)
+
+
+  
+ActionView::Template::Error (undefined method `shop_path' for #<ActionView::Base:0x0000000000ee70>):
+    62:               <p><strong>3.5</strong></p>
+    63:               <hr />
+    64:               <div>
+    65:                 <%= link_to "Tovább a vásárláshoz", shop_path(advert.id) %>
+    66:               </div>
+    67:             </div>
+    68:           </div>
+  
+app/views/home/home.html.erb:65
+app/views/home/home.html.erb:29
+Started GET "/" for 127.0.0.1 at 2023-04-29 21:36:35 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 2.1ms | Allocations: 858)
+  [1m[36mAdvert Load (8.3ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:29
+  Rendered home/home.html.erb within layouts/application (Duration: 155.2ms | Allocations: 45248)
+  Rendered layout layouts/application.html.erb (Duration: 156.2ms | Allocations: 45354)
+Completed 500 Internal Server Error in 179ms (ActiveRecord: 42.6ms | Allocations: 49891)
+
+
+  
+ActionView::Template::Error (undefined method `shop_path' for #<ActionView::Base:0x0000000000ece0>):
+    62:               <p><strong>3.5</strong></p>
+    63:               <hr />
+    64:               <div>
+    65:                 <%= link_to "Tovább a vásárláshoz", shop_path(advert.id) %>
+    66:               </div>
+    67:             </div>
+    68:           </div>
+  
+app/views/home/home.html.erb:65
+app/views/home/home.html.erb:29
+Started GET "/" for 127.0.0.1 at 2023-04-29 21:38:02 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 3.2ms | Allocations: 858)
+  [1m[36mAdvert Load (10.5ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:29
+  Rendered home/home.html.erb within layouts/application (Duration: 173.3ms | Allocations: 45118)
+  Rendered layout layouts/application.html.erb (Duration: 173.9ms | Allocations: 45224)
+Completed 500 Internal Server Error in 200ms (ActiveRecord: 49.3ms | Allocations: 49761)
+
+
+  
+ActionView::Template::Error (undefined method `shop_path' for #<ActionView::Base:0x0000000000ece0>):
+    62:               <p><strong>3.5</strong></p>
+    63:               <hr />
+    64:               <div>
+    65:                 <%= link_to "Tovább a vásárláshoz", shop_path(advert) %>
+    66:               </div>
+    67:             </div>
+    68:           </div>
+  
+app/views/home/home.html.erb:65
+app/views/home/home.html.erb:29
+Started GET "/" for 127.0.0.1 at 2023-04-29 21:39:44 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 2.0ms | Allocations: 858)
+  [1m[36mAdvert Load (7.6ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:29
+  Rendered home/home.html.erb within layouts/application (Duration: 189.2ms | Allocations: 40863)
+  Rendered layout layouts/application.html.erb (Duration: 214.4ms | Allocations: 56434)
+Completed 200 OK in 240ms (Views: 174.7ms | ActiveRecord: 46.9ms | Allocations: 61025)
+
+
+Started GET "/shop/1" for 127.0.0.1 at 2023-04-29 21:39:47 +0200
+Processing by ShopController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 406 Not Acceptable in 5ms (ActiveRecord: 0.0ms | Allocations: 862)
+
+
+  
+ActionController::MissingExactTemplate (ShopController#show is missing a template for request formats: text/html):
+  
+actionpack (7.0.4.3) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.4.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (7.0.4.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.4.3) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.4.3) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.4.3) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.4.3) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4.3) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4.3) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.3) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.3) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.3) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.3) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2023-04-29 21:44:44 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 2.5ms | Allocations: 864)
+  [1m[36mAdvert Load (7.3ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:29
+  Rendered home/home.html.erb within layouts/application (Duration: 151.2ms | Allocations: 40899)
+  Rendered layout layouts/application.html.erb (Duration: 171.6ms | Allocations: 56470)
+Completed 200 OK in 196ms (Views: 137.0ms | ActiveRecord: 42.3ms | Allocations: 61061)
+
+
+Started GET "/shop/1" for 127.0.0.1 at 2023-04-29 21:44:47 +0200
+Processing by ShopController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 406 Not Acceptable in 5ms (ActiveRecord: 0.0ms | Allocations: 862)
+
+
+  
+ActionController::MissingExactTemplate (ShopController#show is missing a template for request formats: text/html):
+  
+actionpack (7.0.4.3) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.4.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (7.0.4.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.4.3) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.4.3) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.4.3) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.4.3) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4.3) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4.3) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.3) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.3) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.3) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.3) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2023-04-29 21:45:36 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.9ms | Allocations: 864)
+  [1m[36mAdvert Load (6.0ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:29
+  Rendered home/home.html.erb within layouts/application (Duration: 138.5ms | Allocations: 40945)
+  Rendered layout layouts/application.html.erb (Duration: 161.6ms | Allocations: 56516)
+Completed 200 OK in 184ms (Views: 131.0ms | ActiveRecord: 38.0ms | Allocations: 61107)
+
+
+Started GET "/shop/1" for 127.0.0.1 at 2023-04-29 21:45:38 +0200
+Processing by ShopController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering shop/show.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 391)
+  Rendered shop/show.html.erb within layouts/application (Duration: 7.9ms | Allocations: 4357)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 4453)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms | Allocations: 5251)
+
+
+  
+ActionView::Template::Error (undefined method `termek_nev' for nil:NilClass):
+    17:       <div class="hirdetes">
+    18:         <div class="hirdetes-adatok">
+    19:           <div class="adatok1">
+    20:             <h2 class="hirdetett-termek">Hirdetett termék: <%= @advert.termek_nev %></h2>
+    21:             <h3 class="hirdeto">Hirdető: Mekk elek</h3>
+    22:             <p>
+    23:               <%= @advert.leiras %>
+  
+app/views/shop/show.html.erb:20
+Started GET "/" for 127.0.0.1 at 2023-04-29 21:46:40 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 4.4ms | Allocations: 855)
+  [1m[36mAdvert Load (9.2ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:29
+  Rendered home/home.html.erb within layouts/application (Duration: 176.9ms | Allocations: 40799)
+  Rendered layout layouts/application.html.erb (Duration: 198.8ms | Allocations: 56370)
+Completed 200 OK in 224ms (Views: 160.4ms | ActiveRecord: 46.2ms | Allocations: 60961)
+
+
+Started GET "/shop/1" for 127.0.0.1 at 2023-04-29 21:46:43 +0200
+Processing by ShopController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdvert Load (2.1ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS" WHERE (1) FETCH FIRST :a1 ROWS ONLY[0m  [["LIMIT", 1]]
+  ↳ app/controllers/shop_controller.rb:3:in `show'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 2.1ms | Allocations: 2348)
+
+
+  
+ActiveRecord::StatementInvalid (OCIError: ORA-00920: invalid relational operator):
+  
+app/controllers/shop_controller.rb:3:in `show'
+Started GET "/" for 127.0.0.1 at 2023-04-29 21:47:38 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 2.0ms | Allocations: 870)
+  [1m[36mAdvert Load (6.9ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:29
+  Rendered home/home.html.erb within layouts/application (Duration: 164.1ms | Allocations: 40912)
+  Rendered layout layouts/application.html.erb (Duration: 186.8ms | Allocations: 56483)
+Completed 200 OK in 218ms (Views: 150.6ms | ActiveRecord: 48.3ms | Allocations: 61074)
+
+
+Started GET "/shop/1" for 127.0.0.1 at 2023-04-29 21:47:41 +0200
+Processing by ShopController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 633)
+
+
+  
+ArgumentError (Unsupported argument type: id (Symbol)):
+  
+app/controllers/shop_controller.rb:3:in `show'
+Started GET "/" for 127.0.0.1 at 2023-04-29 21:48:11 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 2.0ms | Allocations: 873)
+  [1m[36mAdvert Load (6.8ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:29
+  Rendered home/home.html.erb within layouts/application (Duration: 179.4ms | Allocations: 40910)
+  Rendered layout layouts/application.html.erb (Duration: 198.8ms | Allocations: 56481)
+Completed 200 OK in 221ms (Views: 154.9ms | ActiveRecord: 51.7ms | Allocations: 61072)
+
+
+Started GET "/shop/2" for 127.0.0.1 at 2023-04-29 21:48:14 +0200
+Processing by ShopController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 633)
+
+
+  
+ArgumentError (Unsupported argument type: id (Symbol)):
+  
+app/controllers/shop_controller.rb:3:in `show'
+Started GET "/" for 127.0.0.1 at 2023-04-29 21:50:10 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 3.8ms | Allocations: 846)
+  [1m[36mAdvert Load (7.6ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:29
+  Rendered home/home.html.erb within layouts/application (Duration: 167.2ms | Allocations: 40814)
+  Rendered layout layouts/application.html.erb (Duration: 189.1ms | Allocations: 56385)
+Completed 200 OK in 215ms (Views: 151.1ms | ActiveRecord: 46.2ms | Allocations: 60976)
+
+
+Started GET "/shop/1" for 127.0.0.1 at 2023-04-29 21:50:12 +0200
+Processing by ShopController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdvert Load (2.3ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS" WHERE "ADVERTS"."ID" = :a1 FETCH FIRST :a2 ROWS ONLY[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shop_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering shop/show.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 394)
+  Rendered shop/show.html.erb within layouts/application (Duration: 10.4ms | Allocations: 7580)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 7676)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 2.3ms | Allocations: 11012)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `advert' for #<ActionView::Base:0x0000000000eee8>
+Did you mean?  @advert
+               alert):
+    24:             </p>
+    25:           </div>
+    26:           <div class="adatok2">
+    27:             <p><strong>Ár/kg: </strong><%= advert.ar_kg %></p>
+    28:             <p><strong>Min. vásárlás: </strong><%= @advert.min_vasarlas %></p>
+    29:             <p><strong>Raktáron: </strong><%= @advert.mennyiseg %></p>
+    30:           </div>
+  
+app/views/shop/show.html.erb:27
+Started GET "/" for 127.0.0.1 at 2023-04-29 21:50:57 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.9ms | Allocations: 858)
+  [1m[36mAdvert Load (6.5ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:29
+  Rendered home/home.html.erb within layouts/application (Duration: 141.6ms | Allocations: 40843)
+  Rendered layout layouts/application.html.erb (Duration: 163.9ms | Allocations: 56414)
+Completed 200 OK in 186ms (Views: 132.9ms | ActiveRecord: 39.1ms | Allocations: 61013)
+
+
+Started GET "/shop/1" for 127.0.0.1 at 2023-04-29 21:51:00 +0200
+Processing by ShopController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdvert Load (0.5ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS" WHERE "ADVERTS"."ID" = :a1 FETCH FIRST :a2 ROWS ONLY[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shop_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering shop/show.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 379)
+  Rendered shop/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1827)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4189)
+Completed 200 OK in 20ms (Views: 12.3ms | ActiveRecord: 0.5ms | Allocations: 7550)
+
+
+Started GET "/shop/2" for 127.0.0.1 at 2023-04-29 21:51:05 +0200
+Processing by ShopController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdvert Load (0.5ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS" WHERE "ADVERTS"."ID" = :a1 FETCH FIRST :a2 ROWS ONLY[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shop_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering shop/show.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 322)
+  Rendered shop/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1291)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3584)
+Completed 200 OK in 13ms (Views: 7.7ms | ActiveRecord: 0.5ms | Allocations: 4569)
+
+
+Started GET "/shop/3" for 127.0.0.1 at 2023-04-29 21:51:08 +0200
+Processing by ShopController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdvert Load (0.5ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS" WHERE "ADVERTS"."ID" = :a1 FETCH FIRST :a2 ROWS ONLY[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shop_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering shop/show.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 292)
+  Rendered shop/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1261)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 3554)
+Completed 200 OK in 17ms (Views: 11.1ms | ActiveRecord: 0.5ms | Allocations: 4431)
+
+
+Started GET "/shop/1" for 127.0.0.1 at 2023-04-29 21:51:21 +0200
+Processing by ShopController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdvert Load (0.5ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS" WHERE "ADVERTS"."ID" = :a1 FETCH FIRST :a2 ROWS ONLY[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shop_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering shop/show.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 289)
+  Rendered shop/show.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1258)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3551)
+Completed 200 OK in 14ms (Views: 9.0ms | ActiveRecord: 0.5ms | Allocations: 4428)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-29 21:53:16 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.9ms | Allocations: 843)
+  [1m[36mAdvert Load (6.3ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:29
+  Rendered home/home.html.erb within layouts/application (Duration: 148.8ms | Allocations: 40826)
+  Rendered layout layouts/application.html.erb (Duration: 172.7ms | Allocations: 56397)
+Completed 200 OK in 208ms (Views: 143.7ms | ActiveRecord: 42.3ms | Allocations: 60988)
+
+
+Started GET "/shop/5" for 127.0.0.1 at 2023-04-29 21:53:26 +0200
+Processing by ShopController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdvert Load (0.5ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS" WHERE "ADVERTS"."ID" = :a1 FETCH FIRST :a2 ROWS ONLY[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/shop_controller.rb:3:in `show'
+  [1m[36mSupplier Load (3.3ms)[0m  [1m[34mSELECT "SUPPLIERS".* FROM "SUPPLIERS" WHERE "SUPPLIERS"."MIT" = :a1 FETCH FIRST :a2 ROWS ONLY[0m  [["mit", "Szivarvanyko"], ["LIMIT", 1]]
+  ↳ app/controllers/shop_controller.rb:4:in `show'
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 5.8ms | Allocations: 5678)
+
+
+  
+ActiveRecord::StatementInvalid (OCIError: ORA-00904: "SUPPLIERS"."MIT": invalid identifier):
+  
+app/controllers/shop_controller.rb:4:in `show'
+Started GET "/" for 127.0.0.1 at 2023-04-29 21:54:01 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 2.5ms | Allocations: 849)
+  [1m[36mAdvert Load (6.6ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:29
+  Rendered home/home.html.erb within layouts/application (Duration: 152.7ms | Allocations: 40756)
+  Rendered layout layouts/application.html.erb (Duration: 178.5ms | Allocations: 56327)
+Completed 200 OK in 202ms (Views: 147.8ms | ActiveRecord: 38.5ms | Allocations: 60918)
+
+
+Started GET "/shop/5" for 127.0.0.1 at 2023-04-29 21:54:07 +0200
+Processing by ShopController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdvert Load (0.7ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS" WHERE "ADVERTS"."ID" = :a1 FETCH FIRST :a2 ROWS ONLY[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/shop_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering shop/show.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 379)
+  Rendered shop/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1827)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 4189)
+Completed 200 OK in 26ms (Views: 15.9ms | ActiveRecord: 0.7ms | Allocations: 7549)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-29 22:06:44 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 2.8ms | Allocations: 846)
+  [1m[36mAdvert Load (7.4ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:29
+  Rendered home/home.html.erb within layouts/application (Duration: 150.7ms | Allocations: 40829)
+  Rendered layout layouts/application.html.erb (Duration: 182.2ms | Allocations: 56400)
+Completed 200 OK in 207ms (Views: 146.3ms | ActiveRecord: 45.4ms | Allocations: 60991)
+
+
+Started GET "/shop/2" for 127.0.0.1 at 2023-04-29 22:07:17 +0200
+Processing by ShopController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdvert Load (0.6ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS" WHERE "ADVERTS"."ID" = :a1 FETCH FIRST :a2 ROWS ONLY[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shop_controller.rb:3:in `show'
+  [1m[35mSQL (0.9ms)[0m  [1m[34mSELECT suppliers.id, suppliers.km_ar, suppliers.ar_kg FROM suppliers, carries WHERE
+        carries.supplier_id = suppliers.id AND carries.mit = Bazalt;[0m
+  ↳ app/controllers/shop_controller.rb:4:in `show'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.5ms | Allocations: 3677)
+
+
+  
+ActiveRecord::StatementInvalid (OCIError: ORA-00933: SQL command not properly ended):
+  
+app/controllers/shop_controller.rb:4:in `show'
+Started GET "/" for 127.0.0.1 at 2023-04-29 22:07:57 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.9ms | Allocations: 852)
+  [1m[36mAdvert Load (7.6ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:29
+  Rendered home/home.html.erb within layouts/application (Duration: 157.1ms | Allocations: 40891)
+  Rendered layout layouts/application.html.erb (Duration: 179.3ms | Allocations: 56462)
+Completed 200 OK in 202ms (Views: 145.9ms | ActiveRecord: 41.9ms | Allocations: 61053)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-29 22:08:22 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.9ms | Allocations: 849)
+  [1m[36mAdvert Load (7.1ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:29
+  Rendered home/home.html.erb within layouts/application (Duration: 149.9ms | Allocations: 40849)
+  Rendered layout layouts/application.html.erb (Duration: 172.3ms | Allocations: 56420)
+Completed 200 OK in 194ms (Views: 132.6ms | ActiveRecord: 47.2ms | Allocations: 61011)
+
+
+Started GET "/shop/2" for 127.0.0.1 at 2023-04-29 22:08:26 +0200
+Processing by ShopController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdvert Load (0.6ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS" WHERE "ADVERTS"."ID" = :a1 FETCH FIRST :a2 ROWS ONLY[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shop_controller.rb:3:in `show'
+  [1m[35mSQL (1.3ms)[0m  [1m[34mSELECT suppliers.id, suppliers.km_ar, suppliers.ar_kg FROM suppliers, carries WHERE
+        carries.supplier_id = suppliers.id AND carries.mit = Bazalt[0m
+  ↳ app/controllers/shop_controller.rb:4:in `show'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.9ms | Allocations: 3726)
+
+
+  
+ActiveRecord::StatementInvalid (OCIError: ORA-00904: "BAZALT": invalid identifier):
+  
+app/controllers/shop_controller.rb:4:in `show'
+Started GET "/" for 127.0.0.1 at 2023-04-29 22:09:34 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 2.0ms | Allocations: 846)
+  [1m[36mAdvert Load (6.0ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:29
+  Rendered home/home.html.erb within layouts/application (Duration: 174.0ms | Allocations: 40719)
+  Rendered layout layouts/application.html.erb (Duration: 197.2ms | Allocations: 56290)
+Completed 200 OK in 223ms (Views: 161.1ms | ActiveRecord: 43.2ms | Allocations: 60883)
+
+
+Started GET "/shop/2" for 127.0.0.1 at 2023-04-29 22:09:36 +0200
+Processing by ShopController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdvert Load (0.8ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS" WHERE "ADVERTS"."ID" = :a1 FETCH FIRST :a2 ROWS ONLY[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shop_controller.rb:3:in `show'
+  [1m[35mSQL (1.1ms)[0m  [1m[34mSELECT suppliers.id, suppliers.km_ar, suppliers.ar_kg FROM suppliers, carries WHERE
+        carries.supplier_id = suppliers.id AND carries.mit LIKE Bazalt[0m
+  ↳ app/controllers/shop_controller.rb:4:in `show'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.9ms | Allocations: 3726)
+
+
+  
+ActiveRecord::StatementInvalid (OCIError: ORA-00904: "BAZALT": invalid identifier):
+  
+app/controllers/shop_controller.rb:4:in `show'
+Started GET "/" for 127.0.0.1 at 2023-04-29 22:13:37 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 2.0ms | Allocations: 864)
+  [1m[36mAdvert Load (7.4ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:29
+  Rendered home/home.html.erb within layouts/application (Duration: 158.6ms | Allocations: 40874)
+  Rendered layout layouts/application.html.erb (Duration: 190.5ms | Allocations: 56445)
+Completed 200 OK in 218ms (Views: 158.1ms | ActiveRecord: 42.5ms | Allocations: 61036)
+
+
+Started GET "/shop/2" for 127.0.0.1 at 2023-04-29 22:13:40 +0200
+Processing by ShopController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdvert Load (0.7ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS" WHERE "ADVERTS"."ID" = :a1 FETCH FIRST :a2 ROWS ONLY[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shop_controller.rb:3:in `show'
+  [1m[35mSQL (1.5ms)[0m  [1m[34mSELECT * FROM querries WHERE mit LIKE Bazalt[0m
+  ↳ app/controllers/shop_controller.rb:4:in `show'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 2.2ms | Allocations: 3726)
+
+
+  
+ActiveRecord::StatementInvalid (OCIError: ORA-00942: table or view does not exist):
+  
+app/controllers/shop_controller.rb:4:in `show'
+Started GET "/" for 127.0.0.1 at 2023-04-29 22:14:09 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 2.0ms | Allocations: 858)
+  [1m[36mAdvert Load (6.1ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS"[0m
+  ↳ app/views/home/home.html.erb:29
+  Rendered home/home.html.erb within layouts/application (Duration: 141.7ms | Allocations: 40856)
+  Rendered layout layouts/application.html.erb (Duration: 165.0ms | Allocations: 56427)
+Completed 200 OK in 191ms (Views: 132.8ms | ActiveRecord: 40.8ms | Allocations: 61018)
+
+
+Started GET "/shop/2" for 127.0.0.1 at 2023-04-29 22:14:12 +0200
+Processing by ShopController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdvert Load (0.6ms)[0m  [1m[34mSELECT "ADVERTS".* FROM "ADVERTS" WHERE "ADVERTS"."ID" = :a1 FETCH FIRST :a2 ROWS ONLY[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shop_controller.rb:3:in `show'
+  [1m[35mSQL (1.1ms)[0m  [1m[34mSELECT * FROM carries WHERE mit LIKE Bazalt[0m
+  ↳ app/controllers/shop_controller.rb:4:in `show'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.7ms | Allocations: 3726)
+
+
+  
+ActiveRecord::StatementInvalid (OCIError: ORA-00904: "BAZALT": invalid identifier):
+  
+app/controllers/shop_controller.rb:4:in `show'
