@@ -26,10 +26,10 @@
             <button type="submit">Keresés</button>
           </form>-->
         </div>
-<%   query_result = ActiveRecord::Base.connection.exec_query("SELECT  *
-  FROM advertises,users,adverts
-  WHERE advertises.User_id=users.id
-  AND advertises.advert_id=adverts.id")
+<%   query_result = ActiveRecord::Base.connection.exec_query("SELECT advertises.*, users.nev, adverts.*
+FROM advertises
+JOIN users ON advertises.user_id = users.id
+JOIN adverts ON advertises.advert_id = adverts.id")
 
      @advertsall=query_result.to_a %>
         <% @advertsall.each do |a| %>
@@ -37,14 +37,15 @@
             <div class="hirdetes-adatok">
               <div class="adatok1">
                 <h2 class="hirdetett-termek">Hirdetett termék: <%= a['termek_nev'] %></h2>
-                <h3 class="hirdeto">Hirdető: <% a['nev']%></h3>
+
+                <h3 class="hirdeto">Hirdető: <%= a['nev'] %></h3>
                 <p>
-                  <%= a['leiras'] %>
+                    <%= a['leiras'] %>
                 </p>
               </div>
               <div class="adatok2">
                 <p><strong>Ár/kg: </strong><%= a['ar_kg'] %></p>
-                <p><strong>Min. vásárlás: </strong><%=a['min_vasarlas'] %></p>
+                  <p><strong>Min. vásárlás: </strong><%=a['min_vasarlas'] %></p>
                 <p><strong>Raktáron: </strong><%= a['mennyiseg'] %></p>
               </div>
             </div>
