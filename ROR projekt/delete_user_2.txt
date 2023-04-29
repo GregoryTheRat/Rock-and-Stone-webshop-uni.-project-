@@ -1,0 +1,6 @@
+CREATE OR REPLACE TRIGGER delete_user_2
+BEFORE DELETE ON orders
+FOR EACH ROW
+BEGIN
+    DELETE FROM delivers WHERE order_id = :OLD.id;
+END;
