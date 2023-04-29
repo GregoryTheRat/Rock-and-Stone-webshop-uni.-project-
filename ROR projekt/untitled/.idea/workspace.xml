@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80373b3c-3dd1-4d6a-9163-d5b0c95c885d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/untitled.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/untitled.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/home/home.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/home.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/login/login.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/login/login.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/newads/newads.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/newads/newads.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20230428192834_rename_jelszo.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20230428192834_rename_jelszo.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +62,8 @@
       <command value="rails g controller sessions" />
       <command value="rails g migration rename_jelszo" />
       <command value="rails db:migrate" />
+      <command value="rails db:drop" />
+      <command value="rails db:prepare" />
     </option>
   </component>
   <component name="RunManager" selected="Rails.untitled">
@@ -139,6 +139,7 @@
       <option name="presentableId" value="Default" />
       <updated>1682699084461</updated>
       <workItem from="1682699087256" duration="12837000" />
+      <workItem from="1682759724092" duration="458000" />
     </task>
     <servers />
   </component>

@@ -24,6 +24,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_28_192834) do
     t.float "mennyiseg"
     t.float "ar_kg"
     t.integer "min_vasarlas", precision: 38
+    t.string "leiras"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
