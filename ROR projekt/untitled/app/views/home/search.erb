@@ -16,7 +16,6 @@
     <div class="search-bar">
 
       <%= form_with url: "/search", method: :get do |form| %>
-        <%= form.label :word %>
         <%= form.text_field :word %>
         <%= form.submit "Search" %>
       <% end %>
@@ -31,10 +30,6 @@
       <h1>Nem találtam semmit</h1>
     <% else %>
       <% @results.each do |result| %>
-        <% if @results.nil? %>
-          <h1>Nem találtam semmit</h1>
-        <% else %>
-          <% @results.each do |result| %>
             <div class="hirdetes">
               <div class="hirdetes-adatok">
                 <div class="adatok1">
@@ -75,10 +70,8 @@
                 </div>
               </div>
             </div>
-          <% end %>
         <% end %>
       <% end %>
-    <% end %>
   </main>
 </div>
 </body>

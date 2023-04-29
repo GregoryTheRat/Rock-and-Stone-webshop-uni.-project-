@@ -13,24 +13,27 @@
 
   <div>
     <%= form.label :termek_nev, style: "display: block" %>
-    <%= form.text_field :termek_nev %>
+    <%= form.text_field :termek_nev, required: true %>
   </div>
 
   <div>
     <%= form.label :mennyiseg, style: "display: block" %>
-    <%= form.text_field :mennyiseg %>
+    <%= form.text_field :mennyiseg,required: true %>
   </div>
 
   <div>
     <%= form.label :ar_kg, style: "display: block" %>
-    <%= form.text_field :ar_kg %>
+    <%= form.text_field :ar_kg ,required: true%>
   </div>
 
   <div>
     <%= form.label :min_vasarlas, style: "display: block" %>
-    <%= form.number_field :min_vasarlas %>
+    <%= form.number_field :min_vasarlas,required: true %>
   </div>
-
+  <div>
+    <%= form.label :Leiras, style: "display: block" %>
+    <%= form.text_field :leiras,required: true %>
+  </div>
   <div>
     <%= form.submit %>
   </div>

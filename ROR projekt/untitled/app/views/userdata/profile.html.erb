@@ -12,6 +12,7 @@
     <%= render 'layouts/navbar' %>
   <main>
     <%= render "form", user: @user %>
+    <%= button_to "Destroy this user", @user, method: :delete %>
   </main>
   <footer><p>&copy; Kő és szikla 2023</p></footer>
 </div>

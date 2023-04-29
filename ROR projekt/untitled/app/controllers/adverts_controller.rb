@@ -17,6 +17,7 @@ class AdvertsController < ApplicationController
   # GET /adverts/new
   def new
     @advert = Advert.new
+
   end
 
   # GET /adverts/1/edit
@@ -25,17 +26,30 @@ class AdvertsController < ApplicationController
 
   # POST /adverts or /adverts.json
   def create
+
     @advert = Advert.new(advert_params)
+    adverts= Advert.all
+    ids=adverts.to_a
+    id=1
+    ids.each do |row|
+      id=row['id']
+    end
+
+    advertise_params={"user_id"=>session['user_id'],"advert_id"=>id,"mikor"=>DateTime.now}
+    Advertise.create(advertise_params )
+    #  sqlstring=session['user_id'].to_s+","+id.to_s+","+DateTime.now.to_s+','+Time.now.to_i.to_s+','+Time.now.to_i.to_s
+    #ActiveRecord::Base.connection.exec_insert("BEGIN INSERT INTO advertises VALUES(#{sqlstring}); END;")
 
     respond_to do |format|
       if @advert.save
-        format.html { redirect_to advert_url(@advert), notice: "Advert was successfully created." }
-        format.json { render :show, status: :created, location: @advert }
+        format.html { redirect_to home_path, notice: "Advert was successfully created." }
+        # format.json { render :show, status: :created, location: @advert }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @advert.errors, status: :unprocessable_entity }
       end
     end
+
   end
 
   # PATCH/PUT /adverts/1 or /adverts/1.json
@@ -69,6 +83,6 @@ class AdvertsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def advert_params
-      params.require(:advert).permit(:termek_nev, :mennyiseg, :ar_kg, :min_vasarlas)
+      params.require(:advert).permit(:termek_nev, :mennyiseg, :ar_kg, :min_vasarlas,:leiras)
     end
 end

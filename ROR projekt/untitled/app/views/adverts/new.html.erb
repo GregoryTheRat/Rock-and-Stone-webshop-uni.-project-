@@ -1,9 +1,58 @@
-<h1>New advert</h1>
 
-<%= render "form", advert: @advert %>
 
-<br>
 
-<div>
-  <%= link_to "Back to adverts", adverts_path %>
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <% stylesheet_link_tag "style" %>
+  <title>Kő és szikla</title>
+</head>
+<body>
+<div class="container">
+  <%= render 'layouts/navbar' %>
+  <main>
+   <!-- <form class="profil">
+      <h1>Hozz létre saját hírdetéseket!</h1>
+      <div class="new_ads">
+        <div>
+          <label>Termék neve:</label>
+          <input type="text" name="product" placeholder="Termék név"></input>
+        </div>
+        <div>
+          <label>Termék leírása:</label>
+          <input type="text" name="description" placeholder="Termék leírás"></input>
+        </div>
+        <div>
+          <label>Termék mennyisége:</label>
+          <input type="number" name="description" placeholder="100"></input>
+        </div>
+        <div>
+          <label>Termék min. vásárlásának mennyisége:</label>
+          <input type="number" name="description" placeholder="100"></input>
+        </div>
+        <div>
+          <label>Termék raktáron lévő mennyisége:</label>
+          <input type="number" name="description" placeholder="100"></input>
+        </div>
+      </div>
+      <div class="buttons">
+        <input type="reset" value="Mégse" />
+        <input type="submit" value="Létrehozás" />
+      </div>
+    </form>-->
+
+    <%= render "form", advert: @advert %>
+    <%= link_to "cancel", home_path %>
+  </main>
+  <footer><p>&copy; Kő és szikla 2023</p></footer>
 </div>
+</body>
+</html>
+
+
+
+

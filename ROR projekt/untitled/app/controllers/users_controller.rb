@@ -11,6 +11,10 @@ class UsersController < ApplicationController
   end
 
 
+  def delet
+
+  end
+
 
 
   # GET /users/new
@@ -53,7 +57,7 @@ class UsersController < ApplicationController
     @user.destroy
 
     respond_to do |format|
-      format.html { redirect_to users_url, notice: "User was successfully destroyed." }
+      format.html { redirect_to home_path, notice: "User was successfully destroyed." }
       format.json { head :no_content }
     end
   end

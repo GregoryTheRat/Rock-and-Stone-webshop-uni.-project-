@@ -17,7 +17,6 @@
         <div class="search-bar">
 
           <%= form_with url: "/search", method: :get do |form| %>
-            <%= form.label :word%>
             <%= form.text_field :word %>
             <%= form.submit "Search" %>
           <% end %>
@@ -27,26 +26,33 @@
             <button type="submit">Keresés</button>
           </form>-->
         </div>
-        <% @adverts.each do |advert| %>
+<%   query_result = ActiveRecord::Base.connection.exec_query("SELECT  *
+  FROM advertises,users,adverts
+  WHERE advertises.User_id=users.id
+  AND advertises.advert_id=adverts.id")
+
+     @advertsall=query_result.to_a %>
+        <% @advertsall.each do |a| %>
           <div class="hirdetes">
             <div class="hirdetes-adatok">
               <div class="adatok1">
-                <h2 class="hirdetett-termek">Hirdetett termék: <%= advert.termek_nev %></h2>
-                <h3 class="hirdeto">Hirdető: Mekk elek</h3>
+                <h2 class="hirdetett-termek">Hirdetett termék: <%= a['termek_nev'] %></h2>
+                <h3 class="hirdeto">Hirdető: <% a['nev']%></h3>
                 <p>
-                  <%= advert.leiras %>
+                  <%= a['leiras'] %>
                 </p>
               </div>
               <div class="adatok2">
-                <p><strong>Ár/kg: </strong><%= advert.ar_kg %></p>
-                <p><strong>Min. vásárlás: </strong><%= advert.min_vasarlas %></p>
-                <p><strong>Raktáron: </strong><%= advert.mennyiseg %></p>
+                <p><strong>Ár/kg: </strong><%= a['ar_kg'] %></p>
+                <p><strong>Min. vásárlás: </strong><%=a['min_vasarlas'] %></p>
+                <p><strong>Raktáron: </strong><%= a['mennyiseg'] %></p>
               </div>
             </div>
             <div class="szallitas-adatok">
               <h2>Szállítási adatok</h2>
 
               <div class="szallito-list">
+                <% %>
                 <label for="szallitok" class="szallitok">Szállítók:</label>
                 <select>
                   <option value="foodpanda" selected>Foodpanda</option>
