@@ -15,10 +15,17 @@
       <%= render 'layouts/navbar' %>
       <main>
         <div class="search-bar">
-          <form>
+
+          <%= form_with url: "/search", method: :get do |form| %>
+            <%= form.label :word%>
+            <%= form.text_field :word %>
+            <%= form.submit "Search" %>
+          <% end %>
+
+          <!-- <form action="/search" method="get">
             <input type="text" placeholder="Írd be a keresett termék nevét!">
             <button type="submit">Keresés</button>
-          </form>
+          </form>-->
         </div>
         <% @adverts.each do |advert| %>
           <div class="hirdetes">
@@ -27,56 +34,7 @@
                 <h2 class="hirdetett-termek">Hirdetett termék: <%= advert.termek_nev %></h2>
                 <h3 class="hirdeto">Hirdető: Mekk elek</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                  molestias laudantium, veniam ducimus magnam ad repellendus
-                  quisquam perspiciatis culpa quo architecto deleniti amet fuga.
-                  Neque veniam laborum blanditiis repellat error? Velit eum, quasi
-                  repellat cumque repellendus quia, placeat exercitationem optio,
-                  natus accusamus tenetur! Nihil quasi magni minus totam quas
-                  facilis veritatis corrupti mollitia rem recusandae, ab nostrum
-                  fugit cum sint quod aperiam aliquam laborum et distinctio quo
-                  itaque ut rerum. Corrupti maiores temporibus mollitia quos.
-                  Ipsam perferendis nam alias amet. Dolorem necessitatibus quis
-                  deserunt culpa. Delectus numquam necessitatibus voluptas ullam
-                  atque dolorum dolores nulla a, quis autem, provident itaque
-                  iusto voluptate sequi facilis nemo inventore, quas nesciunt?
-                  Aliquam dicta voluptate quibusdam qui eligendi. Incidunt aliquam
-                  rem minus. Ea dolores distinctio fuga deleniti dolorem quaerat
-                  harum doloribus, reprehenderit quos fugiat illum ratione.
-                  Aliquid eligendi consectetur delectus ipsum saepe dolores
-                  maiores maxime temporibus ea dolore cupiditate facere possimus
-                  cum error hic voluptates, libero ab quae mollitia beatae quos
-                  aliquam officia non! Eligendi dolorem quo assumenda. Qui eaque
-                  vel corrupti accusamus exercitationem velit soluta, veritatis
-                  ipsa, alias rerum mollitia. Numquam fuga delectus inventore odit
-                  repellat ipsam perspiciatis nostrum qui repellendus eum, soluta
-                  deserunt natus, vel corporis ab explicabo eligendi, magnam rerum
-                  voluptatem dolor necessitatibus autem magni hic mollitia? Fugiat
-                  ad, eos minima praesentium facere eaque saepe maxime repudiandae
-                  commodi, non veritatis distinctio illo similique ducimus
-                  possimus dolorem exercitationem libero blanditiis aspernatur?
-                  Quia sit fuga perspiciatis voluptate itaque voluptatibus iusto
-                  temporibus similique sapiente facilis enim molestiae, velit quas
-                  provident ipsam nemo autem iste corrupti nobis ipsum
-                  consectetur. Exercitationem animi, in, nulla numquam, laborum
-                  laudantium provident dicta explicabo laboriosam similique ut.
-                  Inventore, sequi totam. Fuga a dolore ipsum? Aliquid quis ipsam
-                  provident, temporibus eum necessitatibus, labore quae sapiente,
-                  magnam nesciunt officiis. Aliquam labore dolorum beatae magni
-                  quas dolores fuga hic pariatur libero, voluptate sequi rem
-                  dolore, omnis, maxime consectetur voluptas reprehenderit
-                  voluptatibus a excepturi doloribus! Error neque perferendis
-                  tenetur itaque doloremque odio labore quod. Repellat obcaecati
-                  in cupiditate veniam pariatur! Nulla ea accusantium esse
-                  consequuntur odit illum dicta necessitatibus cumque modi at ad,
-                  molestiae id magni maxime inventore neque, debitis optio
-                  veritatis iure repellendus? Quam mollitia eligendi voluptatum
-                  dolor debitis? Non quo sint, quae tempore unde, quod animi
-                  similique voluptas repellat placeat porro reiciendis blanditiis
-                  cum accusantium dignissimos eum autem cumque! Inventore odit
-                  consequuntur architecto laudantium omnis debitis nihil veritatis
-                  ea sit, fugit mollitia veniam praesentium voluptas. Repellendus
-                  enim nihil blanditiis porro. Quidem, nostrum assumenda?
+                  <%= advert.leiras %>
                 </p>
               </div>
               <div class="adatok2">

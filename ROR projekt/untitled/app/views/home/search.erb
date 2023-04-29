@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <%= stylesheet_link_tag "style" %>
+  <title>Kő és szikla</title>
+</head>
+<body>
+
+<div class="container">
+  <%= render 'layouts/navbar' %>
+  <main>
+    <div class="search-bar">
+
+      <%= form_with url: "/search", method: :get do |form| %>
+        <%= form.label :word %>
+        <%= form.text_field :word %>
+        <%= form.submit "Search" %>
+      <% end %>
+
+      <!-- <form action="/search" method="get">
+        <input type="text" placeholder="Írd be a keresett termék nevét!">
+        <button type="submit">Keresés</button>
+      </form>-->
+    </div>
+
+    <% if @results.nil? %>
+      <h1>Nem találtam semmit</h1>
+    <% else %>
+      <% @results.each do |result| %>
+        <% if @results.nil? %>
+          <h1>Nem találtam semmit</h1>
+        <% else %>
+          <% @results.each do |result| %>
+            <div class="hirdetes">
+              <div class="hirdetes-adatok">
+                <div class="adatok1">
+                  <h2 class="hirdetett-termek">Hirdetett termék: <%= result['termek_nev'] %></h2>
+                  <h3 class="hirdeto">Hirdető:
+                    <% result['nev'] %></h3>
+                  <p>
+                    <%= result['leiras'] %>
+                  </p>
+                </div>
+                <div class="adatok2">
+                  <p><strong>Ár/kg: </strong><%= result['ar_kg'] %></p>
+                  <p><strong>Min. vásárlás: </strong><%= result['min_vasarlas'] %></p>
+                  <p><strong>Raktáron: </strong><%= result['mennyiseg'] %></p>
+                </div>
+              </div>
+              <div class="szallitas-adatok">
+                <h2>Szállítási adatok</h2>
+
+                <div class="szallito-list">
+                  <label for="szallitok" class="szallitok">Szállítók:</label>
+                  <select>
+                    <option value="foodpanda" selected>Foodpanda</option>
+                    <option value="gls" disabled>GLS</option>
+                    <option value="dpd" disabled>DPD</option>
+                    <option value="wolt" disabled>Wolt</option>
+                  </select>
+                </div>
+                <p><strong>Ár/km: </strong>70 HUF</p>
+                <p><strong>Ár/kg: </strong>45 HUF</p>
+              </div>
+              <div class="egyeb-adatok">
+                <h2>Értékelés</h2>
+                <p><strong>3.5</strong></p>
+                <hr/>
+                <div>
+                  <button>Tovább a vásárláshoz</button>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+  </main>
+</div>
+</body>
+</html>
