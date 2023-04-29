@@ -1,0 +1,15 @@
+CREATE OR REPLACE TRIGGER total_cost
+AFTER INSERT OR UPDATE OR DELETE ON delivers
+FOR EACH ROW
+DECLARE
+  v_total_cost NUMBER(10, 2);
+BEGIN
+  SELECT SUM(koltseg) INTO v_total_cost FROM delivers;
+  IF v_total_cost IS NULL THEN
+    v_total_cost := 0;
+  END IF;
+  INSERT INTO total_cost (total) VALUES (v_total_cost);
+END;
+/
+
+CREATE VIEW total_cost AS SELECT SUM(koltseg) AS total FROM delivers;
