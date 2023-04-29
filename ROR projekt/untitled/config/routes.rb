@@ -11,7 +11,8 @@ Rails.application.routes.draw do
   get '/logout', to: "home#destroy"
   get 'userdata', to: "userdata#userdata"
   get 'home', to: "home#home"
-  get 'login', to: "login#login"
+  get 'login', to: "sessions#new"
+  post 'login', to: "sessions#create"
   get 'newads', to: "newads#newads"
 
   get 'osszes', to: 'adverts#osszes'

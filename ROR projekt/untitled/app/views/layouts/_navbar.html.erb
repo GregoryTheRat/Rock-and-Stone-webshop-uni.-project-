@@ -10,10 +10,13 @@
       <a href="/userdata" onclick="activateNavItem(this)"
       >Profil adatok</a
       >
+      <% if logged_in? %>
+        <%= current_user.nev %>
+      <% end %>
     </li>
     <% if logged_in? %>
       <!-- <li><a href="/logout">Kijelentkezés</a></li> -->
-      <li><%= link_to "Sign out", logout_path %></li>
+      <li><%= link_to "Kijelentkezés", logout_path %></li>
     <% else %>
       <li><%= link_to "Bejelentkezés", login_path %></li>
     <% end %>
