@@ -1,0 +1,34 @@
+<%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <br>
+  <br>
+  <div>
+    <%= form.label :Név, style: "display: block" %>
+    <%= form.text_field :nev, required: true %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :Email, style: "display: block" %>
+    <%= form.email_field :email, required: true%>
+  </div>
+
+  <br>
+
+  <div class="buttons">
+    <%= form.submit value="Adatok módosítása"%>
+  </div>
+<% end %>

@@ -13,7 +13,7 @@ users = User.create([{ nev: "Szabo Peter", email: "szabp@citromail.hu", password
                      { nev: "Kalapos Gertrud", email: "kalapge@citromail.hu", password: "akalapos" },
                      { nev: "Lakatos Emanuel", email: "lakatm@citromail.hu", password: "lammelama12" },
                      { nev: "Pecsi Zsofi", email: "pezso@citromail.hu", password: "pezso" },
-                     { nev: "Banki Gergely", email: "kicsiq@citromail.hu", password: "password" },
+                     { nev: "geri", email: "geri@gmail.com", password: "admin", admin: true },
                      { nev: "Lakatos Alfonz", email: 'lafikobra@citromail.hu', password: 'hagyma21' },
                      { nev: 'Dombovari Istvan', email: 'veryfunny@citromail.hu', password: 'humoros69' },
                      { nev: 'Puskas Tivadar', email: 'imold@citromail.hu', password: 'jelszo45' },

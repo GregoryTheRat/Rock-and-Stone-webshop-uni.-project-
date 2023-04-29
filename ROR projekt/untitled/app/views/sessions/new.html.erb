@@ -12,23 +12,37 @@
   <div class="container">
     <%= render 'layouts/navbar' %>
     <main>
-      <%= form_with(model: user) do |form| %>
-        <% if user.errors.any? %>
-          <div style="color: red">
-            <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <br>
+      <br>
+      <br>
+      <h1>Bejelentkezés</h1>
+      <br>
+      <br>
+      <%= form_with url: login_path do |form| %>
 
-            <ul>
-              <% user.errors.each do |error| %>
-                <li><%= error.full_message %></li>
-              <% end %>
-            </ul>
-          </div>
-        <% end %>
-        <div class="signup">
-          <%= form.label :nev, style: "display: block" %>
-          <%= form.text_field :nev %>
+        <div>
+          <%= form.label :Név, style: "display: block" %>
+          <%= form.text_field :nev, required: true %>
+        </div>
+
+        <br>
+
+
+        <br>
+
+        <div>
+          <%= form.label :Jelszó, style: "display: block" %>
+          <%= form.password_field :password, required: true%>
+        </div>
+
+
+        <div class="buttons">
+          <%= form.submit 'Bejelentkezés' %>
         </div>
       <% end %>
+      <br>
+      <br>
+      <br>
       <!-- <form class="profil">
         <h1>Bejelentkezés</h1>
         <div class="signup">

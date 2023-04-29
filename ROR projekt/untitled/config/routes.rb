@@ -9,10 +9,13 @@ Rails.application.routes.draw do
   resources :users
 
   get '/logout', to: "home#destroy"
-  get 'userdata', to: "userdata#userdata"
+  get 'profile', to: "userdata#profile"
+  post 'profile', to: "userdata#updateprofile"
   get 'home', to: "home#home"
-  get 'login', to: "login#login"
+  get 'login', to: "sessions#new"
+  post 'login', to: "sessions#create"
   get 'newads', to: "newads#newads"
+  get 'bag', to: "bag#bag"
 
   get 'osszes', to: 'adverts#osszes'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
