@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   resources :users
 
   get '/logout', to: "home#destroy"
-  get 'profile', to: "sessions#profile"
+  get 'profile', to: "userdata#profile"
+  post 'profile', to: "userdata#updateprofile"
   get 'home', to: "home#home"
   get 'login', to: "sessions#new"
   post 'login', to: "sessions#create"
