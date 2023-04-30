@@ -1,12 +1,12 @@
 <header><a href="../" class="ko-es-szikla"><span>Kő és szikla</span></a>
   <ul class="navbar">
     <li><%= link_to "Hírdetmények", home_path %></li>
+    <li><%= link_to "Rendelések", bag_path %></li>
 
 
 
     <% if logged_in? %>
       <li><%= link_to "Új hírdetmény", "/adverts/new" %></li>
-      <li><%= link_to "Rendelések", bag_path %></li>
       <li><%= link_to "Profil adatok", profile_path %></li>
       <li><%= link_to "Kijelentkezés", logout_path %></li>
     <% else %>

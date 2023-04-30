@@ -9,28 +9,20 @@
     <title>Kő és szikla</title>
   </head>
   <body>
-
-    <div class="container">
-      <%= render 'layouts/navbar' %>
+  <div class="container">
+    <%= render 'layouts/navbar' %>
       <main>
         <div class="search-bar">
-
           <%= form_with url: "/search", method: :get do |form| %>
             <%= form.text_field :word %>
             <%= form.submit "Search" %>
           <% end %>
-
-          <!-- <form action="/search" method="get">
-            <input type="text" placeholder="Írd be a keresett termék nevét!">
-            <button type="submit">Keresés</button>
-          </form>-->
         </div>
-<%   query_result = ActiveRecord::Base.connection.exec_query("SELECT advertises.*, users.nev, adverts.*
-FROM advertises
-JOIN users ON advertises.user_id = users.id
-JOIN adverts ON advertises.advert_id = adverts.id")
-
-     @advertsall=query_result.to_a %>
+        <%query_result = ActiveRecord::Base.connection.exec_query("SELECT advertises.*, users.nev, adverts.*
+          FROM advertises
+          JOIN users ON advertises.user_id = users.id
+          JOIN adverts ON advertises.advert_id = adverts.id")
+          @advertsall=query_result.to_a %>
         <% @advertsall.each do |a| %>
           <div class="hirdetes">
             <div class="hirdetes-adatok">
@@ -69,7 +61,6 @@ JOIN adverts ON advertises.advert_id = adverts.id")
               <p><strong>3.5</strong></p>
               <hr />
               <div>
-                <%= link_to "Tovább a vásárláshoz", shop_path(advert) %>
               </div>
             </div>
           </div>
