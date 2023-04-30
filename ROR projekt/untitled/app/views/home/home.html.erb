@@ -70,18 +70,11 @@ JOIN adverts ON advertises.advert_id = adverts.id
                                                                         WHERE advert_id  =#{a['advert_id']}").to_a%>
               <p><strong><%= result[0]['avg']%></strong></p>
               <hr />
-              <div>
-              </div>
-
-<<<<<<< Updated upstream
-              <% asd='<div>
-                <%= link_to "Tovább a vásárláshoz", shop_path(a)
-              </div>'%>
-=======
+              
               <div>
                 <%=  link_to "Tovább a vásárláshoz", shop_path(a['advert_id']) %>
               </div>
->>>>>>> Stashed changes
+
             </div>
           </div>
         <% end %>
