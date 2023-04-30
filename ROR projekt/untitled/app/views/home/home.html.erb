@@ -54,9 +54,9 @@ JOIN adverts ON advertises.advert_id = adverts.id
               <%result = ActiveRecord::Base.connection.exec_query(" SELECT AVG(csillag) AS avg
                                                                       FROM rates
                                                                         WHERE advert_id  =#{a['advert_id']}").to_a%>
-              <p><strong><%= result[0]['avg']%></strong></p>
+              <p><strong><%= format('%.2f', result[0]['avg'])%></strong></p>
               <hr />
-              
+
               <div>
                 <% unless !logged_in? %>
                   <%=  link_to "Tovább a vásárláshoz", shop_path(a['advert_id']) %>

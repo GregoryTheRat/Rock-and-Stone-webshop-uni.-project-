@@ -5,17 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb431ad2-aa09-45b4-9587-e95cf7326dad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Dokumentálcio/SSADMsablon.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tmp/pids/server.pid" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/shop_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/shop_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/bag_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/bag_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/rates_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/rates_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/bag/bag.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/bag/bag.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/home.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/home.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/search.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/search.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/shop/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shop/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/pids/server.pid" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/pids/server.pid" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,6 +165,14 @@
           </properties>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/controllers/bag_controller.rb</url>
+          <line>2</line>
+          <properties myBlockOrdinal="-1">
+            <option name="block-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
@@ -177,6 +184,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/untitled@Unnamed.rcov" NAME="Unnamed Coverage Results" MODIFIED="1682861354715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="untitled" />
-    <SUITE FILE_PATH="coverage/untitled@rails_s.rcov" NAME="rails s Coverage Results" MODIFIED="1682871220676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="untitled" />
+    <SUITE FILE_PATH="coverage/untitled@rails_s.rcov" NAME="rails s Coverage Results" MODIFIED="1682872170612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="untitled" />
   </component>
 </project>

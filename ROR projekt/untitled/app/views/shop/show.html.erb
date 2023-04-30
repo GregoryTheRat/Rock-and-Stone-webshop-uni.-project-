@@ -49,7 +49,7 @@
       </div>
       <div class="egyeb-adatok">
         <h2>Értékelés</h2>
-        <p><strong><%= @rates[0]['avg'] %></strong></p>
+        <p><strong><%=format('%.2f', @rates[0]['avg']) %></strong></p>
         <hr/>
       </div>
     </div>

@@ -22,10 +22,11 @@ class RatesController < ApplicationController
   # POST /rates or /rates.json
   def create
     @rate = Rate.new(rate_params)
+    id=rate_params[:id]
 
     respond_to do |format|
       if @rate.save
-        format.html { redirect_to rate_url(@rate), notice: "Rate was successfully created." }
+        format.html { redirect_to home_path, notice: "Rate was successfully created." }
         format.json { render :show, status: :created, location: @rate }
       else
         format.html { render :new, status: :unprocessable_entity }
