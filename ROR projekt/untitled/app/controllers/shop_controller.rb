@@ -61,6 +61,9 @@ class ShopController < ApplicationController
 
     #error handling
     selected_advert = Advert.find_by(id: params['advert_id'])
+
+    # vasarolhat=ActiveRecord::Base.connection.exec_query("SELECT LEHETEVASAROLNI(#{params['mennyiseg']},#{params['advert_id']})as lehete FROM DUAL")
+    @cost=allcost
     if selected_advert.mennyiseg < params['mennyiseg'].to_f
       flash[:notice] = "Nincs ennyi termék!"
       redirect_to shop_path(selected_advert.id)
@@ -68,6 +71,7 @@ class ShopController < ApplicationController
       flash[:notice] = "Minimum " + selected_advert.min_vasarlas.to_s + " kg-ot kell venned!"
       redirect_to shop_path(selected_advert.id)
     else
+
       # advert frissítése
       new_mennyiseg = selected_advert.mennyiseg - params[:mennyiseg].to_f
       Advert.update(id = selected_advert.id, mennyiseg: new_mennyiseg)
