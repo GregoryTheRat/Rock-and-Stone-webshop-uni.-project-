@@ -25,10 +25,12 @@
             <button type="submit">Keresés</button>
           </form>-->
         </div>
-<%   query_result = ActiveRecord::Base.connection.exec_query("SELECT advertises.*, users.nev, adverts.*
+<%   query_result = ActiveRecord::Base.connection.exec_query("
+                                          SELECT advertises.*, users.nev, adverts.*
 FROM advertises
 JOIN users ON advertises.user_id = users.id
-JOIN adverts ON advertises.advert_id = adverts.id")
+JOIN adverts ON advertises.advert_id = adverts.id
+")
 
      @advertsall=query_result.to_a %>
         <% @advertsall.each do |a| %>
@@ -52,7 +54,6 @@ JOIN adverts ON advertises.advert_id = adverts.id")
               <h2>Szállítási adatok</h2>
 
               <div class="szallito-list">
-                <% %>
                 <label for="szallitok" class="szallitok">Szállítók:</label>
                 <select>
                   <option value="foodpanda" selected>Foodpanda</option>
@@ -66,11 +67,15 @@ JOIN adverts ON advertises.advert_id = adverts.id")
             </div>
             <div class="egyeb-adatok">
               <h2>Értékelés</h2>
-              <p><strong>3.5</strong></p>
+              <%result = ActiveRecord::Base.connection.exec_query(" SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =#{a['advert_id']}").to_a%>
+              <p><strong><%= result[0]['avg']%></strong></p>
               <hr />
-              <div>
-                <%= link_to "Tovább a vásárláshoz", shop_path(advert) %>
-              </div>
+
+              <% asd='<div>
+                <%= # link_to "Tovább a vásárláshoz", shop_path(a)
+              </div>' %>
             </div>
           </div>
         <% end %>

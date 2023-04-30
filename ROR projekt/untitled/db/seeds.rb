@@ -1,11 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
-
 users = User.create([{ nev: "Szabo Peter", email: "szabp@citromail.hu", password: "erospista123" },
                      { nev: "Tamas Eszter", email: "tas@citromail.hu", password: "tami4" },
                      { nev: "Kerek Huba", email: "kerhub@freemail.hu", password: "hubi23" },
@@ -24,7 +16,6 @@ users = User.create([{ nev: "Szabo Peter", email: "szabp@citromail.hu", password
                      { nev: 'Adolf Alfonzo', email: 'alfonz@citromail.hu', password: 'alfaalfonz' },
                      { nev: 'Chadwik Chad', email: 'chad@citromail.hu', password: 'cc666' },
                      { nev: 'Biro Zsoka', email: 'birozs@citromail.hu', password: '123-45' }])
-
 adverts = Advert.create([{ termek_nev: 'Bolgar Lyukacsos Szikla', mennyiseg: 32000, ar_kg: 180, min_vasarlas: 1000, leiras: 'Kivallo minosegu bolgar lyukacsos szikla elado kedvezo aron ' },
                          { termek_nev: 'Bazalt', mennyiseg: 120000, ar_kg: 990, min_vasarlas: 1000, leiras: 'kiskamospuszati elso osztályu  haza  fejtettt bazalt 8-10 cm atmeroju' },
                          { termek_nev: 'Gorog hofeher szikla', mennyiseg: 76030, ar_kg: 1501000, min_vasarlas: 1000, leiras: 'Eredeti hellenistica feher szikla a atticai felszigetrol rednkivul olcson ' },
@@ -50,7 +41,6 @@ adverts = Advert.create([{ termek_nev: 'Bolgar Lyukacsos Szikla', mennyiseg: 320
                          { termek_nev: 'Brazil Pala', mennyiseg: 54000, ar_kg: 320, min_vasarlas: 1000, leiras: 'a messzi braziliabol importalt pala kozet ' },
                          { termek_nev: 'Indiai Homokko', mennyiseg: 34000, ar_kg: 410, min_vasarlas: 1000, leiras: 'Indiai homokko rendkivuli minoseg kedvezo ar ' },
                          { termek_nev: 'Perlato Meszko', mennyiseg: 22000, ar_kg: 890, min_vasarlas: 1000, leiras: 'Perlato meszko burkoasra homlokzatra burkolas' }])
-
 suppliers = Supplier.create([{ km_ar: 200, ar_kg: 45,ceg_nev:"Kovacs es tarsa Kft." },
                              { km_ar: 210, ar_kg: 37,ceg_nev:"Tamas es tarsa Kft."  },
                              { km_ar: 310, ar_kg: 20,ceg_nev:"Kovek Kft."  },
@@ -63,33 +53,31 @@ suppliers = Supplier.create([{ km_ar: 200, ar_kg: 45,ceg_nev:"Kovacs es tarsa Kf
                              { km_ar: 390, ar_kg: 12,ceg_nev:"kavics futar Bt."  },
                              { km_ar: 430, ar_kg: 36,ceg_nev:"Pala palik Kft."  },
                              { km_ar: 330, ar_kg: 30,ceg_nev:"Stone Giant "  }])
-
-carries = Carry.create([{ supplier_id: 1, mit: 'Lyukacsos Szikla' },
-                        { supplier_id: 1, mit: 'Bazalt' },
-                        { supplier_id: 1, mit: 'Gorog Hofeher Szikla' },
-                        { supplier_id: 1, mit: 'Tahiti uveg Turkiz' },
-                        { supplier_id: 2, mit: 'Szivarvanyko' },
-                        { supplier_id: 2, mit: 'Gardenit Extra' },
-                        { supplier_id: 6, mit: 'Marvany' },
-                        { supplier_id: 3, mit: 'Spagettikoral Szikla' },
-                        { supplier_id: 4, mit: 'Barnas Meszko' },
-                        { supplier_id: 4, mit: 'Szorny Szikla' },
-                        { supplier_id: 4, mit: 'Riolit' },
-                        { supplier_id: 5, mit: 'Opal' },
-                        { supplier_id: 5, mit: 'Bezs Meszko' },
-                        { supplier_id: 5, mit: 'Meteora Meszko' },
-                        { supplier_id: 6, mit: 'Sivatagi Rozsa' },
-                        { supplier_id: 7, mit: 'Fekete Pala' },
-                        { supplier_id: 8, mit: 'Granit Golyok' },
-                        { supplier_id: 9, mit: 'Erezett Marvany' },
-                        { supplier_id: 10, mit: 'Vraca Meszko' },
-                        { supplier_id: 11, mit: 'Akron' },
-                        { supplier_id: 10, mit: 'Jade' },
-                        { supplier_id: 9, mit: 'Travertin' },
-                        { supplier_id: 7, mit: 'Brazil Pala' },
-                        { supplier_id: 6, mit: 'Indiai Homokko' },
-                        { supplier_id: 5, mit: 'Perlato Meszko' }])
-
+carries = Carry.create([{ supplier_id: 1, mit: 'SZIKLA' },
+                        { supplier_id: 1, mit: 'BAZALT' },
+                        { supplier_id: 2, mit: 'SZIKLA' },
+                        { supplier_id: 1, mit: 'UVEG' },
+                        { supplier_id: 2, mit: 'SZIVARVANYKO' },
+                        { supplier_id: 2, mit: 'GRADENIT' },
+                        { supplier_id: 6, mit: 'MARVANY' },
+                        { supplier_id: 3, mit: 'SZIKLA' },
+                        { supplier_id: 4, mit: 'MESZKO' },
+                        { supplier_id: 4, mit: 'SZIKLA' },
+                        { supplier_id: 4, mit: 'RIOLIT' },
+                        { supplier_id: 5, mit: 'OPAL' },
+                        { supplier_id: 5, mit: 'MESZKO' },
+                        { supplier_id: 5, mit: 'UVEG' },
+                        { supplier_id: 6, mit: 'ROZSA' },
+                        { supplier_id: 7, mit: 'PALA' },
+                        { supplier_id: 8, mit: 'GRANIT' },
+                        { supplier_id: 9, mit: 'MARVANY' },
+                        { supplier_id: 10, mit: 'MESZKO' },
+                        { supplier_id: 11, mit: 'AKRON' },
+                        { supplier_id: 10, mit: 'JADE' },
+                        { supplier_id: 9, mit: 'TRAVERTIN' },
+                        { supplier_id: 7, mit: 'HOMOKKO' },
+                        { supplier_id: 6, mit: 'HOMOKKO' },
+                        { supplier_id: 5, mit: 'GRANIT' }])
 advertises = Advertise.create([{ user_id: 1, advert_id: 1, mikor: '11-NOV-1999' },
                                { user_id: 1, advert_id: 2, mikor: '11-NOV-1999' },
                                { user_id: 1, advert_id: 3, mikor: '11-JUN-1999' },
@@ -115,7 +103,6 @@ advertises = Advertise.create([{ user_id: 1, advert_id: 1, mikor: '11-NOV-1999' 
                                { user_id: 6, advert_id: 23, mikor: '09-APR-2019' },
                                { user_id: 5, advert_id: 24, mikor: '06-APR-2019' },
                                { user_id: 5, advert_id: 25, mikor: '09-APR-2019' }])
-
 rates = Rate.create([{ user_id: 6, advert_id: 1, csillag: 5, leiras: 'jo kis cucc mind megjott kivallo minoseg' },
                      { user_id: 6, advert_id: 2, csillag: 5, leiras: 'jo kis cucc mind megjott kivallo minoseg' },
                      { user_id: 13, advert_id: 2, csillag: 5, leiras: 'jo kis cucc mind megjott kivallo minoseg' },
@@ -146,7 +133,6 @@ rates = Rate.create([{ user_id: 6, advert_id: 1, csillag: 5, leiras: 'jo kis cuc
                      { user_id: 9, advert_id: 23, csillag: 4, leiras: 'jo' },
                      { user_id: 7, advert_id: 24, csillag: 4, leiras: 'jo' },
                      { user_id: 6, advert_id: 25, csillag: 4, leiras: 'jo' }])
-
 orders = Order.create([{ user_id: 6, advert_id: 4, supplier_id: 1 },
                        { user_id: 3, advert_id: 4, supplier_id: 1 },
                        { user_id: 13, advert_id: 1, supplier_id: 1 },
@@ -154,7 +140,6 @@ orders = Order.create([{ user_id: 6, advert_id: 4, supplier_id: 1 },
                        { user_id: 13, advert_id: 23, supplier_id: 7 },
                        { user_id: 13, advert_id: 21, supplier_id: 10 },
                        { user_id: 13, advert_id: 20, supplier_id: 11 }])
-
 delivers = Deliver.create([{ order_id: 1, supplier_id: 1, mennyiseg: 1500, hova: 'Kiskerepes Vitez utca 27', koltseg: 1600000, varhato_szallitas: '29-MAR-2023' },
                            { order_id: 2, supplier_id: 1, mennyiseg: 2500, hova: 'Fot Petofi koz 13', koltseg: 1600000, varhato_szallitas: '29-MAR-2023' },
                            { order_id: 3, supplier_id: 1, mennyiseg: 2500, hova: 'Budapest Galamb utca 10', koltseg: 1650000, varhato_szallitas: '26-MAR-2023' },
