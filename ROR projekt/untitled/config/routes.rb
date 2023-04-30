@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get '/search', to: 'home#search'
   get 'osszes', to: 'adverts#osszes'
   get '/delete',to: 'users#delete'
+  get '/sajat',to: 'adverts#sajat'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   root "home#home"
   # Defines the root path route ("/")
