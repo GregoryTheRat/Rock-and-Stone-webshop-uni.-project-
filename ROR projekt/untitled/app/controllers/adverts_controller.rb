@@ -7,11 +7,11 @@ class AdvertsController < ApplicationController
   end
 
   def osszes
-    query_result=ActiveRecord::Base.connection.exec_query("SELECT users.nev, adverts.termek_nev, advertises.mikor,ADVERTS.ID AS id
-FROM advertises, users, adverts
-WHERE advertises.User_id = users.id
-AND advertises.advert_id = adverts.id"
-
+    query_result=ActiveRecord::Base.connection.exec_query("
+    SELECT users.nev, adverts.termek_nev, advertises.mikor,ADVERTS.ID AS id
+    FROM advertises, users, adverts
+    WHERE advertises.User_id = users.id
+    AND advertises.advert_id = adverts.id"
     )
 
     @adverts = query_result.to_a
@@ -20,10 +20,10 @@ AND advertises.advert_id = adverts.id"
 
   def sajat
     query_result = ActiveRecord::Base.connection.exec_query("SELECT *
-FROM advertises,users,adverts
-WHERE advertises.User_id=users.id
-AND advertises.advert_id=adverts.id
-AND users.id=#{session['user_id']}")
+    FROM advertises,users,adverts
+    WHERE advertises.User_id=users.id
+    AND advertises.advert_id=adverts.id
+    AND users.id=#{session['user_id']}")
 
     @myadverts=query_result.to_a
 
