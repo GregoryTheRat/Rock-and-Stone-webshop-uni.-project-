@@ -9,7 +9,6 @@ class HomeController < ApplicationController
     FROM advertises,users,adverts
     WHERE advertises.User_id=users.id
     AND advertises.advert_id=adverts.id")
-
     @advertsall=query_result.to_a
   end
   def search
