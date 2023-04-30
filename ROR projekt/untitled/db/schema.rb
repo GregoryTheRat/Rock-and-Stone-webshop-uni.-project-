@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_30_070944) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_30_204133) do
   create_table "advertises", force: :cascade do |t|
     t.integer "user_id", precision: 38
     t.integer "advert_id", precision: 38
