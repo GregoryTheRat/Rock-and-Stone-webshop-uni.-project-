@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <%= stylesheet_link_tag "style" %>
   <title>Kő és szikla</title>
@@ -14,51 +14,87 @@
   <%= render 'layouts/navbar' %>
   <main>
 
-      <div class="hirdetes">
-        <div class="hirdetes-adatok">
-          <div class="adatok1">
-            <h2 class="hirdetett-termek">Hirdetett termék: <%= @advert_with_user[0]['termek_nev'] %></h2>
-            <h3 class="hirdeto">Hirdető: <%= @advert_with_user[0]['nev'] %></h3>
-            <p>
-              <%= @advert_with_user[0]['leiras'] %>
-            </p>
-          </div>
-          <div class="adatok2">
-            <p><strong>Ár/kg: </strong><%= @advert_with_user[0]['ar_kg'] %></p>
-            <p><strong>Min. vásárlás: </strong><%= @advert_with_user[0]['min_vasarlas'] %></p>
-            <p><strong>Raktáron: </strong><%= @advert_with_user[0]['mennyiseg'] %></p>
-          </div>
+    <div class="hirdetes">
+      <div class="hirdetes-adatok">
+        <div class="adatok1">
+          <h2 class="hirdetett-termek">Hirdetett termék: <%= @advert_with_user[0]['termek_nev'] %></h2>
+          <h3 class="hirdeto">Hirdető: <%= @advert_with_user[0]['nev'] %></h3>
+          <p>
+            <%= @advert_with_user[0]['leiras'] %>
+          </p>
         </div>
-        <div class="szallitas-adatok">
-          <h2>Szállítási adatok</h2>
-
-          <div class="szallito-list">
-            <label for="szallitok" class="szallitok">Szállítók:</label>
-            <%= form_with url: "/buy", method: :post do |form| %>
-              <select>
-              <% @suppliers.each do |s| %>
-                <option value="<%= s[0]['id'] %>"><%= s[0]['ceg_nev'] %> <%= s[0]['km_ar'] %> Ft/km <%= s[0]['ar_kg'] %> Ft/kg</option>
-              <% end %>
-              </select>
-              <%= form.label :mennyiseg, "Mennyiség:" %>
-              <%= form.text_field :mennyiseg, required: true %>
-
-              <%= form.label :szall_cim, "Cím:"%>
-              <%= form.text_field :szall_cim, required: true %>
-
-              <%= form.hidden_field :advert_id, value: @advert_with_user[0]['advert_id'] %>
-              <br>
-              <%= form.submit "Megrendel"%>
-            <% end %>
-
-          </div>
-        </div>
-        <div class="egyeb-adatok">
-          <h2>Értékelés</h2>
-          <p><strong><%= @rates[0]['avg'] %></strong></p>
-          <hr />
+        <div class="adatok2">
+          <p><strong>Ár/kg: </strong><%= @advert_with_user[0]['ar_kg'] %></p>
+          <p><strong>Min. vásárlás: </strong><%= @advert_with_user[0]['min_vasarlas'] %></p>
+          <p><strong>Raktáron: </strong><%= @advert_with_user[0]['mennyiseg'] %></p>
         </div>
       </div>
+      <div class="szallitas-adatok">
+        <h2>Szállítási adatok</h2>
+
+        <div class="szallito-list">
+          <label for="szallitok" class="szallitok">Szállítók:</label>
+          <select>
+            <% @suppliers.each do |s| %>
+              <option value="<%= s[0]['id'] %>"><%= s[0]['ceg_nev'] %></option>
+            <% end %>
+            <!-- <option value="foodpanda" selected>Foodpanda</option>
+            <option value="gls" disabled>GLS</option>
+            <option value="dpd" disabled>DPD</option>
+            <option value="wolt" disabled>Wolt</option> -->
+          </select>
+        </div>
+        <p><strong>Ár/km: </strong>70 HUF</p>
+        <p><strong>Ár/kg: </strong>45 HUF</p>
+      </div>
+      <div class="egyeb-adatok">
+        <h2>Értékelés</h2>
+        <p><strong><%= @rates[0]['avg'] %></strong></p>
+        <hr/>
+      </div>
+    </div>
+
+      <div class="ertekeles">
+
+        <table class="hozzaszolas">
+          <thead>
+          <td>Név</td>
+          <td>Hozzászolás</td>
+          <td>Értékelés</td>
+          </thead>
+          <% @ratings.each do |rating| %>
+            <tr>
+              <td><%= rating['nev'] %>:</td>
+              <td><%= rating['leiras'] %></td>
+              <td>5/<%= rating['csillag'] %></td>
+            </tr>
+          <% end %>
+
+        </table>
+        <% if logged_in? %>
+        <% rate = Rate.new %>
+        <%= form_with(model: rate) do |form| %>
+
+          <%= form.hidden_field :user_id, value: session[:user_id] %>
+          <%= form.hidden_field :advert_id, value: @advert_with_user[0]['advert_id'] %>
+
+
+          <div>
+            <%= form.label :Ertekeles, style: "display: block" %>
+            <%= form.number_field :csillag, min: 1, max: 5, step: 1 %>
+          </div>
+
+          <div>
+            <%= form.label :Hozzászolás, style: "display: block;" %>
+            <%= form.text_area :leiras,class: 'comment',style: " widht: 1000px" %>
+          </div>
+
+          <div>
+            <%= form.submit %>
+          </div>
+        <% end %>
+    <% end %>
+    </div>
     <div>
     </div>
   </main>

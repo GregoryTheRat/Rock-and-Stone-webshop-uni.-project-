@@ -31,6 +31,39 @@ header {
   border-bottom: 1px solid black;
   box-shadow: 10px 10px 10px grey;
 }
+.hozzaszolas {
+  border-collapse:  collapse;
+  border: 2px solid black;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.comment{
+  width: 800px;
+
+}
+.ertekeles{
+  width:1400px;
+  background-color:#ffffff;
+  padding: 50px;
+ display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+
+}
+.hozzaszolas thead td {
+
+  font-weight: bold;
+  background-color: #00c4ff;
+  text-align: left;
+}
+
+.hozzaszolas td {
+  border:  #ddd;
+  padding: 8px;
+}
 
 .ko-es-szikla span {
   color: black;
