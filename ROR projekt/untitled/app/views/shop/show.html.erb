@@ -34,18 +34,24 @@
 
         <div class="szallito-list">
           <label for="szallitok" class="szallitok">Szállítók:</label>
-          <select>
-            <% @suppliers.each do |s| %>
-              <option value="<%= s[0]['id'] %>"><%= s[0]['ceg_nev'] %></option>
-            <% end %>
-            <!-- <option value="foodpanda" selected>Foodpanda</option>
-            <option value="gls" disabled>GLS</option>
-            <option value="dpd" disabled>DPD</option>
-            <option value="wolt" disabled>Wolt</option> -->
-          </select>
+          <%= form_with(url: "/buy") do |form| %>
+
+            <%= form.select :supplier_id, options_for_select(@options_hash)%>
+            <%= form.label :mennyiseg, "Mennyiség:" %>
+            <%= form.text_field :mennyiseg, required: true %>
+
+            <%= form.label :hova, "Cím:"%>
+            <%= form.text_field :hova, required: true %>
+
+            <%= form.hidden_field :advert_id, value: @advert_with_user[0]['advert_id'] %>
+            <br>
+            <%= form.submit "Megrendel"%>
+          <% end %>
+
+          <% if flash[:notice] %>
+            <p><strong><%= flash[:notice] %></strong></p>
+          <% end %>
         </div>
-        <p><strong>Ár/km: </strong>70 HUF</p>
-        <p><strong>Ár/kg: </strong>45 HUF</p>
       </div>
       <div class="egyeb-adatok">
         <h2>Értékelés</h2>
@@ -94,6 +100,10 @@
           </div>
         <% end %>
     <% end %>
+        <% if flash[:alert] %>
+          <p><strong><%= flash[:alert] %></strong></p>
+        <% end %>
+
     </div>
     <div>
     </div>
