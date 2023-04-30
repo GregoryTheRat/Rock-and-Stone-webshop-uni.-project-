@@ -10,6 +10,17 @@ class AdvertsController < ApplicationController
     @adverts = Advert.all
   end
 
+  def sajat
+    query_result = ActiveRecord::Base.connection.exec_query("SELECT *
+FROM advertises,users,adverts
+WHERE advertises.User_id=users.id
+AND advertises.advert_id=adverts.id
+AND users.id=#{session['user_id']}")
+
+    @myadverts=query_result.to_a
+
+  end
+
   # GET /adverts/1 or /adverts/1.json
   def show
   end
@@ -35,7 +46,7 @@ class AdvertsController < ApplicationController
       id=row['id']
     end
 
-    advertise_params={"user_id"=>session['user_id'],"advert_id"=>id,"mikor"=>DateTime.now}
+    advertise_params={"user_id"=>session['user_id'],"advert_id"=>@advert.id,"mikor"=>DateTime.now}
     Advertise.create(advertise_params )
     #  sqlstring=session['user_id'].to_s+","+id.to_s+","+DateTime.now.to_s+','+Time.now.to_i.to_s+','+Time.now.to_i.to_s
     #ActiveRecord::Base.connection.exec_insert("BEGIN INSERT INTO advertises VALUES(#{sqlstring}); END;")

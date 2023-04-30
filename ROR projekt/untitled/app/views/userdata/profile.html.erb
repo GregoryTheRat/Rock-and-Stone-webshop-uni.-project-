@@ -13,6 +13,9 @@
   <main>
     <%= render "form", user: @user %>
     <%= button_to "Destroy this user", @user, method: :delete %>
+    <%= form_with url: "/sajat", method: :get do |form| %>
+      <%= form.submit "Sajat hirdetmenyeim" %>
+    <% end %>
   </main>
   <footer><p>&copy; Kő és szikla 2023</p></footer>
 </div>
