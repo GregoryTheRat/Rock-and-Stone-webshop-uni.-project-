@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Ember neve</th>
+      <th>e-mail cime</th>
+      <th>Hányszor ertekelt</th>
+      <th colspan="3"></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user['nev'] %></td>
+        <td><%= user['eamil'] %></td>
+        <td><%= user['num_ratings'] %></td>
+        <td>
+          <%= form_tag delete_users_path(id: user['id']), method: :delete do %>
+            <%= submit_tag "Delete" %>
+          <% end %>
+        </td>
+      </tr>
+
+
+    <% end %>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

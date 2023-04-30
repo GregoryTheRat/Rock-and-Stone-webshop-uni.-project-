@@ -4,7 +4,10 @@
     <li><%= link_to "Rendelések", bag_path %></li>
 
 
-
+    <% if session[:admin] %>
+      <li><%= link_to "Hirdetemenyek Kezelese", "/osszes" %></li>
+      <li><%= link_to "felhasznalok kezelese", "/all_users" %></li>
+    <% end %>
     <% if logged_in? %>
       <li><%= link_to "Új hírdetmény", "/adverts/new" %></li>
       <li><%= link_to "Profil adatok", profile_path %></li>

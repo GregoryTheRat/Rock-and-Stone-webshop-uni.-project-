@@ -7,6 +7,9 @@ class SessionsController < ApplicationController
 
     if user != nil && user.authenticate(params[:password])
       session[:user_id] = user.id
+      if user.admin
+        session[:admin]=true
+      end
       redirect_to root_path
       flash[:notice] = 'Jó újra látni.'
     else
