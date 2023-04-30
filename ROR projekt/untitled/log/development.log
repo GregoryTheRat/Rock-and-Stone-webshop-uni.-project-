@@ -51852,3 +51852,1674 @@ AND users.id=8[0m
 Completed 200 OK in 32ms (Views: 13.8ms | ActiveRecord: 0.9ms | Allocations: 4803)
 
 
+Started GET "/" for 127.0.0.1 at 2023-04-30 15:43:59 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (6.9ms)[0m  [1m[34mSELECT "SCHEMA_MIGRATIONS"."VERSION" FROM "SCHEMA_MIGRATIONS" ORDER BY "SCHEMA_MIGRATIONS"."VERSION" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 11.0ms | Allocations: 917)
+  [1m[35mSQL (62.2ms)[0m  [1m[34mSELECT advertises.*, users.nev, adverts.*
+          FROM advertises
+          JOIN users ON advertises.user_id = users.id
+          JOIN adverts ON advertises.advert_id = adverts.id[0m
+  ↳ app/views/home/home.html.erb:21
+  [1m[35mSQL (22.1ms)[0m  [1m[34m
+                                          SELECT advertises.*, users.nev, adverts.*
+FROM advertises
+JOIN users ON advertises.user_id = users.id
+JOIN adverts ON advertises.advert_id = adverts.id
+[0m
+  ↳ app/views/home/home.html.erb:26
+  [1m[35mSQL (4.7ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =1[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.4ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =2[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (2.1ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =3[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.2ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =4[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.5ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =5[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.2ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =6[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =7[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.3ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =8[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.2ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =9[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.2ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =10[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.4ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =11[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.1ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =12[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.1ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =13[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.3ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =14[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.4ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =15[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.3ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =16[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.6ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =17[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (2.2ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =18[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.3ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =19[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =20[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.3ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =21[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.1ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =22[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =23[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =24[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.2ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =25[0m
+  ↳ app/views/home/home.html.erb:68
+  Rendered home/home.html.erb within layouts/application (Duration: 369.1ms | Allocations: 49886)
+  Rendered layout layouts/application.html.erb (Duration: 465.0ms | Allocations: 67604)
+Completed 200 OK in 704ms (Views: 402.3ms | ActiveRecord: 121.3ms | Allocations: 71970)
+
+
+Started GET "/shop/2" for 127.0.0.1 at 2023-04-30 15:44:12 +0200
+Processing by ShopController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mSQL (7.1ms)[0m  [1m[34m
+        SELECT advertises.*, users.nev, adverts.*
+        FROM advertises
+        JOIN users ON advertises.user_id = users.id
+        JOIN adverts ON advertises.advert_id = adverts.id
+        WHERE adverts.id = 2[0m
+  ↳ app/controllers/shop_controller.rb:4:in `show'
+  [1m[35mSQL (3.7ms)[0m  [1m[34m
+        SELECT AVG(csillag) AS avg
+        FROM rates
+        WHERE advert_id  =2[0m
+  ↳ app/controllers/shop_controller.rb:15:in `show'
+  [1m[35mSQL (495.5ms)[0m  [1m[34mSELECT supplier_id ,mit FROM carries[0m
+  ↳ app/controllers/shop_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering shop/show.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.8ms | Allocations: 362)
+  Rendered shop/show.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1855)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 4377)
+Completed 200 OK in 540ms (Views: 21.0ms | ActiveRecord: 506.2ms | Allocations: 6611)
+
+
+Started GET "/shop/3" for 127.0.0.1 at 2023-04-30 15:44:19 +0200
+Processing by ShopController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mSQL (1.5ms)[0m  [1m[34m
+        SELECT advertises.*, users.nev, adverts.*
+        FROM advertises
+        JOIN users ON advertises.user_id = users.id
+        JOIN adverts ON advertises.advert_id = adverts.id
+        WHERE adverts.id = 3[0m
+  ↳ app/controllers/shop_controller.rb:4:in `show'
+  [1m[35mSQL (1.0ms)[0m  [1m[34m
+        SELECT AVG(csillag) AS avg
+        FROM rates
+        WHERE advert_id  =3[0m
+  ↳ app/controllers/shop_controller.rb:15:in `show'
+  [1m[35mSQL (1.0ms)[0m  [1m[34mSELECT supplier_id ,mit FROM carries[0m
+  ↳ app/controllers/shop_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering shop/show.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.6ms | Allocations: 344)
+  Rendered shop/show.html.erb within layouts/application (Duration: 7.9ms | Allocations: 1376)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 3852)
+Completed 200 OK in 33ms (Views: 20.2ms | ActiveRecord: 3.5ms | Allocations: 5663)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-04-30 15:44:24 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.0ms | Allocations: 341)
+  [1m[35mSQL (5.6ms)[0m  [1m[34mSELECT advertises.*, users.nev, adverts.*
+          FROM advertises
+          JOIN users ON advertises.user_id = users.id
+          JOIN adverts ON advertises.advert_id = adverts.id[0m
+  ↳ app/views/home/home.html.erb:21
+  [1m[35mSQL (3.8ms)[0m  [1m[34m
+                                          SELECT advertises.*, users.nev, adverts.*
+FROM advertises
+JOIN users ON advertises.user_id = users.id
+JOIN adverts ON advertises.advert_id = adverts.id
+[0m
+  ↳ app/views/home/home.html.erb:26
+  [1m[35mSQL (1.4ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =1[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.8ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =2[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =3[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =4[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.3ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =5[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.2ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =6[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (2.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =7[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.1ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =8[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =9[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.8ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =10[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.8ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =11[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.4ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =12[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =13[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.8ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =14[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =15[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.6ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =16[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.7ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =17[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =18[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.2ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =19[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.2ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =20[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.4ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =21[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.4ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =22[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =23[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =24[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =25[0m
+  ↳ app/views/home/home.html.erb:68
+  Rendered home/home.html.erb within layouts/application (Duration: 107.5ms | Allocations: 21418)
+  Rendered layout layouts/application.html.erb (Duration: 115.6ms | Allocations: 23894)
+Completed 200 OK in 121ms (Views: 80.4ms | ActiveRecord: 36.4ms | Allocations: 24194)
+
+
+Started GET "/shop/1" for 127.0.0.1 at 2023-04-30 15:44:25 +0200
+Processing by ShopController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSQL (1.1ms)[0m  [1m[34m
+        SELECT advertises.*, users.nev, adverts.*
+        FROM advertises
+        JOIN users ON advertises.user_id = users.id
+        JOIN adverts ON advertises.advert_id = adverts.id
+        WHERE adverts.id = 1[0m
+  ↳ app/controllers/shop_controller.rb:4:in `show'
+  [1m[35mSQL (0.9ms)[0m  [1m[34m
+        SELECT AVG(csillag) AS avg
+        FROM rates
+        WHERE advert_id  =1[0m
+  ↳ app/controllers/shop_controller.rb:15:in `show'
+  [1m[35mSQL (0.7ms)[0m  [1m[34mSELECT supplier_id ,mit FROM carries[0m
+  ↳ app/controllers/shop_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering shop/show.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 335)
+  Rendered shop/show.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1367)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 3873)
+Completed 200 OK in 31ms (Views: 18.8ms | ActiveRecord: 2.7ms | Allocations: 5684)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-04-30 15:44:47 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 335)
+  [1m[35mSQL (4.5ms)[0m  [1m[34mSELECT advertises.*, users.nev, adverts.*
+          FROM advertises
+          JOIN users ON advertises.user_id = users.id
+          JOIN adverts ON advertises.advert_id = adverts.id[0m
+  ↳ app/views/home/home.html.erb:21
+  [1m[35mSQL (3.5ms)[0m  [1m[34m
+                                          SELECT advertises.*, users.nev, adverts.*
+FROM advertises
+JOIN users ON advertises.user_id = users.id
+JOIN adverts ON advertises.advert_id = adverts.id
+[0m
+  ↳ app/views/home/home.html.erb:26
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =1[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.7ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =2[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =3[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.3ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =4[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.1ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =5[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =6[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.5ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =7[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.5ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =8[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =9[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.6ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =10[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.6ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =11[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.5ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =12[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.6ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =13[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.5ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =14[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.1ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =15[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.8ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =16[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.5ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =17[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.4ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =18[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.3ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =19[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =20[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.2ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =21[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =22[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.8ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =23[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.7ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =24[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.5ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =25[0m
+  ↳ app/views/home/home.html.erb:68
+  Rendered home/home.html.erb within layouts/application (Duration: 106.0ms | Allocations: 21406)
+  Rendered layout layouts/application.html.erb (Duration: 115.9ms | Allocations: 23896)
+Completed 200 OK in 122ms (Views: 84.1ms | ActiveRecord: 33.1ms | Allocations: 24189)
+
+
+Started GET "/shop/1" for 127.0.0.1 at 2023-04-30 15:45:11 +0200
+Processing by ShopController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSQL (0.8ms)[0m  [1m[34m
+        SELECT advertises.*, users.nev, adverts.*
+        FROM advertises
+        JOIN users ON advertises.user_id = users.id
+        JOIN adverts ON advertises.advert_id = adverts.id
+        WHERE adverts.id = 1[0m
+  ↳ app/controllers/shop_controller.rb:4:in `show'
+  [1m[35mSQL (1.0ms)[0m  [1m[34m
+        SELECT AVG(csillag) AS avg
+        FROM rates
+        WHERE advert_id  =1[0m
+  ↳ app/controllers/shop_controller.rb:15:in `show'
+  [1m[35mSQL (0.7ms)[0m  [1m[34mSELECT supplier_id ,mit FROM carries[0m
+  ↳ app/controllers/shop_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering shop/show.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 332)
+  Rendered shop/show.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1363)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 3838)
+Completed 200 OK in 32ms (Views: 21.5ms | ActiveRecord: 2.6ms | Allocations: 5660)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-04-30 15:46:37 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.0ms | Allocations: 344)
+  [1m[35mSQL (3.9ms)[0m  [1m[34mSELECT advertises.*, users.nev, adverts.*
+          FROM advertises
+          JOIN users ON advertises.user_id = users.id
+          JOIN adverts ON advertises.advert_id = adverts.id[0m
+  ↳ app/views/home/home.html.erb:21
+  [1m[35mSQL (5.9ms)[0m  [1m[34m
+                                          SELECT advertises.*, users.nev, adverts.*
+FROM advertises
+JOIN users ON advertises.user_id = users.id
+JOIN adverts ON advertises.advert_id = adverts.id
+[0m
+  ↳ app/views/home/home.html.erb:26
+  [1m[35mSQL (1.4ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =1[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =2[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.2ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =3[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =4[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.1ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =5[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.3ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =6[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.7ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =7[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.4ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =8[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.2ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =9[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =10[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =11[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.8ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =12[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.8ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =13[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.5ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =14[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.1ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =15[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =16[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.1ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =17[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.2ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =18[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =19[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =20[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =21[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.8ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =22[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =23[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =24[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =25[0m
+  ↳ app/views/home/home.html.erb:68
+  Rendered home/home.html.erb within layouts/application (Duration: 116.3ms | Allocations: 21413)
+  Rendered layout layouts/application.html.erb (Duration: 126.7ms | Allocations: 23917)
+Completed 200 OK in 134ms (Views: 90.5ms | ActiveRecord: 37.6ms | Allocations: 24214)
+
+
+Started GET "/shop/2" for 127.0.0.1 at 2023-04-30 15:46:39 +0200
+Processing by ShopController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mSQL (1.2ms)[0m  [1m[34m
+        SELECT advertises.*, users.nev, adverts.*
+        FROM advertises
+        JOIN users ON advertises.user_id = users.id
+        JOIN adverts ON advertises.advert_id = adverts.id
+        WHERE adverts.id = 2[0m
+  ↳ app/controllers/shop_controller.rb:4:in `show'
+  [1m[35mSQL (1.2ms)[0m  [1m[34m
+        SELECT AVG(csillag) AS avg
+        FROM rates
+        WHERE advert_id  =2[0m
+  ↳ app/controllers/shop_controller.rb:15:in `show'
+  [1m[35mSQL (1.0ms)[0m  [1m[34mSELECT supplier_id ,mit FROM carries[0m
+  ↳ app/controllers/shop_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering shop/show.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 335)
+  Rendered shop/show.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1370)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 3854)
+Completed 200 OK in 29ms (Views: 15.7ms | ActiveRecord: 3.4ms | Allocations: 5678)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-04-30 15:46:50 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.3ms | Allocations: 347)
+  [1m[35mSQL (5.0ms)[0m  [1m[34mSELECT advertises.*, users.nev, adverts.*
+          FROM advertises
+          JOIN users ON advertises.user_id = users.id
+          JOIN adverts ON advertises.advert_id = adverts.id[0m
+  ↳ app/views/home/home.html.erb:21
+  [1m[35mSQL (5.2ms)[0m  [1m[34m
+                                          SELECT advertises.*, users.nev, adverts.*
+FROM advertises
+JOIN users ON advertises.user_id = users.id
+JOIN adverts ON advertises.advert_id = adverts.id
+[0m
+  ↳ app/views/home/home.html.erb:26
+  [1m[35mSQL (1.2ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =1[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.8ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =2[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =3[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =4[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =5[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.4ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =6[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.8ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =7[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =8[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.6ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =9[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.2ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =10[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =11[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =12[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =13[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.4ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =14[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.5ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =15[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =16[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.1ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =17[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.8ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =18[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =19[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.5ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =20[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.3ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =21[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.5ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =22[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.2ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =23[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.1ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =24[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.5ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =25[0m
+  ↳ app/views/home/home.html.erb:68
+  Rendered home/home.html.erb within layouts/application (Duration: 123.5ms | Allocations: 21416)
+  Rendered layout layouts/application.html.erb (Duration: 133.3ms | Allocations: 23892)
+Completed 200 OK in 140ms (Views: 93.9ms | ActiveRecord: 40.8ms | Allocations: 24189)
+
+
+Started GET "/shop/1" for 127.0.0.1 at 2023-04-30 15:46:52 +0200
+Processing by ShopController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSQL (1.0ms)[0m  [1m[34m
+        SELECT advertises.*, users.nev, adverts.*
+        FROM advertises
+        JOIN users ON advertises.user_id = users.id
+        JOIN adverts ON advertises.advert_id = adverts.id
+        WHERE adverts.id = 1[0m
+  ↳ app/controllers/shop_controller.rb:4:in `show'
+  [1m[35mSQL (0.6ms)[0m  [1m[34m
+        SELECT AVG(csillag) AS avg
+        FROM rates
+        WHERE advert_id  =1[0m
+  ↳ app/controllers/shop_controller.rb:15:in `show'
+  [1m[35mSQL (0.7ms)[0m  [1m[34mSELECT supplier_id ,mit FROM carries[0m
+  ↳ app/controllers/shop_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering shop/show.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 326)
+  Rendered shop/show.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1357)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 3832)
+Completed 200 OK in 23ms (Views: 13.6ms | ActiveRecord: 2.3ms | Allocations: 5654)
+
+
+Started GET "/bag" for 127.0.0.1 at 2023-04-30 15:47:02 +0200
+Processing by BagController#bag as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bag/bag.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 375)
+  Rendered bag/bag.html.erb within layouts/application (Duration: 369.3ms | Allocations: 1625)
+  Rendered layout layouts/application.html.erb (Duration: 392.7ms | Allocations: 4167)
+Completed 200 OK in 405ms (Views: 399.6ms | ActiveRecord: 0.0ms | Allocations: 4840)
+
+
+Started GET "/profile" for 127.0.0.1 at 2023-04-30 15:47:07 +0200
+Processing by UserdataController#profile as HTML
+  [1m[36mUser Load (12.1ms)[0m  [1m[34mSELECT "USERS".* FROM "USERS" WHERE "USERS"."ID" = :a1 FETCH FIRST :a2 ROWS ONLY[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/userdata_controller.rb:3:in `profile'
+  Rendering layout layouts/application.html.erb
+  Rendering userdata/profile.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 186)
+  Rendered userdata/_form.html.erb (Duration: 91.4ms | Allocations: 1826)
+  Rendered userdata/profile.html.erb within layouts/application (Duration: 99.6ms | Allocations: 3493)
+  Rendered layout layouts/application.html.erb (Duration: 100.2ms | Allocations: 3575)
+Completed 500 Internal Server Error in 302ms (ActiveRecord: 20.9ms | Allocations: 8454)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <%= form_with(model: user) do |form| %>
+    2:   <% if user.errors.any? %>
+    3:     <div style="color: red">
+    4:       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+    5: 
+  
+app/views/userdata/_form.html.erb:2
+app/views/userdata/_form.html.erb:1
+app/views/userdata/profile.html.erb:14
+Started GET "/" for 127.0.0.1 at 2023-04-30 15:47:22 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 323)
+  [1m[35mSQL (2.8ms)[0m  [1m[34mSELECT advertises.*, users.nev, adverts.*
+          FROM advertises
+          JOIN users ON advertises.user_id = users.id
+          JOIN adverts ON advertises.advert_id = adverts.id[0m
+  ↳ app/views/home/home.html.erb:21
+  [1m[35mSQL (3.3ms)[0m  [1m[34m
+                                          SELECT advertises.*, users.nev, adverts.*
+FROM advertises
+JOIN users ON advertises.user_id = users.id
+JOIN adverts ON advertises.advert_id = adverts.id
+[0m
+  ↳ app/views/home/home.html.erb:26
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =1[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =2[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.2ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =3[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =4[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =5[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.8ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =6[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.6ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =7[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.6ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =8[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.5ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =9[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.6ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =10[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.6ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =11[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.8ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =12[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.7ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =13[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.7ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =14[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =15[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.7ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =16[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.7ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =17[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =18[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.8ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =19[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =20[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.6ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =21[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.1ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =22[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =23[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.8ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =24[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.7ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =25[0m
+  ↳ app/views/home/home.html.erb:68
+  Rendered home/home.html.erb within layouts/application (Duration: 90.0ms | Allocations: 21397)
+  Rendered layout layouts/application.html.erb (Duration: 99.1ms | Allocations: 23901)
+Completed 200 OK in 105ms (Views: 73.1ms | ActiveRecord: 27.1ms | Allocations: 24195)
+
+
+Started GET "/search?word=ba&commit=Search" for 127.0.0.1 at 2023-04-30 15:47:26 +0200
+Processing by HomeController#search as HTML
+  Parameters: {"word"=>"ba", "commit"=>"Search"}
+  [1m[35mSQL (263.7ms)[0m  [1m[34mSELECT  *
+    FROM advertises,users,adverts
+    WHERE advertises.User_id=users.id
+    AND advertises.advert_id=adverts.id
+    AND termek_nev LIKE '%ba%'
+    [0m
+  ↳ app/controllers/home_controller.rb:16:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 326)
+  Rendered home/search.erb within layouts/application (Duration: 8.3ms | Allocations: 2546)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 5021)
+Completed 200 OK in 289ms (Views: 16.2ms | ActiveRecord: 263.7ms | Allocations: 5817)
+
+
+Started GET "/search?word=sz%C3%ADnes&commit=Search" for 127.0.0.1 at 2023-04-30 15:47:31 +0200
+Processing by HomeController#search as HTML
+  Parameters: {"word"=>"színes", "commit"=>"Search"}
+  [1m[35mSQL (1.2ms)[0m  [1m[34mSELECT  *
+    FROM advertises,users,adverts
+    WHERE advertises.User_id=users.id
+    AND advertises.advert_id=adverts.id
+    AND termek_nev LIKE '%színes%'
+    [0m
+  ↳ app/controllers/home_controller.rb:16:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 341)
+  Rendered home/search.erb within layouts/application (Duration: 5.7ms | Allocations: 2064)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 4539)
+Completed 200 OK in 25ms (Views: 16.4ms | ActiveRecord: 1.2ms | Allocations: 5282)
+
+
+Started GET "/search?word=dd&commit=Search" for 127.0.0.1 at 2023-04-30 15:47:34 +0200
+Processing by HomeController#search as HTML
+  Parameters: {"word"=>"dd", "commit"=>"Search"}
+  [1m[35mSQL (0.7ms)[0m  [1m[34mSELECT  *
+    FROM advertises,users,adverts
+    WHERE advertises.User_id=users.id
+    AND advertises.advert_id=adverts.id
+    AND termek_nev LIKE '%dd%'
+    [0m
+  ↳ app/controllers/home_controller.rb:16:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.8ms | Allocations: 344)
+  Rendered home/search.erb within layouts/application (Duration: 6.5ms | Allocations: 2069)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 4544)
+Completed 200 OK in 23ms (Views: 15.7ms | ActiveRecord: 0.7ms | Allocations: 5282)
+
+
+Started GET "/search?word=bazalt&commit=Search" for 127.0.0.1 at 2023-04-30 15:47:37 +0200
+Processing by HomeController#search as HTML
+  Parameters: {"word"=>"bazalt", "commit"=>"Search"}
+  [1m[35mSQL (0.7ms)[0m  [1m[34mSELECT  *
+    FROM advertises,users,adverts
+    WHERE advertises.User_id=users.id
+    AND advertises.advert_id=adverts.id
+    AND termek_nev LIKE '%bazalt%'
+    [0m
+  ↳ app/controllers/home_controller.rb:16:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 338)
+  Rendered home/search.erb within layouts/application (Duration: 5.3ms | Allocations: 2061)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 4536)
+Completed 200 OK in 20ms (Views: 14.0ms | ActiveRecord: 0.7ms | Allocations: 5274)
+
+
+Started GET "/search?word=bazalt&commit=Search" for 127.0.0.1 at 2023-04-30 15:47:45 +0200
+Processing by HomeController#search as HTML
+  Parameters: {"word"=>"bazalt", "commit"=>"Search"}
+  [1m[35mSQL (0.8ms)[0m  [1m[34mSELECT  *
+    FROM advertises,users,adverts
+    WHERE advertises.User_id=users.id
+    AND advertises.advert_id=adverts.id
+    AND termek_nev LIKE '%bazalt%'
+    [0m
+  ↳ app/controllers/home_controller.rb:16:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.3ms | Allocations: 338)
+  Rendered home/search.erb within layouts/application (Duration: 6.4ms | Allocations: 2061)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 4536)
+Completed 200 OK in 23ms (Views: 16.3ms | ActiveRecord: 0.8ms | Allocations: 5274)
+
+
+Started GET "/search?word=Bazalt&commit=Search" for 127.0.0.1 at 2023-04-30 15:47:50 +0200
+Processing by HomeController#search as HTML
+  Parameters: {"word"=>"Bazalt", "commit"=>"Search"}
+  [1m[35mSQL (1.9ms)[0m  [1m[34mSELECT  *
+    FROM advertises,users,adverts
+    WHERE advertises.User_id=users.id
+    AND advertises.advert_id=adverts.id
+    AND termek_nev LIKE '%Bazalt%'
+    [0m
+  ↳ app/controllers/home_controller.rb:16:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.8ms | Allocations: 326)
+  Rendered home/search.erb within layouts/application (Duration: 6.9ms | Allocations: 2058)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 4533)
+Completed 200 OK in 25ms (Views: 15.1ms | ActiveRecord: 1.9ms | Allocations: 5488)
+
+
+Started GET "/search?word=Lyukas&commit=Search" for 127.0.0.1 at 2023-04-30 15:47:59 +0200
+Processing by HomeController#search as HTML
+  Parameters: {"word"=>"Lyukas", "commit"=>"Search"}
+  [1m[35mSQL (1.1ms)[0m  [1m[34mSELECT  *
+    FROM advertises,users,adverts
+    WHERE advertises.User_id=users.id
+    AND advertises.advert_id=adverts.id
+    AND termek_nev LIKE '%Lyukas%'
+    [0m
+  ↳ app/controllers/home_controller.rb:16:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 353)
+  Rendered home/search.erb within layouts/application (Duration: 5.5ms | Allocations: 2076)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 4551)
+Completed 200 OK in 20ms (Views: 13.2ms | ActiveRecord: 1.1ms | Allocations: 5289)
+
+
+Started GET "/search?word=Lyukacsos&commit=Search" for 127.0.0.1 at 2023-04-30 15:48:03 +0200
+Processing by HomeController#search as HTML
+  Parameters: {"word"=>"Lyukacsos", "commit"=>"Search"}
+  [1m[35mSQL (1.0ms)[0m  [1m[34mSELECT  *
+    FROM advertises,users,adverts
+    WHERE advertises.User_id=users.id
+    AND advertises.advert_id=adverts.id
+    AND termek_nev LIKE '%Lyukacsos%'
+    [0m
+  ↳ app/controllers/home_controller.rb:16:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 335)
+  Rendered home/search.erb within layouts/application (Duration: 5.0ms | Allocations: 2066)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 4542)
+Completed 200 OK in 20ms (Views: 13.6ms | ActiveRecord: 1.0ms | Allocations: 5496)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-04-30 15:48:10 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.9ms | Allocations: 335)
+  [1m[35mSQL (3.4ms)[0m  [1m[34mSELECT advertises.*, users.nev, adverts.*
+          FROM advertises
+          JOIN users ON advertises.user_id = users.id
+          JOIN adverts ON advertises.advert_id = adverts.id[0m
+  ↳ app/views/home/home.html.erb:21
+  [1m[35mSQL (3.4ms)[0m  [1m[34m
+                                          SELECT advertises.*, users.nev, adverts.*
+FROM advertises
+JOIN users ON advertises.user_id = users.id
+JOIN adverts ON advertises.advert_id = adverts.id
+[0m
+  ↳ app/views/home/home.html.erb:26
+  [1m[35mSQL (1.3ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =1[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =2[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.7ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =3[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.6ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =4[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.7ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =5[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.6ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =6[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =7[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.1ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =8[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.1ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =9[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.1ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =10[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.2ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =11[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.8ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =12[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =13[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =14[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.1ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =15[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.5ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =16[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.6ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =17[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.2ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =18[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.1ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =19[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.1ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =20[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.3ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =21[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =22[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =23[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.1ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =24[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.2ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =25[0m
+  ↳ app/views/home/home.html.erb:68
+  Rendered home/home.html.erb within layouts/application (Duration: 122.4ms | Allocations: 21402)
+  Rendered layout layouts/application.html.erb (Duration: 133.3ms | Allocations: 23906)
+Completed 200 OK in 140ms (Views: 102.6ms | ActiveRecord: 32.7ms | Allocations: 24199)
+
+
+Started GET "/search?word=bazalt&commit=Search" for 127.0.0.1 at 2023-04-30 15:48:29 +0200
+Processing by HomeController#search as HTML
+  Parameters: {"word"=>"bazalt", "commit"=>"Search"}
+  [1m[35mSQL (0.6ms)[0m  [1m[34mSELECT  *
+    FROM advertises,users,adverts
+    WHERE advertises.User_id=users.id
+    AND advertises.advert_id=adverts.id
+    AND termek_nev LIKE '%bazalt%'
+    [0m
+  ↳ app/controllers/home_controller.rb:16:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.8ms | Allocations: 338)
+  Rendered home/search.erb within layouts/application (Duration: 7.1ms | Allocations: 2065)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 4540)
+Completed 200 OK in 24ms (Views: 17.1ms | ActiveRecord: 0.6ms | Allocations: 5278)
+
+
+Started GET "/search?word=&commit=Search" for 127.0.0.1 at 2023-04-30 15:48:29 +0200
+Processing by HomeController#search as HTML
+  Parameters: {"word"=>"", "commit"=>"Search"}
+  [1m[35mSQL (13.0ms)[0m  [1m[34mSELECT  *
+    FROM advertises,users,adverts
+    WHERE advertises.User_id=users.id
+    AND advertises.advert_id=adverts.id
+    AND termek_nev LIKE '%%'
+    [0m
+  ↳ app/controllers/home_controller.rb:16:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 341)
+  Rendered home/search.erb within layouts/application (Duration: 6.7ms | Allocations: 2266)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 4741)
+Completed 200 OK in 34ms (Views: 15.4ms | ActiveRecord: 13.0ms | Allocations: 10881)
+
+
+Started GET "/search?word=bazalt&commit=Search" for 127.0.0.1 at 2023-04-30 15:48:32 +0200
+Processing by HomeController#search as HTML
+  Parameters: {"word"=>"bazalt", "commit"=>"Search"}
+  [1m[35mSQL (1.1ms)[0m  [1m[34mSELECT  *
+    FROM advertises,users,adverts
+    WHERE advertises.User_id=users.id
+    AND advertises.advert_id=adverts.id
+    AND termek_nev LIKE '%bazalt%'
+    [0m
+  ↳ app/controllers/home_controller.rb:16:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 326)
+  Rendered home/search.erb within layouts/application (Duration: 5.8ms | Allocations: 2049)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 4524)
+Completed 200 OK in 25ms (Views: 16.7ms | ActiveRecord: 1.1ms | Allocations: 5262)
+
+
+Started GET "/search?word=Bazalt&commit=Search" for 127.0.0.1 at 2023-04-30 15:48:37 +0200
+Processing by HomeController#search as HTML
+  Parameters: {"word"=>"Bazalt", "commit"=>"Search"}
+  [1m[35mSQL (1.4ms)[0m  [1m[34mSELECT  *
+    FROM advertises,users,adverts
+    WHERE advertises.User_id=users.id
+    AND advertises.advert_id=adverts.id
+    AND termek_nev LIKE '%Bazalt%'
+    [0m
+  ↳ app/controllers/home_controller.rb:16:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.8ms | Allocations: 338)
+  Rendered home/search.erb within layouts/application (Duration: 6.4ms | Allocations: 2070)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 4545)
+Completed 200 OK in 23ms (Views: 15.4ms | ActiveRecord: 1.4ms | Allocations: 5500)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-04-30 15:49:40 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 335)
+  [1m[35mSQL (3.2ms)[0m  [1m[34mSELECT advertises.*, users.nev, adverts.*
+          FROM advertises
+          JOIN users ON advertises.user_id = users.id
+          JOIN adverts ON advertises.advert_id = adverts.id[0m
+  ↳ app/views/home/home.html.erb:21
+  [1m[35mSQL (3.1ms)[0m  [1m[34m
+                                          SELECT advertises.*, users.nev, adverts.*
+FROM advertises
+JOIN users ON advertises.user_id = users.id
+JOIN adverts ON advertises.advert_id = adverts.id
+[0m
+  ↳ app/views/home/home.html.erb:26
+  [1m[35mSQL (1.6ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =1[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.5ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =2[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =3[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =4[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.1ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =5[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.8ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =6[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.2ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =7[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.6ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =8[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.6ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =9[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.1ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =10[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =11[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =12[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.6ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =13[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.8ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =14[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.4ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =15[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.5ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =16[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =17[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.1ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =18[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.5ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =19[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.4ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =20[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.2ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =21[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.8ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =22[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.5ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =23[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.2ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =24[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.3ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =25[0m
+  ↳ app/views/home/home.html.erb:68
+  Rendered home/home.html.erb within layouts/application (Duration: 119.7ms | Allocations: 21402)
+  Rendered layout layouts/application.html.erb (Duration: 133.4ms | Allocations: 23906)
+Completed 200 OK in 138ms (Views: 98.9ms | ActiveRecord: 35.8ms | Allocations: 24203)
+
+
+Started GET "/shop/1" for 127.0.0.1 at 2023-04-30 15:49:42 +0200
+Processing by ShopController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSQL (0.9ms)[0m  [1m[34m
+        SELECT advertises.*, users.nev, adverts.*
+        FROM advertises
+        JOIN users ON advertises.user_id = users.id
+        JOIN adverts ON advertises.advert_id = adverts.id
+        WHERE adverts.id = 1[0m
+  ↳ app/controllers/shop_controller.rb:4:in `show'
+  [1m[35mSQL (0.7ms)[0m  [1m[34m
+        SELECT AVG(csillag) AS avg
+        FROM rates
+        WHERE advert_id  =1[0m
+  ↳ app/controllers/shop_controller.rb:15:in `show'
+  [1m[35mSQL (0.5ms)[0m  [1m[34mSELECT supplier_id ,mit FROM carries[0m
+  ↳ app/controllers/shop_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering shop/show.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 320)
+  Rendered shop/show.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1355)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 3832)
+Completed 200 OK in 23ms (Views: 13.0ms | ActiveRecord: 2.1ms | Allocations: 5656)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-04-30 15:49:51 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.0ms | Allocations: 332)
+  [1m[35mSQL (2.9ms)[0m  [1m[34mSELECT advertises.*, users.nev, adverts.*
+          FROM advertises
+          JOIN users ON advertises.user_id = users.id
+          JOIN adverts ON advertises.advert_id = adverts.id[0m
+  ↳ app/views/home/home.html.erb:21
+  [1m[35mSQL (2.6ms)[0m  [1m[34m
+                                          SELECT advertises.*, users.nev, adverts.*
+FROM advertises
+JOIN users ON advertises.user_id = users.id
+JOIN adverts ON advertises.advert_id = adverts.id
+[0m
+  ↳ app/views/home/home.html.erb:26
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =1[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.7ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =2[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.3ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =3[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =4[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.1ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =5[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.8ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =6[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.7ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =7[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.6ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =8[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.8ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =9[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.6ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =10[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.5ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =11[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.1ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =12[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.8ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =13[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.2ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =14[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.2ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =15[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.7ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =16[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.7ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =17[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.7ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =18[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.6ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =19[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.5ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =20[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =21[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.1ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =22[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =23[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.7ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =24[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.6ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =25[0m
+  ↳ app/views/home/home.html.erb:68
+  Rendered home/home.html.erb within layouts/application (Duration: 96.7ms | Allocations: 21400)
+  Rendered layout layouts/application.html.erb (Duration: 104.7ms | Allocations: 23876)
+Completed 200 OK in 110ms (Views: 78.4ms | ActiveRecord: 27.6ms | Allocations: 24169)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-04-30 15:49:53 +0200
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 350)
+  [1m[35mSQL (3.7ms)[0m  [1m[34mSELECT advertises.*, users.nev, adverts.*
+          FROM advertises
+          JOIN users ON advertises.user_id = users.id
+          JOIN adverts ON advertises.advert_id = adverts.id[0m
+  ↳ app/views/home/home.html.erb:21
+  [1m[35mSQL (3.6ms)[0m  [1m[34m
+                                          SELECT advertises.*, users.nev, adverts.*
+FROM advertises
+JOIN users ON advertises.user_id = users.id
+JOIN adverts ON advertises.advert_id = adverts.id
+[0m
+  ↳ app/views/home/home.html.erb:26
+  [1m[35mSQL (0.8ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =1[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =2[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.2ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =3[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.3ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =4[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.8ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =5[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.7ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =6[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.6ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =7[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.6ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =8[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =9[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.4ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =10[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.8ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =11[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =12[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.8ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =13[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.8ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =14[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.7ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =15[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =16[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.1ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =17[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.0ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =18[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.2ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =19[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.7ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =20[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.7ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =21[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.7ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =22[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.6ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =23[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (0.9ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =24[0m
+  ↳ app/views/home/home.html.erb:68
+  [1m[35mSQL (1.5ms)[0m  [1m[34m SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =25[0m
+  ↳ app/views/home/home.html.erb:68
+  Rendered home/home.html.erb within layouts/application (Duration: 97.1ms | Allocations: 21418)
+  Rendered layout layouts/application.html.erb (Duration: 106.4ms | Allocations: 23923)
+Completed 200 OK in 111ms (Views: 77.7ms | ActiveRecord: 29.8ms | Allocations: 24216)
+
+
+Started GET "/shop/1" for 127.0.0.1 at 2023-04-30 15:49:58 +0200
+Processing by ShopController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSQL (1.0ms)[0m  [1m[34m
+        SELECT advertises.*, users.nev, adverts.*
+        FROM advertises
+        JOIN users ON advertises.user_id = users.id
+        JOIN adverts ON advertises.advert_id = adverts.id
+        WHERE adverts.id = 1[0m
+  ↳ app/controllers/shop_controller.rb:4:in `show'
+  [1m[35mSQL (0.6ms)[0m  [1m[34m
+        SELECT AVG(csillag) AS avg
+        FROM rates
+        WHERE advert_id  =1[0m
+  ↳ app/controllers/shop_controller.rb:15:in `show'
+  [1m[35mSQL (0.5ms)[0m  [1m[34mSELECT supplier_id ,mit FROM carries[0m
+  ↳ app/controllers/shop_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering shop/show.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 320)
+  Rendered shop/show.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1354)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 3831)
+Completed 200 OK in 23ms (Views: 13.5ms | ActiveRecord: 2.0ms | Allocations: 5654)
+
+
