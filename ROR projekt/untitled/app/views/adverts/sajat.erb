@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <%= stylesheet_link_tag "style" %>
+  <title>Kő és szikla</title>
+</head>
+<body>
+
+<div class="container">
+  <%= render 'layouts/navbar' %>
+  <main>
+
+    <% @myadverts.each do |a| %>
+      <div class="hirdetes">
+        <div class="hirdetes-adatok">
+          <div class="adatok1">
+            <h2 class="hirdetett-termek">Hirdetett termék: <%= a['termek_nev'] %></h2>
+
+            <h3 class="hirdeto">Hirdető: <%= a['nev'] %></h3>
+            <p>
+              <%= a['leiras'] %>
+            </p>
+          </div>
+          <div class="adatok2">
+            <p><strong>Ár/kg: </strong><%= a['ar_kg'] %></p>
+            <p><strong>Min. vásárlás: </strong><%=a['min_vasarlas'] %></p>
+            <p><strong>Raktáron: </strong><%= a['mennyiseg'] %></p>
+          </div>
+        </div>
+        <div class="szallitas-adatok">
+          <h2>Szállítási adatok</h2>
+
+          <div class="szallito-list">
+            <label for="szallitok" class="szallitok">Szállítók:</label>
+            <select>
+              <option value="foodpanda" selected>Foodpanda</option>
+              <option value="gls" disabled>GLS</option>
+              <option value="dpd" disabled>DPD</option>
+              <option value="wolt" disabled>Wolt</option>
+            </select>
+          </div>
+          <p><strong>Ár/km: </strong>70 HUF</p>
+          <p><strong>Ár/kg: </strong>45 HUF</p>
+        </div>
+        <div class="egyeb-adatok">
+          <h2>Értékelés</h2>
+          <%result = ActiveRecord::Base.connection.exec_query(" SELECT AVG(csillag) AS avg
+                                                                      FROM rates
+                                                                        WHERE advert_id  =#{a['advert_id']}").to_a%>
+          <p><strong><%= result[0]['avg']%></strong></p>
+          <hr />
+
+          <% asd='<div>
+                <%= # link_to "Tovább a vásárláshoz", shop_path(a)
+              </div>' %>
+        </div>
+      </div>
+    <% end %>
+  </main>
+</div>
+</body>
+</html>
