@@ -21,16 +21,23 @@ class RatesController < ApplicationController
 
   # POST /rates or /rates.json
   def create
-    @rate = Rate.new(rate_params)
-    id=rate_params[:id]
+    existing_rate = Rate.find_by(user_id: rate_params[:user_id], advert_id: rate_params[:advert_id])
+    if !!existing_rate
+      flash[:alert] = "Ezt már értékelted!"
+      redirect_to shop_path(rate_params[:advert_id])
+    elsif
 
-    respond_to do |format|
-      if @rate.save
-        format.html { redirect_to home_path, notice: "Rate was successfully created." }
-        format.json { render :show, status: :created, location: @rate }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @rate.errors, status: :unprocessable_entity }
+      @rate = Rate.new(rate_params)
+      id = rate_params[:id]
+
+      respond_to do |format|
+        if @rate.save
+          format.html { redirect_to shop_path(rate_params[:advert_id]), notice: "Rate was successfully created." }
+          format.json { render :show, status: :created, location: @rate }
+        else
+          format.html { render :new, status: :unprocessable_entity }
+          format.json { render json: @rate.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
@@ -59,13 +66,14 @@ class RatesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_rate
-      @rate = Rate.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def rate_params
-      params.require(:rate).permit(:user_id, :advert_id, :csillag, :leiras)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_rate
+    @rate = Rate.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def rate_params
+    params.require(:rate).permit(:user_id, :advert_id, :csillag, :leiras)
+  end
 end

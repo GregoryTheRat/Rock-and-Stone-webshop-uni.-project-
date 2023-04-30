@@ -100,6 +100,10 @@
           </div>
         <% end %>
     <% end %>
+        <% if flash[:alert] %>
+          <p><strong><%= flash[:alert] %></strong></p>
+        <% end %>
+
     </div>
     <div>
     </div>
