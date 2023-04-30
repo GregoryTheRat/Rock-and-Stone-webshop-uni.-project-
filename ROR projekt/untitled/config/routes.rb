@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   resources :adverts
   resources :users
 
+  get '/shop/:id', to: "shop#show", as: 'shop'
+
   get '/logout', to: "home#destroy"
   get 'profile', to: "userdata#profile"
   post 'profile', to: "userdata#updateprofile"
