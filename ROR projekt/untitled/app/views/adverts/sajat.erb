@@ -31,32 +31,17 @@
             <p><strong>Raktáron: </strong><%= a['mennyiseg'] %></p>
           </div>
         </div>
-        <div class="szallitas-adatok">
-          <h2>Szállítási adatok</h2>
-
-          <div class="szallito-list">
-            <label for="szallitok" class="szallitok">Szállítók:</label>
-            <select>
-              <option value="foodpanda" selected>Foodpanda</option>
-              <option value="gls" disabled>GLS</option>
-              <option value="dpd" disabled>DPD</option>
-              <option value="wolt" disabled>Wolt</option>
-            </select>
-          </div>
-          <p><strong>Ár/km: </strong>70 HUF</p>
-          <p><strong>Ár/kg: </strong>45 HUF</p>
-        </div>
         <div class="egyeb-adatok">
           <h2>Értékelés</h2>
           <%result = ActiveRecord::Base.connection.exec_query(" SELECT AVG(csillag) AS avg
                                                                       FROM rates
                                                                         WHERE advert_id  =#{a['advert_id']}").to_a%>
+          <% if !(result[0]['avg'] == nil) %>
           <p><strong><%= result[0]['avg']%></strong></p>
+          <% end %>
           <hr />
 
-          <% asd='<div>
-                <%= # link_to "Tovább a vásárláshoz", shop_path(a)
-              </div>' %>
+          <%= link_to "Hírdetés törlése",  delete_advert(a['advert_id']) %>
         </div>
       </div>
     <% end %>

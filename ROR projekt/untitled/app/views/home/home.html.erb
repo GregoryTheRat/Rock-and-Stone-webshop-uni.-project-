@@ -57,7 +57,9 @@ JOIN adverts ON advertises.advert_id = adverts.id
 
               average=avg.to_a
                  %>
+              <% if !(average[0]['avg'] == nil) %>
               <p><strong><%= format('%.2f', average[0]['avg'])%></strong></p>
+              <% end %>
               <hr />
 
               <div>

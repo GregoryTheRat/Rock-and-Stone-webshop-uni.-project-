@@ -63,7 +63,7 @@ class ShopController < ApplicationController
     selected_advert = Advert.find_by(id: params['advert_id'])
 
     # vasarolhat=ActiveRecord::Base.connection.exec_query("SELECT LEHETEVASAROLNI(#{params['mennyiseg']},#{params['advert_id']})as lehete FROM DUAL")
-    @cost=allcost
+
     if selected_advert.mennyiseg < params['mennyiseg'].to_f
       flash[:notice] = "Nincs ennyi termék!"
       redirect_to shop_path(selected_advert.id)

@@ -48,10 +48,21 @@
               </div>
               <div class="egyeb-adatok">
                 <h2>Értékelés</h2>
-                <p><strong>3.5</strong></p>
+                <%    avg= ActiveRecord::Base.connection.exec_query(" SELECT AVG(csillag) AS avg
+              FROM rates
+              WHERE advert_id  =#{result['advert_id']}")
+
+                      average=avg.to_a
+                %>
+                <% if !(average[0]['avg'] == nil) %>
+                  <p><strong><%= format('%.2f', average[0]['avg'])%></strong></p>
+                <% end %>
+
                 <hr/>
                 <div>
-                  <button>Tovább a vásárláshoz</button>
+                  <% unless !logged_in? %>
+                    <%=  link_to "Tovább a vásárláshoz", shop_path(result['advert_id']) %>
+                  <%end %>
                 </div>
               </div>
             </div>

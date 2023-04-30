@@ -12,9 +12,11 @@
 <div class="container">
     <%= render 'layouts/navbar' %>
   <main>
+    <br>
     <div>
       <p>Az rendeléseid összeköltsége: <%= @cost[0]['koltseg'] %></p>
     </div>
+    <br>
     <table class="hozzaszolas">
       <thead>
       <td>Termék neve</td>
@@ -34,6 +36,7 @@
         <% end %>
 
     </table>
+    <br>
   </main>
   <footer><p>&copy; Kő és szikla 2023</p></footer>
 </div>
