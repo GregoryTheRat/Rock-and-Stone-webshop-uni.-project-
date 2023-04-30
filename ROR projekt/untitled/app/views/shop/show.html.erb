@@ -34,21 +34,21 @@
 
           <div class="szallito-list">
             <label for="szallitok" class="szallitok">Szállítók:</label>
-            <%= form_with url: "/buy", method: :post do |form| %>
-              <select>
-              <% @suppliers.each do |s| %>
-                <option value="<%= s[0]['id'] %>"><%= s[0]['ceg_nev'] %> <%= s[0]['km_ar'] %> Ft/km <%= s[0]['ar_kg'] %> Ft/kg</option>
-              <% end %>
-              </select>
+            <%= form_with(url: "/buy") do |form| %>
+
+              <%= form.select :supplier_id, options_for_select(@options_hash)%>
               <%= form.label :mennyiseg, "Mennyiség:" %>
               <%= form.text_field :mennyiseg, required: true %>
 
-              <%= form.label :szall_cim, "Cím:"%>
-              <%= form.text_field :szall_cim, required: true %>
+              <%= form.label :hova, "Cím:"%>
+              <%= form.text_field :hova, required: true %>
 
               <%= form.hidden_field :advert_id, value: @advert_with_user[0]['advert_id'] %>
               <br>
               <%= form.submit "Megrendel"%>
+            <% end %>
+            <% if flash[:notice] %>
+                  <p><strong><%= flash[:notice] %></strong></p>
             <% end %>
 
           </div>
