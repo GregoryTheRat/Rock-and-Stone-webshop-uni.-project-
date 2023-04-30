@@ -51,18 +51,18 @@ adverts = Advert.create([{ termek_nev: 'Bolgar Lyukacsos Szikla', mennyiseg: 320
                          { termek_nev: 'Indiai Homokko', mennyiseg: 34000, ar_kg: 410, min_vasarlas: 1000, leiras: 'Indiai homokko rendkivuli minoseg kedvezo ar ' },
                          { termek_nev: 'Perlato Meszko', mennyiseg: 22000, ar_kg: 890, min_vasarlas: 1000, leiras: 'Perlato meszko burkoasra homlokzatra burkolas' }])
 
-suppliers = Supplier.create([{ km_ar: 200, ar_kg: 45 },
-                             { km_ar: 210, ar_kg: 37 },
-                             { km_ar: 310, ar_kg: 20 },
-                             { km_ar: 290, ar_kg: 25 },
-                             { km_ar: 500, ar_kg: 5 },
-                             { km_ar: 450, ar_kg: 30 },
-                             { km_ar: 210, ar_kg: 45 },
-                             { km_ar: 220, ar_kg: 19 },
-                             { km_ar: 170, ar_kg: 60 },
-                             { km_ar: 390, ar_kg: 12 },
-                             { km_ar: 430, ar_kg: 36 },
-                             { km_ar: 330, ar_kg: 30 }])
+suppliers = Supplier.create([{ km_ar: 200, ar_kg: 45,ceg_nev:"Kovacs es tarsa Kft." },
+                             { km_ar: 210, ar_kg: 37,ceg_nev:"Tamas es tarsa Kft."  },
+                             { km_ar: 310, ar_kg: 20,ceg_nev:"Kovek Kft."  },
+                             { km_ar: 290, ar_kg: 25,ceg_nev:"Magyarbau Bt."  },
+                             { km_ar: 500, ar_kg: 5,ceg_nev:"Tuzep Posta Kft."  },
+                             { km_ar: 450, ar_kg: 30,ceg_nev:"Kovek Kft."  },
+                             { km_ar: 210, ar_kg: 45,ceg_nev:"szallito Bt."  },
+                             { km_ar: 220, ar_kg: 19,ceg_nev:"ko gls Kft."  },
+                             { km_ar: 170, ar_kg: 60,ceg_nev:" szikla foxpost "  },
+                             { km_ar: 390, ar_kg: 12,ceg_nev:"kavics futar Bt."  },
+                             { km_ar: 430, ar_kg: 36,ceg_nev:"Pala palik Kft."  },
+                             { km_ar: 330, ar_kg: 30,ceg_nev:"Stone Giant "  }])
 
 carries = Carry.create([{ supplier_id: 1, mit: 'Lyukacsos Szikla' },
                         { supplier_id: 1, mit: 'Bazalt' },

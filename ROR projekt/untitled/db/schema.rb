@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_29_094103) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_30_070944) do
   create_table "advertises", force: :cascade do |t|
     t.integer "user_id", precision: 38
     t.integer "advert_id", precision: 38
@@ -69,6 +69,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_29_094103) do
     t.float "ar_kg"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "ceg_nev", default: "f"
   end
 
   create_table "users", force: :cascade do |t|
