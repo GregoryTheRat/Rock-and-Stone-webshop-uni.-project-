@@ -12,6 +12,9 @@
 <div class="container">
     <%= render 'layouts/navbar' %>
   <main>
+    <div>
+      <p>Az rendeléseid összeköltsége: <%= @cost[0]['koltseg'] %></p>
+    </div>
     <table class="hozzaszolas">
       <thead>
       <td>Termék neve</td>
@@ -27,8 +30,8 @@
           <td><%= order['mennyiseg'] %></td>
           <td><%= order['koltseg'] %></td>
           <td><%= order['hova'] %></td>
-        </tr>
-      <% end %>
+          </tr>
+        <% end %>
 
     </table>
   </main>

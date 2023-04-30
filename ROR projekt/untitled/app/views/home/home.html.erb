@@ -51,10 +51,13 @@ JOIN adverts ON advertises.advert_id = adverts.id
 
             <div class="egyeb-adatok">
               <h2>Értékelés</h2>
-              <%result = ActiveRecord::Base.connection.exec_query(" SELECT AVG(csillag) AS avg
-                                                                      FROM rates
-                                                                        WHERE advert_id  =#{a['advert_id']}").to_a%>
-              <p><strong><%= format('%.2f', result[0]['avg'])%></strong></p>
+           <%    avg= ActiveRecord::Base.connection.exec_query(" SELECT AVG(csillag) AS avg
+              FROM rates
+              WHERE advert_id  =#{a['advert_id']}")
+
+              average=avg.to_a
+                 %>
+              <p><strong><%= format('%.2f', average[0]['avg'])%></strong></p>
               <hr />
 
               <div>

@@ -1,0 +1,12 @@
+CREATE OR REPLACE FUNCTION get_user_koltsegek(u_id IN NUMBER) RETURN NUMBER IS
+  v_sum NUMBER;
+BEGIN
+  SELECT SUM(delivers.koltseg)
+  INTO v_sum
+  FROM orders, delivers, users
+  WHERE orders.user_id = users.id
+  AND delivers.order_id = orders.id
+  AND users.id =u_id;
+  
+  RETURN v_sum;
+END;

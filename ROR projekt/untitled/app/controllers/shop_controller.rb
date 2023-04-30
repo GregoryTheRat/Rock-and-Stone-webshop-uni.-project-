@@ -1,5 +1,6 @@
 class ShopController < ApplicationController
 
+
   require 'date'
 
   def show
@@ -41,6 +42,7 @@ class ShopController < ApplicationController
       end
     end
 
+
     options = Array.new
     suppliers_a.each do |s|
       key = s[0]['ceg_nev'] + " " + s[0]['km_ar'].to_s + "Ft/km " + s[0]['ar_kg'].to_s + "Ft/kg"
@@ -48,6 +50,8 @@ class ShopController < ApplicationController
       options.push([key, value])
     end
     @options_hash = options.to_h
+
+
 
   end
 
