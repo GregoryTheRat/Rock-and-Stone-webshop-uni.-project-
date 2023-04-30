@@ -12,7 +12,25 @@
 <div class="container">
     <%= render 'layouts/navbar' %>
   <main>
+    <table class="hozzaszolas">
+      <thead>
+      <td>Termék neve</td>
+      <td>A szalitó eg neve </td>
+      <td>Rednelt mennyiség</td>
+      <td>Koltseg</td>
+      <td>Szallitasi cím</td>
+      </thead>
+      <% @allorders.each do |order| %>
+        <tr>
+          <td><%= order['termek_nev'] %>:</td>
+          <td><%= order['ceg_nev'] %></td>
+          <td><%= order['mennyiseg'] %></td>
+          <td><%= order['koltseg'] %></td>
+          <td><%= order['hova'] %></td>
+        </tr>
+      <% end %>
 
+    </table>
   </main>
   <footer><p>&copy; Kő és szikla 2023</p></footer>
 </div>

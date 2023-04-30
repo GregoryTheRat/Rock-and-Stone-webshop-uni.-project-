@@ -62,7 +62,7 @@ GROUP BY users.nev, users.email,users.id"
   # DELETE /users/1 or /users/1.json
   def destroy
     @user.destroy
-
+    session.clear
     respond_to do |format|
       format.html { redirect_to home_path, notice: "User was successfully destroyed." }
       format.json { head :no_content }

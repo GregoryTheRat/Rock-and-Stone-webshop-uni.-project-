@@ -1,7 +1,8 @@
 class ShopController < ApplicationController
-  require 'date'
-  def show
 
+  require 'date'
+
+  def show
     id = params[:id]
     query_result = ActiveRecord::Base.connection.exec_query("
         SELECT advertises.*, users.nev, adverts.*
@@ -11,6 +12,12 @@ class ShopController < ApplicationController
         WHERE adverts.id = #{id}")
     query_result.to_a
     @advert_with_user = query_result
+
+
+
+    ratesresult=ActiveRecord::Base.connection.exec_query("SELECT users.nev, rates.csillag,rates.leiras FROM rates,users Where rates.user_id=users.id AND rates.advert_id =#{id}")
+    @ratings=ratesresult.to_a
+
     termek = @advert_with_user[0]['termek_nev'].to_s
     termek = termek.upcase
 
@@ -21,7 +28,7 @@ class ShopController < ApplicationController
     rates_query.to_a
     @rates = rates_query
 
-    #suppliers_query = ActiveRecord::Base.connection.exec_query("")
+    # suppliers_query = ActiveRecord::Base.connection.exec_query("")
 
     carries = ActiveRecord::Base.connection.exec_query("SELECT supplier_id ,mit FROM carries")
 
@@ -43,6 +50,7 @@ class ShopController < ApplicationController
     @options_hash = options.to_h
 
   end
+
 
   def buy
     params[:user_id] = session[:user_id]

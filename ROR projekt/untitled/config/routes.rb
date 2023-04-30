@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   resources :users
 
   get '/shop/:id', to: "shop#show", as: 'shop'
-  post '/buy', to: "shop#buy"
 
   get '/logout', to: "home#destroy"
   get 'profile', to: "userdata#profile"
