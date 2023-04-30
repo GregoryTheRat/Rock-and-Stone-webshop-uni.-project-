@@ -1,5 +1,6 @@
 class ShopController < ApplicationController
   def show
+
     id = params[:id]
     query_result = ActiveRecord::Base.connection.exec_query("
         SELECT advertises.*, users.nev, adverts.*
@@ -33,5 +34,10 @@ class ShopController < ApplicationController
     end
     @suppliers = suppliers_a
 
+  end
+
+  def buy
+
+    redirect_to bag_path
   end
 end
