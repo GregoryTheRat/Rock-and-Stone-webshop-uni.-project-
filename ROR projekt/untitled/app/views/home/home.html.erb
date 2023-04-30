@@ -48,21 +48,7 @@ JOIN adverts ON advertises.advert_id = adverts.id
                 <p><strong>Raktáron: </strong><%= a['mennyiseg'] %></p>
               </div>
             </div>
-            <div class="szallitas-adatok">
-              <h2>Szállítási adatok</h2>
-
-              <div class="szallito-list">
-                <label for="szallitok" class="szallitok">Szállítók:</label>
-                <select>
-                  <option value="foodpanda" selected>Foodpanda</option>
-                  <option value="gls" disabled>GLS</option>
-                  <option value="dpd" disabled>DPD</option>
-                  <option value="wolt" disabled>Wolt</option>
-                </select>
-              </div>
-              <p><strong>Ár/km: </strong>70 HUF</p>
-              <p><strong>Ár/kg: </strong>45 HUF</p>
-            </div>
+            
             <div class="egyeb-adatok">
               <h2>Értékelés</h2>
               <%result = ActiveRecord::Base.connection.exec_query(" SELECT AVG(csillag) AS avg
