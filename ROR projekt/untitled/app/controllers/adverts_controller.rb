@@ -7,7 +7,15 @@ class AdvertsController < ApplicationController
   end
 
   def osszes
-    @adverts = Advert.all
+    query_result=ActiveRecord::Base.connection.exec_query("SELECT users.nev, adverts.termek_nev, advertises.mikor,ADVERTS.ID AS id
+FROM advertises, users, adverts
+WHERE advertises.User_id = users.id
+AND advertises.advert_id = adverts.id"
+
+    )
+
+    @adverts = query_result.to_a
+
   end
 
   def sajat
@@ -39,20 +47,14 @@ AND users.id=#{session['user_id']}")
   def create
 
     @advert = Advert.new(advert_params)
-    adverts= Advert.all
-    ids=adverts.to_a
-    id=1
-    ids.each do |row|
-      id=row['id']
-    end
-
-    advertise_params={"user_id"=>session['user_id'],"advert_id"=>@advert.id,"mikor"=>DateTime.now}
-    Advertise.create(advertise_params )
     #  sqlstring=session['user_id'].to_s+","+id.to_s+","+DateTime.now.to_s+','+Time.now.to_i.to_s+','+Time.now.to_i.to_s
     #ActiveRecord::Base.connection.exec_insert("BEGIN INSERT INTO advertises VALUES(#{sqlstring}); END;")
 
     respond_to do |format|
       if @advert.save
+
+        advertise_params={"user_id"=>session['user_id'],"advert_id"=>@advert.id,"mikor"=>DateTime.now}
+        Advertise.create(advertise_params )
         format.html { redirect_to home_path, notice: "Advert was successfully created." }
         # format.json { render :show, status: :created, location: @advert }
       else
@@ -85,6 +87,14 @@ AND users.id=#{session['user_id']}")
       format.json { head :no_content }
     end
   end
+
+  def delete_advert
+    Advert.destroy(params[:id])
+  end
+
+
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

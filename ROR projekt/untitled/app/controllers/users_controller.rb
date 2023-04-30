@@ -11,11 +11,18 @@ class UsersController < ApplicationController
   end
 
 
-  def delet
+
+  def all_users
+    query_result=ActiveRecord::Base.connection.exec_query("SELECT users.nev, users.email,users.id, COUNT(rates.id) AS num_ratings
+FROM users
+LEFT JOIN rates ON rates.user_id = users.id
+GROUP BY users.nev, users.email,users.id"
+
+    )
+
+    @users = query_result.to_a
 
   end
-
-
 
   # GET /users/new
   def new

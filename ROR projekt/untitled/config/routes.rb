@@ -22,8 +22,12 @@ Rails.application.routes.draw do
   get 'osszes', to: 'adverts#osszes'
   get '/delete',to: 'users#delete'
   get '/sajat',to: 'adverts#sajat'
+  get '/all_users' ,to: 'users#all_users'
+  delete '/adverts/:id', to: 'adverts#delete_advert', as: :delete_advert
+  delete '/users/:id', to: 'users#delete_users', as: :delete_users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   root "home#home"
   # Defines the root path route ("/")
   # root "articles#index"
+
 end
